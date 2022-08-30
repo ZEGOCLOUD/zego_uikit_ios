@@ -1,0 +1,4 @@
+framework module ZegoUIKit {
+  header "ZegoUIKit-Swift.h"
+  requires objc
+}
