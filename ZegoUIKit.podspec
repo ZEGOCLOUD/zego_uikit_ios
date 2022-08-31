@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ZEGOCLOUD/zego_uikit_ios.git", :tag => sepc.version.to_s }
+  spec.source       = { :git => "https://github.com/ZEGOCLOUD/zego_uikit_ios.git", :tag => spec.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
