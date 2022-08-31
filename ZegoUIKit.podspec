@@ -144,8 +144,8 @@ Pod::Spec.new do |spec|
     spec_default.dependency 'ZegoExpressEngine'
     spec_default.dependency 'ZIM', '>= 2.3.1'
 
-    spec_default.subspec 'Main' do |main_spec|
-      main_spec.vendored_frameworks = 'UIKit/iOS/ZegoUIKit.xcframework'
+    # spec_default.subspec 'Main' do |main_spec|
+    #   main_spec.vendored_frameworks = 'UIKit/iOS/ZegoUIKit.xcframework'
     end
   end
 
