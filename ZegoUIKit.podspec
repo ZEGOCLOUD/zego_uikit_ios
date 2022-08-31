@@ -137,16 +137,19 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
-  spec.default_subspec = 'Default'
+  # spec.default_subspec = 'Default'
 
-  spec.subspec 'Default' do |spec_default|
-    spec_default.vendored_frameworks = 'UIKit/iOS/ZegoExpressEngine.xcframework', 'UIKit/iOS/ZIM.xcframework'
-    spec_default.dependency 'ZegoExpressEngine'
-    spec_default.dependency 'ZIM', '>= 2.3.1'
+  # spec.subspec 'Default' do |spec_default|
+  #   spec_default.vendored_frameworks = 'UIKit/iOS/ZegoExpressEngine.xcframework', 'UIKit/iOS/ZIM.xcframework'
+  #   spec_default.dependency 'ZegoExpressEngine'
+  #   spec_default.dependency 'ZIM', '>= 2.3.1'
 
-    # spec_default.subspec 'Main' do |main_spec|
-    #   main_spec.vendored_frameworks = 'UIKit/iOS/ZegoUIKit.xcframework'
-    end
-  end
+  #   # spec_default.subspec 'Main' do |main_spec|
+  #   #   main_spec.vendored_frameworks = 'UIKit/iOS/ZegoUIKit.xcframework'
+  #   # end
+  # end
+  spec.vendored_frameworks = 'ZegoUIKit.xcframework'
+  spec.dependency 'ZegoExpressEngine'
+  spec.dependency 'ZIM', '>= 2.3.1'
 
 end
