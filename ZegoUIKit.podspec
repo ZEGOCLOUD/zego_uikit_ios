@@ -147,7 +147,7 @@ Pod::Spec.new do |spec|
   #   #   main_spec.vendored_frameworks = 'UIKit/iOS/ZegoUIKit.xcframework'
   #   # end
   # end
-  spec.vendored_frameworks = 'ZegoUIKit.xcframework'
+  spec.vendored_frameworks = 'ZegoUIKitSDK.xcframework'
   spec.dependency 'ZegoExpressEngine'
   spec.dependency 'ZIM', '>= 2.3.1'
 
