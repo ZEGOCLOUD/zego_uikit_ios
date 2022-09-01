@@ -48,6 +48,7 @@ public protocol ZegoRefuseInvitationButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) public var inviterID: Swift.String?
   @_Concurrency.MainActor(unsafe) public init(_ inviterID: Swift.String)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
   @objc deinit
 }
 public protocol ZegoToggleCameraButtonDelegate : AnyObject {
@@ -181,12 +182,13 @@ public protocol AudioVideoViewDelegate : AnyObject {
 public protocol ZegoAudioVideoContainerDelegate : AnyObject {
   func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIkitUser?) -> UIKit.UIView?
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoAudioVideoContainer : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers public class ZegoAudioVideoContainer : ObjectiveC.NSObject {
   weak public var delegate: ZegoUIKitSDK.ZegoAudioVideoContainerDelegate? {
     get
     set
   }
   public var view: ZegoUIKitSDK.ZegoAVContainerView!
+  @objc override dynamic public init()
   public func setLayout(_ mode: ZegoUIKitSDK.ZegoUIKitLayoutMode, config: ZegoUIKitSDK.ZegoLayoutConfig?)
   @objc deinit
 }
@@ -253,6 +255,7 @@ public protocol ZegoAcceptInvitationButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) public var inviterID: Swift.String?
   @_Concurrency.MainActor(unsafe) public init(_ inviterID: Swift.String)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIkitUser : ObjectiveC.NSObject, Swift.Codable {
@@ -298,6 +301,7 @@ public protocol ZegoStartInvitationButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoStartInvitationButtonDelegate?
   @_Concurrency.MainActor(unsafe) public init(_ type: ZegoUIKitSDK.ZegoInvitationType)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ZegoLayoutConfig : ObjectiveC.NSObject {
@@ -394,6 +398,7 @@ public protocol ZegoCancelInvitationButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoCancelInvitationButtonDelegate?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
   @objc deinit
 }
 extension ZegoUIKitSDK.ZegoUIKitVideoFillMode : Swift.Equatable {}

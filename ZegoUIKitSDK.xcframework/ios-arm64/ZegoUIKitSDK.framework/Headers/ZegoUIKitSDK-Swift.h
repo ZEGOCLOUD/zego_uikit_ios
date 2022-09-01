@@ -224,14 +224,14 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK19ZegoAVContainerView")
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoAcceptInvitationButton")
 @interface ZegoAcceptInvitationButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoAudioVideoContainer")
 @interface ZegoAudioVideoContainer : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -257,6 +257,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoCancelInvitationButton")
 @interface ZegoCancelInvitationButton : UIButton
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)buttonClick;
 @end
 
 
@@ -297,6 +298,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoMicrophoneStateIcon")
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoRefuseInvitationButton")
 @interface ZegoRefuseInvitationButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -304,6 +306,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoRefuseInvitationButton")
 SWIFT_CLASS("_TtC12ZegoUIKitSDK25ZegoStartInvitationButton")
 @interface ZegoStartInvitationButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
