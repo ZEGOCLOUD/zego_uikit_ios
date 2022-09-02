@@ -255,7 +255,6 @@ public protocol ZegoAcceptInvitationButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) public var inviterID: Swift.String?
   @_Concurrency.MainActor(unsafe) public init(_ inviterID: Swift.String)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIkitUser : ObjectiveC.NSObject, Swift.Codable {
@@ -285,7 +284,7 @@ extension UIKit.UIColor {
 public protocol ZegoStartInvitationButtonDelegate : AnyObject {
   func onStartInvitationButtonClick()
 }
-@objc @_Concurrency.MainActor(unsafe) public class ZegoStartInvitationButton : UIKit.UIButton {
+@objc @_Concurrency.MainActor(unsafe) open class ZegoStartInvitationButton : UIKit.UIButton {
   @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage? {
     get
     set
@@ -301,7 +300,7 @@ public protocol ZegoStartInvitationButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoStartInvitationButtonDelegate?
   @_Concurrency.MainActor(unsafe) public init(_ type: ZegoUIKitSDK.ZegoInvitationType)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
+  @objc @_Concurrency.MainActor(unsafe) open func buttonClick()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ZegoLayoutConfig : ObjectiveC.NSObject {

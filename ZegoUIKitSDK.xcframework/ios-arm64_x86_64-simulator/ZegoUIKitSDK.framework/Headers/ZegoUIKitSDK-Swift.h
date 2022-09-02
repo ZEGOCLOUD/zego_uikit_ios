@@ -226,7 +226,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK19ZegoAVContainerView")
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoAcceptInvitationButton")
 @interface ZegoAcceptInvitationButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -662,7 +661,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK19ZegoAVContainerView")
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoAcceptInvitationButton")
 @interface ZegoAcceptInvitationButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
