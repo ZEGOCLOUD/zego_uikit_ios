@@ -241,6 +241,12 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK18ZegoAudioVideoView")
 - (void)layoutSubviews;
 @end
 
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK24ZegoAudioVideoViewConfig")
+@interface ZegoAudioVideoViewConfig : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIImage;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK19ZegoCameraStateIcon")
@@ -317,8 +323,8 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK27ZegoSwitchAudioOutputButton")
 @end
 
 
-SWIFT_CLASS("_TtC12ZegoUIKitSDK28ZegoSwitchCameraFacingButton")
-@interface ZegoSwitchCameraFacingButton : UIButton
+SWIFT_CLASS("_TtC12ZegoUIKitSDK22ZegoSwitchCameraButton")
+@interface ZegoSwitchCameraButton : UIButton
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
