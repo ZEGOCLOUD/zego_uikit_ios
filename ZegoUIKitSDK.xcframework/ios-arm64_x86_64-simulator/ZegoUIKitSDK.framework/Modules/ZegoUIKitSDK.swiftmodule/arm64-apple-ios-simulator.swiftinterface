@@ -130,8 +130,8 @@ public protocol LeaveButtonDelegate : AnyObject {
 @objc @_inheritsConvenienceInitializers public class ZegoLeaveConfirmDialogInfo : ObjectiveC.NSObject {
   public var title: Swift.String?
   public var message: Swift.String?
-  public var cancleButtonName: Swift.String?
-  public var confirmButtomName: Swift.String?
+  public var cancelButtonName: Swift.String?
+  public var confirmButtonName: Swift.String?
   weak public var dialogPresentVC: UIKit.UIViewController?
   @objc override dynamic public init()
   @objc deinit
