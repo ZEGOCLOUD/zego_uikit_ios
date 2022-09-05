@@ -145,9 +145,6 @@ public protocol LeaveButtonDelegate : AnyObject {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ZegoAudioVideoViewConfig : ObjectiveC.NSObject {
-  public var showMicrophoneStateOnView: Swift.Bool
-  public var showCameraStateOnView: Swift.Bool
-  public var showUserNameOnView: Swift.Bool
   public var showSoundWavesInAudioMode: Swift.Bool
   public var useVideoViewAspectFill: Swift.Bool
   @objc override dynamic public init()
