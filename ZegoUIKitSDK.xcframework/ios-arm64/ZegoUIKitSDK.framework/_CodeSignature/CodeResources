@@ -4,49 +4,53 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		8qIE7ZrXVZ3FVQLTkgVyjYefvzo=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		clx9tU25500cSYnPbmKN54uRRdA=
+		d/qri2lmLj4gel13kNQRGTNW6r0=
 		</data>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<data>
-		On68DuKKhAwP2JlHM0bo2TuhRe8=
+		uFb+t7VC4Dmihj18Z8P7q746wh8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		znQu6Gi1tzEdMIyYttbv/+ly62M=
+		F7tbUaNS8T+J1xPurRqYfF7YMP0=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		qN2euz2OX0mZk85haR5SElMcm/4=
+		Oi3HLS0I2onBnNuyftll5v5q85g=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		qN2euz2OX0mZk85haR5SElMcm/4=
+		Oi3HLS0I2onBnNuyftll5v5q85g=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		9nt78tmFwKTgvG1xnwgpjqEmbPE=
+		9GAhwC//ppK8YthEprv7XPXZEcI=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		qUmiIDryxn3YH992AUnyervvpxs=
+		KC7YV/qifJv0RFuOjoDbaRBzlN0=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		tfLfZkozBg09To7vxHe9KmSc9dM=
+		GzORet0rxfF2ERb9b5jsOeV9Uw8=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		9nt78tmFwKTgvG1xnwgpjqEmbPE=
+		9GAhwC//ppK8YthEprv7XPXZEcI=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		qUmiIDryxn3YH992AUnyervvpxs=
+		KC7YV/qifJv0RFuOjoDbaRBzlN0=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		tfLfZkozBg09To7vxHe9KmSc9dM=
+		GzORet0rxfF2ERb9b5jsOeV9Uw8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,70 +63,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IWa0FjOhVI1Q0kuteu+NuV71gqNyxUPPWo+eeSpn2wo=
+			E+f+3QKWO0bivxjOdgkmjIhchkDJKnEsl/FD7CJoGDg=
 			</data>
 		</dict>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jp1IWIZ1kMBl4fp/NmV3ORNASr7DXDVf5yHu0cL0fJ8=
+			6cXIxz4oUfVGR2v57o1ht7v8yad9MnKkfQ3XekWmG/s=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tqq76zaoEGK20t7/zHTKTF5wR9CEM68j5szLknYGZl8=
+			2EKThEfa4r4slEogtM35OZEG9iAulvAI3RXnFMQTiig=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tqq76zaoEGK20t7/zHTKTF5wR9CEM68j5szLknYGZl8=
+			2EKThEfa4r4slEogtM35OZEG9iAulvAI3RXnFMQTiig=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M0qL3jKS8OteQYBp4xaBCggpE/oc6sj8ZoRNishJK3w=
+			si0mOad+ZrRsbVFv2dp4usAD028c21LCaxtQJ67js6U=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YNbr3dL3cEqGnNVB3sAIhj65cVvLv0EVXN/S6U9KJpY=
+			csxy3lQjNrOr2r+Y6xe/IY6Tlr3kaNqcYWITiz1mFrE=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ErDg3kmM++pnRh2ptJBLuANlT855NqhyO0z3wfMQPJU=
+			cY3DY92Qk4IDYVAsvFRqElD/HsCXL5JvNWfMHMBsYvc=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M0qL3jKS8OteQYBp4xaBCggpE/oc6sj8ZoRNishJK3w=
+			si0mOad+ZrRsbVFv2dp4usAD028c21LCaxtQJ67js6U=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YNbr3dL3cEqGnNVB3sAIhj65cVvLv0EVXN/S6U9KJpY=
+			csxy3lQjNrOr2r+Y6xe/IY6Tlr3kaNqcYWITiz1mFrE=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ErDg3kmM++pnRh2ptJBLuANlT855NqhyO0z3wfMQPJU=
+			cY3DY92Qk4IDYVAsvFRqElD/HsCXL5JvNWfMHMBsYvc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -215,14 +215,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSCoder;
 
-SWIFT_CLASS("_TtC12ZegoUIKitSDK19ZegoAVContainerView")
-@interface ZegoAVContainerView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
-@end
-
-
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoAcceptInvitationButton")
 @interface ZegoAcceptInvitationButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -233,6 +225,14 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoAcceptInvitationButton")
 SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoAudioVideoContainer")
 @interface ZegoAudioVideoContainer : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK27ZegoAudioVideoContainerView")
+@interface ZegoAudioVideoContainerView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 @end
 
 
@@ -267,9 +267,61 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoCancelInvitationButton")
 - (void)buttonClick;
 @end
 
+@class NSString;
+@class NSNumber;
+@class ZegoUIkitUser;
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK17ZegoInRoomMessage")
+@interface ZegoInRoomMessage : NSObject
+@property (nonatomic, copy) NSString * _Nullable message;
+@property (nonatomic) uint64_t messageID;
+@property (nonatomic) uint64_t sendTime;
+@property (nonatomic, strong) ZegoUIkitUser * _Nullable sender;
+- (nonnull instancetype)init:(NSString * _Nonnull)message messageID:(uint64_t)messageID sendTime:(uint64_t)sendTime sender:(ZegoUIkitUser * _Nonnull)sender OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@protocol ZegoInRoomMessageInputDelegate;
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK22ZegoInRoomMessageInput")
+@interface ZegoInRoomMessageInput : UIView
+@property (nonatomic, weak) id <ZegoInRoomMessageInputDelegate> _Nullable delegate;
+@property (nonatomic, copy) NSString * _Nullable placeHolder;
+@property (nonatomic, strong) UIImage * _Nullable iconSend;
+@property (nonatomic) BOOL enable;
+@property (nonatomic) CGFloat minHeight;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+- (void)startEdit;
+@end
+
+
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK30ZegoInRoomMessageInputDelegate_")
+@protocol ZegoInRoomMessageInputDelegate
+- (void)onSubmit;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK21ZegoInRoomMessageView")
+@interface ZegoInRoomMessageView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@property (nonatomic) CGRect frame;
+- (void)layoutSubviews;
+@end
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK16ZegoLayoutConfig")
 @interface ZegoLayoutConfig : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK31ZegoLayoutFixedSideBySideConfig")
+@interface ZegoLayoutFixedSideBySideConfig : ZegoLayoutConfig
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -357,6 +409,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK9ZegoUIKit")
 
 
 
+
 /// Audio route
 typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
 /// Speaker
@@ -373,10 +426,7 @@ typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
   ZegoUIKitAudioOutputDeviceAirPlay = 5,
 };
 
-@class ZegoUIkitUser;
 enum ZegoUIKitRoomStateChangedReason : NSUInteger;
-@class NSNumber;
-@class NSString;
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 @protocol ZegoUIKitEventHandle
@@ -384,6 +434,7 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onRemoteUserJoin:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
 - (void)onRemoteUserLeave:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
 - (void)onOnlySelfInRoom;
+- (void)onUserCountOrPropertyChanged:(NSArray<ZegoUIkitUser *> * _Nullable)userList;
 - (void)onRoomStateChanged:(enum ZegoUIKitRoomStateChangedReason)reason errorCode:(int32_t)errorCode extendedData:(NSDictionary * _Nonnull)extendedData roomID:(NSString * _Nonnull)roomID;
 - (void)onCameraOn:(ZegoUIkitUser * _Nonnull)user isOn:(BOOL)isOn;
 - (void)onMicrophoneOn:(ZegoUIkitUser * _Nonnull)user isOn:(BOOL)isOn;
@@ -397,6 +448,8 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onInvitationAccepted:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
 - (void)onInvitationRefused:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
 - (void)onInvitationCanceled:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
+- (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
+- (void)onMessageSent:(int32_t)errorCode messageID:(uint64_t)messageID;
 @end
 
 
@@ -656,14 +709,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSCoder;
 
-SWIFT_CLASS("_TtC12ZegoUIKitSDK19ZegoAVContainerView")
-@interface ZegoAVContainerView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
-@end
-
-
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoAcceptInvitationButton")
 @interface ZegoAcceptInvitationButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -674,6 +719,14 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoAcceptInvitationButton")
 SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoAudioVideoContainer")
 @interface ZegoAudioVideoContainer : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK27ZegoAudioVideoContainerView")
+@interface ZegoAudioVideoContainerView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 @end
 
 
@@ -708,9 +761,61 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoCancelInvitationButton")
 - (void)buttonClick;
 @end
 
+@class NSString;
+@class NSNumber;
+@class ZegoUIkitUser;
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK17ZegoInRoomMessage")
+@interface ZegoInRoomMessage : NSObject
+@property (nonatomic, copy) NSString * _Nullable message;
+@property (nonatomic) uint64_t messageID;
+@property (nonatomic) uint64_t sendTime;
+@property (nonatomic, strong) ZegoUIkitUser * _Nullable sender;
+- (nonnull instancetype)init:(NSString * _Nonnull)message messageID:(uint64_t)messageID sendTime:(uint64_t)sendTime sender:(ZegoUIkitUser * _Nonnull)sender OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@protocol ZegoInRoomMessageInputDelegate;
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK22ZegoInRoomMessageInput")
+@interface ZegoInRoomMessageInput : UIView
+@property (nonatomic, weak) id <ZegoInRoomMessageInputDelegate> _Nullable delegate;
+@property (nonatomic, copy) NSString * _Nullable placeHolder;
+@property (nonatomic, strong) UIImage * _Nullable iconSend;
+@property (nonatomic) BOOL enable;
+@property (nonatomic) CGFloat minHeight;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+- (void)startEdit;
+@end
+
+
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK30ZegoInRoomMessageInputDelegate_")
+@protocol ZegoInRoomMessageInputDelegate
+- (void)onSubmit;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK21ZegoInRoomMessageView")
+@interface ZegoInRoomMessageView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@property (nonatomic) CGRect frame;
+- (void)layoutSubviews;
+@end
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK16ZegoLayoutConfig")
 @interface ZegoLayoutConfig : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK31ZegoLayoutFixedSideBySideConfig")
+@interface ZegoLayoutFixedSideBySideConfig : ZegoLayoutConfig
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -798,6 +903,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK9ZegoUIKit")
 
 
 
+
 /// Audio route
 typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
 /// Speaker
@@ -814,10 +920,7 @@ typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
   ZegoUIKitAudioOutputDeviceAirPlay = 5,
 };
 
-@class ZegoUIkitUser;
 enum ZegoUIKitRoomStateChangedReason : NSUInteger;
-@class NSNumber;
-@class NSString;
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 @protocol ZegoUIKitEventHandle
@@ -825,6 +928,7 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onRemoteUserJoin:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
 - (void)onRemoteUserLeave:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
 - (void)onOnlySelfInRoom;
+- (void)onUserCountOrPropertyChanged:(NSArray<ZegoUIkitUser *> * _Nullable)userList;
 - (void)onRoomStateChanged:(enum ZegoUIKitRoomStateChangedReason)reason errorCode:(int32_t)errorCode extendedData:(NSDictionary * _Nonnull)extendedData roomID:(NSString * _Nonnull)roomID;
 - (void)onCameraOn:(ZegoUIkitUser * _Nonnull)user isOn:(BOOL)isOn;
 - (void)onMicrophoneOn:(ZegoUIkitUser * _Nonnull)user isOn:(BOOL)isOn;
@@ -838,6 +942,8 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onInvitationAccepted:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
 - (void)onInvitationRefused:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
 - (void)onInvitationCanceled:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
+- (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
+- (void)onMessageSent:(int32_t)errorCode messageID:(uint64_t)messageID;
 @end
 
 
