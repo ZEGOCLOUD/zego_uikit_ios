@@ -313,6 +313,17 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK21ZegoInRoomMessageView")
 - (void)layoutSubviews;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZegoInvitationType, open) {
+  ZegoInvitationTypeVoiceCall = 0,
+  ZegoInvitationTypeVideoCall = 1,
+};
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK10ZegoLayout")
+@interface ZegoLayout : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK16ZegoLayoutConfig")
 @interface ZegoLayoutConfig : NSObject
@@ -320,8 +331,8 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK16ZegoLayoutConfig")
 @end
 
 
-SWIFT_CLASS("_TtC12ZegoUIKitSDK31ZegoLayoutFixedSideBySideConfig")
-@interface ZegoLayoutFixedSideBySideConfig : ZegoLayoutConfig
+SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoLayoutGalleryConfig")
+@interface ZegoLayoutGalleryConfig : ZegoLayoutConfig
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -344,6 +355,30 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoLeaveConfirmDialogInfo")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UINib;
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK14ZegoMemberList")
+@interface ZegoMemberList : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+- (void)registerCell:(Class _Nullable)cellClass forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+- (void)registerNibCell:(UINib * _Nullable)nib forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+@end
+
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK22ZegoMemberListDelegate_")
+@protocol ZegoMemberListDelegate
+@optional
+- (UITableViewCell * _Nullable)getMemberListItemView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath userInfo:(ZegoUIkitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getMemberListItemHeight:(ZegoUIkitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getMemberListHeaderHeight:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)getMemberListviewForHeaderInSection:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoMicrophoneStateIcon")
 @interface ZegoMicrophoneStateIcon : UIImageView
@@ -361,12 +396,27 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoRefuseInvitationButton")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@protocol ZegoStartInvitationButtonDelegate;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK25ZegoStartInvitationButton")
 @interface ZegoStartInvitationButton : UIButton
+@property (nonatomic, strong) UIImage * _Nullable icon;
+@property (nonatomic, copy) NSString * _Nullable text;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull invitees;
+@property (nonatomic, copy) NSString * _Nullable data;
+@property (nonatomic) uint32_t timeout;
+@property (nonatomic) NSInteger type;
+@property (nonatomic, weak) id <ZegoStartInvitationButtonDelegate> _Nullable delegate;
+- (nonnull instancetype)init:(enum ZegoInvitationType)type OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK33ZegoStartInvitationButtonDelegate_")
+@protocol ZegoStartInvitationButtonDelegate
+- (void)onStartInvitationButtonClick;
 @end
 
 
@@ -807,6 +857,17 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK21ZegoInRoomMessageView")
 - (void)layoutSubviews;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZegoInvitationType, open) {
+  ZegoInvitationTypeVoiceCall = 0,
+  ZegoInvitationTypeVideoCall = 1,
+};
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK10ZegoLayout")
+@interface ZegoLayout : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK16ZegoLayoutConfig")
 @interface ZegoLayoutConfig : NSObject
@@ -814,8 +875,8 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK16ZegoLayoutConfig")
 @end
 
 
-SWIFT_CLASS("_TtC12ZegoUIKitSDK31ZegoLayoutFixedSideBySideConfig")
-@interface ZegoLayoutFixedSideBySideConfig : ZegoLayoutConfig
+SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoLayoutGalleryConfig")
+@interface ZegoLayoutGalleryConfig : ZegoLayoutConfig
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -838,6 +899,30 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoLeaveConfirmDialogInfo")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UINib;
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK14ZegoMemberList")
+@interface ZegoMemberList : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+- (void)registerCell:(Class _Nullable)cellClass forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+- (void)registerNibCell:(UINib * _Nullable)nib forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+@end
+
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK22ZegoMemberListDelegate_")
+@protocol ZegoMemberListDelegate
+@optional
+- (UITableViewCell * _Nullable)getMemberListItemView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath userInfo:(ZegoUIkitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getMemberListItemHeight:(ZegoUIkitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getMemberListHeaderHeight:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)getMemberListviewForHeaderInSection:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoMicrophoneStateIcon")
 @interface ZegoMicrophoneStateIcon : UIImageView
@@ -855,12 +940,27 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoRefuseInvitationButton")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@protocol ZegoStartInvitationButtonDelegate;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK25ZegoStartInvitationButton")
 @interface ZegoStartInvitationButton : UIButton
+@property (nonatomic, strong) UIImage * _Nullable icon;
+@property (nonatomic, copy) NSString * _Nullable text;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull invitees;
+@property (nonatomic, copy) NSString * _Nullable data;
+@property (nonatomic) uint32_t timeout;
+@property (nonatomic) NSInteger type;
+@property (nonatomic, weak) id <ZegoStartInvitationButtonDelegate> _Nullable delegate;
+- (nonnull instancetype)init:(enum ZegoInvitationType)type OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK33ZegoStartInvitationButtonDelegate_")
+@protocol ZegoStartInvitationButtonDelegate
+- (void)onStartInvitationButtonClick;
 @end
 
 
