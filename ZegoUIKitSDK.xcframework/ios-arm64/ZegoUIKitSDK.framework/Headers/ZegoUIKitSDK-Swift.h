@@ -266,16 +266,43 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoCancelInvitationButton")
 @end
 
 @class NSString;
+@class UINib;
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK18ZegoInRoomChatView")
+@interface ZegoInRoomChatView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+- (void)registerCell:(Class _Nullable)cellClass forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+- (void)registerNibCell:(UINib * _Nullable)nib forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+@end
+
+@class UITableView;
+@class NSIndexPath;
+@class ZegoInRoomMessage;
+@class UITableViewCell;
 @class NSNumber;
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK26ZegoInRoomChatViewDelegate_")
+@protocol ZegoInRoomChatViewDelegate
+@optional
+- (UITableViewCell * _Nullable)getChatViewItemView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath message:(ZegoInRoomMessage * _Nonnull)message SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getChatViewItemHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath message:(ZegoInRoomMessage * _Nonnull)message SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getChatViewHeaderHeight:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)getChatViewForHeaderInSection:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class ZegoUIkitUser;
+enum ZegoInRoomMessageState : NSInteger;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK17ZegoInRoomMessage")
 @interface ZegoInRoomMessage : NSObject
 @property (nonatomic, copy) NSString * _Nullable message;
-@property (nonatomic) uint64_t messageID;
+@property (nonatomic) int64_t messageID;
 @property (nonatomic) uint64_t sendTime;
-@property (nonatomic, strong) ZegoUIkitUser * _Nullable sender;
-- (nonnull instancetype)init:(NSString * _Nonnull)message messageID:(uint64_t)messageID sendTime:(uint64_t)sendTime sender:(ZegoUIkitUser * _Nonnull)sender OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) ZegoUIkitUser * _Nullable user;
+@property (nonatomic) enum ZegoInRoomMessageState state;
+- (nonnull instancetype)init:(NSString * _Nonnull)message messageID:(int64_t)messageID sendTime:(uint64_t)sendTime user:(ZegoUIkitUser * _Nonnull)user OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -302,6 +329,13 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK30ZegoInRoomMessageInputDelegate_")
 - (void)onSubmit;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZegoInRoomMessageState, open) {
+  ZegoInRoomMessageStateIdle = 0,
+  ZegoInRoomMessageStateSending = 1,
+  ZegoInRoomMessageStateSuccess = 2,
+  ZegoInRoomMessageStateFailed = 3,
+};
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK21ZegoInRoomMessageView")
 @interface ZegoInRoomMessageView : UIView
@@ -309,6 +343,34 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK21ZegoInRoomMessageView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @property (nonatomic) CGRect frame;
 - (void)layoutSubviews;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoInRoomNotificationView")
+@interface ZegoInRoomNotificationView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@property (nonatomic) CGRect frame;
+- (void)registerCell:(Class _Nullable)cellClass forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+- (void)registerNibCell:(UINib * _Nullable)nib forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK32ZegoInRoomNotificationViewConfig")
+@interface ZegoInRoomNotificationViewConfig : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK34ZegoInRoomNotificationViewDelegate_")
+@protocol ZegoInRoomNotificationViewDelegate
+@optional
+- (UITableViewCell * _Nullable)getJoinCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nullable)getLeaveCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nullable)getMessageCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath inRoomMessage:(ZegoInRoomMessage * _Nonnull)inRoomMessage SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getJoinCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getLeaveCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getMessageCellHeight:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath inRoomMessage:(ZegoInRoomMessage * _Nonnull)inRoomMessage SWIFT_WARN_UNUSED_RESULT;
 @end
 
 typedef SWIFT_ENUM(NSInteger, ZegoInvitationType, open) {
@@ -353,7 +415,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoLeaveConfirmDialogInfo")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UINib;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK14ZegoMemberList")
 @interface ZegoMemberList : UIView
@@ -364,9 +425,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK14ZegoMemberList")
 - (void)registerNibCell:(UINib * _Nullable)nib forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
 @end
 
-@class UITableView;
-@class NSIndexPath;
-@class UITableViewCell;
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK22ZegoMemberListDelegate_")
 @protocol ZegoMemberListDelegate
@@ -497,7 +555,7 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onInvitationRefused:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
 - (void)onInvitationCanceled:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
 - (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
-- (void)onMessageSent:(int32_t)errorCode messageID:(uint64_t)messageID;
+- (void)onInRoomMessageSendingStateChanged:(ZegoInRoomMessage * _Nonnull)message;
 @end
 
 
