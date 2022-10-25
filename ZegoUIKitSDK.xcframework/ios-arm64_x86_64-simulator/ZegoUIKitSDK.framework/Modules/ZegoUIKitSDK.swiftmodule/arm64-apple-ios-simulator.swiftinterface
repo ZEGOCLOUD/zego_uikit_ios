@@ -63,6 +63,7 @@ public protocol ZegoRefuseInvitationButtonDelegate : AnyObject {
   }
   @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoRefuseInvitationButtonDelegate?
   @_Concurrency.MainActor(unsafe) public var inviterID: Swift.String?
+  @_Concurrency.MainActor(unsafe) public var data: Swift.String?
   @_Concurrency.MainActor(unsafe) public init(_ inviterID: Swift.String)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
@@ -99,12 +100,6 @@ public protocol ZegoRefuseInvitationButtonDelegate : AnyObject {
   @objc @_Concurrency.MainActor(unsafe) public func registerNibCell(_ nib: UIKit.UINib?, forCellReuseIdentifier: Swift.String)
   @_Concurrency.MainActor(unsafe) public func scrollToLastLine()
   @objc deinit
-}
-extension ZegoUIKitSDK.ZegoUIKit {
-  public func startInvitation(_ invitees: [Swift.String], timeout: Swift.UInt32 = 60, type: Swift.Int, data: Swift.String?)
-  public func cancelInvitation(_ invitees: [Swift.String], data: Swift.String?)
-  public func refuseInvitation(_ inviterID: Swift.String, data: Swift.String?)
-  public func acceptInvitation(_ inviterID: Swift.String, data: Swift.String?)
 }
 public typealias ZegoUIKitSendMessageCallback = (Swift.Result<Any, Swift.Error>) -> Swift.Void
 extension ZegoUIKitSDK.ZegoUIKit {
@@ -172,6 +167,7 @@ public protocol ZegoAudioVideoContainerDelegate : AnyObject {
   @objc optional func onInvitationCanceled(_ inviter: ZegoUIKitSDK.ZegoUIkitUser, data: Swift.String?)
   @objc optional func onInRoomMessageReceived(_ messageList: [ZegoUIKitSDK.ZegoInRoomMessage])
   @objc optional func onInRoomMessageSendingStateChanged(_ message: ZegoUIKitSDK.ZegoInRoomMessage)
+  @objc optional func onSignalingPluginConnectionState(_ params: [Swift.String : Swift.AnyObject])
 }
 public protocol ToggleMicrophoneButtonDelegate : AnyObject {
   func onToggleMicButtonClick(_ isOn: Swift.Bool)
@@ -295,6 +291,25 @@ public protocol ZegoToggleCameraButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
+public typealias PluginCallBack = (_ data: Swift.Dictionary<Swift.String, Swift.AnyObject>?) -> ()
+public enum ZegoUIKitPluginType : Swift.String {
+  case signaling
+  case beauty
+  case whiteboard
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class ZegoUIKitPlugin : ObjectiveC.NSObject {
+  open func getPluginType() -> ZegoUIKitSDK.ZegoUIKitPluginType?
+  open func getVersion() -> Swift.String?
+  open func invoke(_ method: Swift.String, params: Swift.Dictionary<Swift.String, Swift.AnyObject>?, callBack: ZegoUIKitSDK.PluginCallBack?)
+  open func registerPluginEventHandler(_ object: ZegoUIKitSDK.ZegoPluginEventHandle)
+  @objc override dynamic public init()
+  @objc deinit
+}
 extension ZegoUIKitSDK.ZegoUIKit {
   public func login(_ userID: Swift.String, userName: Swift.String)
   public func getUser(_ userID: Swift.String) -> ZegoUIKitSDK.ZegoUIkitUser?
@@ -377,11 +392,14 @@ public protocol AudioVideoViewDelegate : AnyObject {
   @objc override dynamic public init()
   @objc deinit
 }
+@objc public protocol ZegoPluginEventHandle {
+  @objc optional func onPluginEvent(_ event: Swift.String, data: Swift.Dictionary<Swift.String, Swift.AnyObject>?)
+}
 extension UIKit.UIColor {
   public class func colorWithHexString(_ hexString: Swift.String, alpha: CoreGraphics.CGFloat = 1) -> UIKit.UIColor
 }
 @objc public protocol ZegoStartInvitationButtonDelegate {
-  @objc func onStartInvitationButtonClick()
+  @objc func onStartInvitationButtonClick(_ data: [Swift.String : Swift.AnyObject]?)
 }
 @objc @_Concurrency.MainActor(unsafe) open class ZegoStartInvitationButton : UIKit.UIButton {
   @objc @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage? {
@@ -506,6 +524,31 @@ public enum ZegoViewPosition : Swift.Int {
     get
   }
 }
+@objc public enum ZegoPluginConnectionState : Swift.Int {
+  case disconnected
+  case connecting
+  case connected
+  case reconnecting
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitInvitationService : ObjectiveC.NSObject {
+  public static let shared: ZegoUIKitSDK.ZegoUIKitInvitationService
+  public func installPlugins(_ plugins: [ZegoUIKitSDK.ZegoUIKitPlugin])
+  public func getPlugin(_ type: ZegoUIKitSDK.ZegoUIKitPluginType) -> ZegoUIKitSDK.ZegoUIKitPlugin?
+  public func initWithAppID(appID: Swift.UInt32, appSign: Swift.String)
+  public func uninit()
+  public func login(_ userID: Swift.String, userName: Swift.String)
+  public func loginOut()
+  public func sendInvitation(_ invitees: [Swift.String], timeout: Swift.UInt32, type: Swift.Int, data: Swift.String?, callback: ZegoUIKitSDK.PluginCallBack?)
+  public func cancelInvitation(_ invitees: [Swift.String], data: Swift.String?, callback: ZegoUIKitSDK.PluginCallBack?)
+  public func refuseInvitation(_ inviterID: Swift.String, data: Swift.String?)
+  public func acceptInvitation(_ inviterID: Swift.String, data: Swift.String?)
+  @objc deinit
+}
 @objc @_Concurrency.MainActor(unsafe) public class ZegoMicrophoneStateIcon : UIKit.UIImageView {
   @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
     get
@@ -562,6 +605,31 @@ public protocol ZegoCancelInvitationButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
+public enum ZegoPluginMethodName : Swift.String {
+  case init_method
+  case uinit_method
+  case login_method
+  case logout_method
+  case sendInvitation_method
+  case cancelInvitation_method
+  case refuseInvitation_method
+  case acceptInvitation_method
+  case onCallInvitationReceived_method
+  case onCallInvitationCancelled_method
+  case onCallInvitationAccepted_method
+  case onCallInvitationRejected_method
+  case onCallInvitationTimeout_method
+  case onCallInviteesAnsweredTimeout_method
+  case onConnectionStateChanged_method
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension ZegoUIKitSDK.ZegoUIKitPluginType : Swift.Equatable {}
+extension ZegoUIKitSDK.ZegoUIKitPluginType : Swift.Hashable {}
+extension ZegoUIKitSDK.ZegoUIKitPluginType : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoUIKitVideoFillMode : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoUIKitVideoFillMode : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoUIKitVideoFillMode : Swift.RawRepresentable {}
@@ -583,3 +651,9 @@ extension ZegoUIKitSDK.ZegoInvitationType : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoInRoomMessageState : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoInRoomMessageState : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoInRoomMessageState : Swift.RawRepresentable {}
+extension ZegoUIKitSDK.ZegoPluginConnectionState : Swift.Equatable {}
+extension ZegoUIKitSDK.ZegoPluginConnectionState : Swift.Hashable {}
+extension ZegoUIKitSDK.ZegoPluginConnectionState : Swift.RawRepresentable {}
+extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.Equatable {}
+extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.Hashable {}
+extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.RawRepresentable {}

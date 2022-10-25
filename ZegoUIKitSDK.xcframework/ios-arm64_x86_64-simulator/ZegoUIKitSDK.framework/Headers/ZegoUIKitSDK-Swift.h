@@ -446,6 +446,20 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoMicrophoneStateIcon")
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZegoPluginConnectionState, open) {
+  ZegoPluginConnectionStateDisconnected = 0,
+  ZegoPluginConnectionStateConnecting = 1,
+  ZegoPluginConnectionStateConnected = 2,
+  ZegoPluginConnectionStateReconnecting = 3,
+};
+
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK21ZegoPluginEventHandle_")
+@protocol ZegoPluginEventHandle
+@optional
+- (void)onPluginEvent:(NSString * _Nonnull)event data:(NSDictionary<NSString *, id> * _Nullable)data;
+@end
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoRefuseInvitationButton")
 @interface ZegoRefuseInvitationButton : UIButton
@@ -474,7 +488,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK25ZegoStartInvitationButton")
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK33ZegoStartInvitationButtonDelegate_")
 @protocol ZegoStartInvitationButtonDelegate
-- (void)onStartInvitationButtonClick;
+- (void)onStartInvitationButtonClick:(NSDictionary<NSString *, id> * _Nullable)data;
 @end
 
 
@@ -558,6 +572,20 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onInvitationCanceled:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
 - (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
 - (void)onInRoomMessageSendingStateChanged:(ZegoInRoomMessage * _Nonnull)message;
+- (void)onSignalingPluginConnectionState:(NSDictionary<NSString *, id> * _Nonnull)params;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoUIKitInvitationService")
+@interface ZegoUIKitInvitationService : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK15ZegoUIKitPlugin")
+@interface ZegoUIKitPlugin : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1048,6 +1076,20 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoMicrophoneStateIcon")
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZegoPluginConnectionState, open) {
+  ZegoPluginConnectionStateDisconnected = 0,
+  ZegoPluginConnectionStateConnecting = 1,
+  ZegoPluginConnectionStateConnected = 2,
+  ZegoPluginConnectionStateReconnecting = 3,
+};
+
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK21ZegoPluginEventHandle_")
+@protocol ZegoPluginEventHandle
+@optional
+- (void)onPluginEvent:(NSString * _Nonnull)event data:(NSDictionary<NSString *, id> * _Nullable)data;
+@end
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoRefuseInvitationButton")
 @interface ZegoRefuseInvitationButton : UIButton
@@ -1076,7 +1118,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK25ZegoStartInvitationButton")
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK33ZegoStartInvitationButtonDelegate_")
 @protocol ZegoStartInvitationButtonDelegate
-- (void)onStartInvitationButtonClick;
+- (void)onStartInvitationButtonClick:(NSDictionary<NSString *, id> * _Nullable)data;
 @end
 
 
@@ -1160,6 +1202,20 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onInvitationCanceled:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
 - (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
 - (void)onInRoomMessageSendingStateChanged:(ZegoInRoomMessage * _Nonnull)message;
+- (void)onSignalingPluginConnectionState:(NSDictionary<NSString *, id> * _Nonnull)params;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoUIKitInvitationService")
+@interface ZegoUIKitInvitationService : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK15ZegoUIKitPlugin")
+@interface ZegoUIKitPlugin : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
