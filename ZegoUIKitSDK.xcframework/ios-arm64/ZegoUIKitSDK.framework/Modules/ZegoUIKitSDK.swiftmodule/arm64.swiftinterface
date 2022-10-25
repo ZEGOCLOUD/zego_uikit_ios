@@ -4,7 +4,6 @@
 import Foundation
 import Swift
 import UIKit
-import ZIM
 import ZegoExpressEngine
 import _Concurrency
 @objc public protocol ZegoInRoomMessageInputDelegate {
