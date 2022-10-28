@@ -148,6 +148,6 @@ Pod::Spec.new do |spec|
   #   # end
   # end
   spec.vendored_frameworks = 'ZegoUIKitSDK.xcframework'
-  spec.dependency 'ZegoExpressEngine'
+  spec.dependency 'ZegoExpressEngine', '2.23.0'
 
 end
