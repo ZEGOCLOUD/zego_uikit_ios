@@ -294,7 +294,7 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK26ZegoInRoomChatViewDelegate_")
 - (UIView * _Nullable)getChatViewForHeaderInSection:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class ZegoUIkitUser;
+@class ZegoUIKitUser;
 enum ZegoInRoomMessageState : NSInteger;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK17ZegoInRoomMessage")
@@ -302,9 +302,9 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK17ZegoInRoomMessage")
 @property (nonatomic, copy) NSString * _Nullable message;
 @property (nonatomic) int64_t messageID;
 @property (nonatomic) uint64_t sendTime;
-@property (nonatomic, strong) ZegoUIkitUser * _Nullable user;
+@property (nonatomic, strong) ZegoUIKitUser * _Nullable user;
 @property (nonatomic) enum ZegoInRoomMessageState state;
-- (nonnull instancetype)init:(NSString * _Nonnull)message messageID:(int64_t)messageID sendTime:(uint64_t)sendTime user:(ZegoUIkitUser * _Nonnull)user OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSString * _Nonnull)message messageID:(int64_t)messageID sendTime:(uint64_t)sendTime user:(ZegoUIKitUser * _Nonnull)user OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -367,18 +367,13 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK32ZegoInRoomNotificationViewConfig")
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK34ZegoInRoomNotificationViewDelegate_")
 @protocol ZegoInRoomNotificationViewDelegate
 @optional
-- (UITableViewCell * _Nullable)getJoinCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
-- (UITableViewCell * _Nullable)getLeaveCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nullable)getJoinCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIKitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nullable)getLeaveCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIKitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nullable)getMessageCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath inRoomMessage:(ZegoInRoomMessage * _Nonnull)inRoomMessage SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)getJoinCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)getLeaveCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getJoinCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIKitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getLeaveCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIKitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)getMessageCellHeight:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath inRoomMessage:(ZegoInRoomMessage * _Nonnull)inRoomMessage SWIFT_WARN_UNUSED_RESULT;
 @end
-
-typedef SWIFT_ENUM(NSInteger, ZegoInvitationType, open) {
-  ZegoInvitationTypeVoiceCall = 0,
-  ZegoInvitationTypeVideoCall = 1,
-};
 
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK10ZegoLayout")
@@ -425,16 +420,18 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK14ZegoMemberList")
 - (void)layoutSubviews;
 - (void)registerCell:(Class _Nullable)cellClass forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
 - (void)registerNibCell:(UINib * _Nullable)nib forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+- (void)reloadData;
 @end
 
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK22ZegoMemberListDelegate_")
 @protocol ZegoMemberListDelegate
 @optional
-- (UITableViewCell * _Nullable)getMemberListItemView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath userInfo:(ZegoUIkitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)getMemberListItemHeight:(ZegoUIkitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nullable)getMemberListItemView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath userInfo:(ZegoUIKitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getMemberListItemHeight:(ZegoUIKitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)getMemberListHeaderHeight:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nullable)getMemberListviewForHeaderInSection:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<ZegoUIKitUser *> * _Nonnull)sortUserList:(NSArray<ZegoUIKitUser *> * _Nonnull)userList SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -479,7 +476,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK25ZegoStartInvitationButton")
 @property (nonatomic) uint32_t timeout;
 @property (nonatomic) NSInteger type;
 @property (nonatomic, weak) id <ZegoStartInvitationButtonDelegate> _Nullable delegate;
-- (nonnull instancetype)init:(enum ZegoInvitationType)type OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSInteger)type OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -531,7 +528,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK9ZegoUIKit")
 
 
 
-
 /// Audio route
 typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
 /// Speaker
@@ -553,23 +549,25 @@ enum ZegoUIKitRoomStateChangedReason : NSUInteger;
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 @protocol ZegoUIKitEventHandle
 @optional
-- (void)onRemoteUserJoin:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
-- (void)onRemoteUserLeave:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
+- (void)onRemoteUserJoin:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onRemoteUserLeave:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
 - (void)onOnlySelfInRoom;
-- (void)onUserCountOrPropertyChanged:(NSArray<ZegoUIkitUser *> * _Nullable)userList;
+- (void)onUserCountOrPropertyChanged:(NSArray<ZegoUIKitUser *> * _Nullable)userList;
 - (void)onRoomStateChanged:(enum ZegoUIKitRoomStateChangedReason)reason errorCode:(int32_t)errorCode extendedData:(NSDictionary * _Nonnull)extendedData roomID:(NSString * _Nonnull)roomID;
-- (void)onCameraOn:(ZegoUIkitUser * _Nonnull)user isOn:(BOOL)isOn;
-- (void)onMicrophoneOn:(ZegoUIkitUser * _Nonnull)user isOn:(BOOL)isOn;
-- (void)onSoundLevelUpdate:(ZegoUIkitUser * _Nonnull)userInfo level:(double)level;
-- (void)onAudioVideoAvailable:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
-- (void)onAudioVideoUnavailable:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
+- (void)onRoomPropertyUpdated:(NSString * _Nonnull)key oldValue:(NSString * _Nonnull)oldValue newValue:(NSString * _Nonnull)newValue;
+- (void)onRoomPropertiesFullUpdated:(NSArray<NSString *> * _Nonnull)updateKeys oldProperties:(NSDictionary<NSString *, NSString *> * _Nonnull)oldProperties properties:(NSDictionary<NSString *, NSString *> * _Nonnull)properties;
+- (void)onCameraOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
+- (void)onMicrophoneOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
+- (void)onSoundLevelUpdate:(ZegoUIKitUser * _Nonnull)userInfo level:(double)level;
+- (void)onAudioVideoAvailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onAudioVideoUnavailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
 - (void)onAudioOutputDeviceChange:(enum ZegoUIKitAudioOutputDevice)audioRoute;
-- (void)onInvitationReceived:(ZegoUIkitUser * _Nonnull)inviter type:(NSInteger)type data:(NSString * _Nullable)data;
-- (void)onInvitationTimeout:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
-- (void)onInvitationResponseTimeout:(NSArray<ZegoUIkitUser *> * _Nonnull)invitees data:(NSString * _Nullable)data;
-- (void)onInvitationAccepted:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
-- (void)onInvitationRefused:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
-- (void)onInvitationCanceled:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
+- (void)onInvitationReceived:(ZegoUIKitUser * _Nonnull)inviter type:(NSInteger)type data:(NSString * _Nullable)data;
+- (void)onInvitationTimeout:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
+- (void)onInvitationResponseTimeout:(NSArray<ZegoUIKitUser *> * _Nonnull)invitees data:(NSString * _Nullable)data;
+- (void)onInvitationAccepted:(ZegoUIKitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
+- (void)onInvitationRefused:(ZegoUIKitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
+- (void)onInvitationCanceled:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
 - (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
 - (void)onInRoomMessageSendingStateChanged:(ZegoInRoomMessage * _Nonnull)message;
 - (void)onSignalingPluginConnectionState:(NSDictionary<NSString *, id> * _Nonnull)params;
@@ -617,8 +615,8 @@ typedef SWIFT_ENUM(NSUInteger, ZegoUIKitRoomStateChangedReason, open) {
 };
 
 
-SWIFT_CLASS("_TtC12ZegoUIKitSDK13ZegoUIkitUser")
-@interface ZegoUIkitUser : NSObject
+SWIFT_CLASS("_TtC12ZegoUIKitSDK13ZegoUIKitUser")
+@interface ZegoUIKitUser : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -924,7 +922,7 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK26ZegoInRoomChatViewDelegate_")
 - (UIView * _Nullable)getChatViewForHeaderInSection:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class ZegoUIkitUser;
+@class ZegoUIKitUser;
 enum ZegoInRoomMessageState : NSInteger;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK17ZegoInRoomMessage")
@@ -932,9 +930,9 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK17ZegoInRoomMessage")
 @property (nonatomic, copy) NSString * _Nullable message;
 @property (nonatomic) int64_t messageID;
 @property (nonatomic) uint64_t sendTime;
-@property (nonatomic, strong) ZegoUIkitUser * _Nullable user;
+@property (nonatomic, strong) ZegoUIKitUser * _Nullable user;
 @property (nonatomic) enum ZegoInRoomMessageState state;
-- (nonnull instancetype)init:(NSString * _Nonnull)message messageID:(int64_t)messageID sendTime:(uint64_t)sendTime user:(ZegoUIkitUser * _Nonnull)user OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSString * _Nonnull)message messageID:(int64_t)messageID sendTime:(uint64_t)sendTime user:(ZegoUIKitUser * _Nonnull)user OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -997,18 +995,13 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK32ZegoInRoomNotificationViewConfig")
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK34ZegoInRoomNotificationViewDelegate_")
 @protocol ZegoInRoomNotificationViewDelegate
 @optional
-- (UITableViewCell * _Nullable)getJoinCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
-- (UITableViewCell * _Nullable)getLeaveCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nullable)getJoinCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIKitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nullable)getLeaveCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIKitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nullable)getMessageCell:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath inRoomMessage:(ZegoInRoomMessage * _Nonnull)inRoomMessage SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)getJoinCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)getLeaveCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIkitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getJoinCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIKitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getLeaveCellHeight:(UITableView * _Nonnull)tableView heightForRowAt:(NSIndexPath * _Nonnull)indexPath uiKitUser:(ZegoUIKitUser * _Nonnull)uiKitUser SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)getMessageCellHeight:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath inRoomMessage:(ZegoInRoomMessage * _Nonnull)inRoomMessage SWIFT_WARN_UNUSED_RESULT;
 @end
-
-typedef SWIFT_ENUM(NSInteger, ZegoInvitationType, open) {
-  ZegoInvitationTypeVoiceCall = 0,
-  ZegoInvitationTypeVideoCall = 1,
-};
 
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK10ZegoLayout")
@@ -1055,16 +1048,18 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK14ZegoMemberList")
 - (void)layoutSubviews;
 - (void)registerCell:(Class _Nullable)cellClass forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
 - (void)registerNibCell:(UINib * _Nullable)nib forCellReuseIdentifier:(NSString * _Nonnull)forCellReuseIdentifier;
+- (void)reloadData;
 @end
 
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK22ZegoMemberListDelegate_")
 @protocol ZegoMemberListDelegate
 @optional
-- (UITableViewCell * _Nullable)getMemberListItemView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath userInfo:(ZegoUIkitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)getMemberListItemHeight:(ZegoUIkitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nullable)getMemberListItemView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath userInfo:(ZegoUIKitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)getMemberListItemHeight:(ZegoUIKitUser * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)getMemberListHeaderHeight:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nullable)getMemberListviewForHeaderInSection:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<ZegoUIKitUser *> * _Nonnull)sortUserList:(NSArray<ZegoUIKitUser *> * _Nonnull)userList SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1109,7 +1104,7 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK25ZegoStartInvitationButton")
 @property (nonatomic) uint32_t timeout;
 @property (nonatomic) NSInteger type;
 @property (nonatomic, weak) id <ZegoStartInvitationButtonDelegate> _Nullable delegate;
-- (nonnull instancetype)init:(enum ZegoInvitationType)type OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSInteger)type OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1161,7 +1156,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK9ZegoUIKit")
 
 
 
-
 /// Audio route
 typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
 /// Speaker
@@ -1183,23 +1177,25 @@ enum ZegoUIKitRoomStateChangedReason : NSUInteger;
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 @protocol ZegoUIKitEventHandle
 @optional
-- (void)onRemoteUserJoin:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
-- (void)onRemoteUserLeave:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
+- (void)onRemoteUserJoin:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onRemoteUserLeave:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
 - (void)onOnlySelfInRoom;
-- (void)onUserCountOrPropertyChanged:(NSArray<ZegoUIkitUser *> * _Nullable)userList;
+- (void)onUserCountOrPropertyChanged:(NSArray<ZegoUIKitUser *> * _Nullable)userList;
 - (void)onRoomStateChanged:(enum ZegoUIKitRoomStateChangedReason)reason errorCode:(int32_t)errorCode extendedData:(NSDictionary * _Nonnull)extendedData roomID:(NSString * _Nonnull)roomID;
-- (void)onCameraOn:(ZegoUIkitUser * _Nonnull)user isOn:(BOOL)isOn;
-- (void)onMicrophoneOn:(ZegoUIkitUser * _Nonnull)user isOn:(BOOL)isOn;
-- (void)onSoundLevelUpdate:(ZegoUIkitUser * _Nonnull)userInfo level:(double)level;
-- (void)onAudioVideoAvailable:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
-- (void)onAudioVideoUnavailable:(NSArray<ZegoUIkitUser *> * _Nonnull)userList;
+- (void)onRoomPropertyUpdated:(NSString * _Nonnull)key oldValue:(NSString * _Nonnull)oldValue newValue:(NSString * _Nonnull)newValue;
+- (void)onRoomPropertiesFullUpdated:(NSArray<NSString *> * _Nonnull)updateKeys oldProperties:(NSDictionary<NSString *, NSString *> * _Nonnull)oldProperties properties:(NSDictionary<NSString *, NSString *> * _Nonnull)properties;
+- (void)onCameraOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
+- (void)onMicrophoneOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
+- (void)onSoundLevelUpdate:(ZegoUIKitUser * _Nonnull)userInfo level:(double)level;
+- (void)onAudioVideoAvailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onAudioVideoUnavailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
 - (void)onAudioOutputDeviceChange:(enum ZegoUIKitAudioOutputDevice)audioRoute;
-- (void)onInvitationReceived:(ZegoUIkitUser * _Nonnull)inviter type:(NSInteger)type data:(NSString * _Nullable)data;
-- (void)onInvitationTimeout:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
-- (void)onInvitationResponseTimeout:(NSArray<ZegoUIkitUser *> * _Nonnull)invitees data:(NSString * _Nullable)data;
-- (void)onInvitationAccepted:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
-- (void)onInvitationRefused:(ZegoUIkitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
-- (void)onInvitationCanceled:(ZegoUIkitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
+- (void)onInvitationReceived:(ZegoUIKitUser * _Nonnull)inviter type:(NSInteger)type data:(NSString * _Nullable)data;
+- (void)onInvitationTimeout:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
+- (void)onInvitationResponseTimeout:(NSArray<ZegoUIKitUser *> * _Nonnull)invitees data:(NSString * _Nullable)data;
+- (void)onInvitationAccepted:(ZegoUIKitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
+- (void)onInvitationRefused:(ZegoUIKitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
+- (void)onInvitationCanceled:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
 - (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
 - (void)onInRoomMessageSendingStateChanged:(ZegoInRoomMessage * _Nonnull)message;
 - (void)onSignalingPluginConnectionState:(NSDictionary<NSString *, id> * _Nonnull)params;
@@ -1247,8 +1243,8 @@ typedef SWIFT_ENUM(NSUInteger, ZegoUIKitRoomStateChangedReason, open) {
 };
 
 
-SWIFT_CLASS("_TtC12ZegoUIKitSDK13ZegoUIkitUser")
-@interface ZegoUIkitUser : NSObject
+SWIFT_CLASS("_TtC12ZegoUIKitSDK13ZegoUIKitUser")
+@interface ZegoUIKitUser : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
