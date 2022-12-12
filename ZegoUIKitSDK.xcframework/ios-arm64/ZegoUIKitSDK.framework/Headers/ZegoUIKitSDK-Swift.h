@@ -247,6 +247,12 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK24ZegoAudioVideoViewConfig")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+typedef SWIFT_ENUM(NSInteger, ZegoAvatarAlignment, open) {
+  ZegoAvatarAlignmentCenter = 0,
+  ZegoAvatarAlignmentStart = 1,
+  ZegoAvatarAlignmentEnd = 2,
+};
+
 @class UIImage;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK19ZegoCameraStateIcon")
@@ -543,6 +549,7 @@ typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
 };
 
 enum ZegoUIKitRoomStateChangedReason : NSUInteger;
+@class ZegoUserInRoomAttributesInfo;
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 @protocol ZegoUIKitEventHandle
@@ -569,13 +576,8 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
 - (void)onInRoomMessageSendingStateChanged:(ZegoInRoomMessage * _Nonnull)message;
 - (void)onSignalingPluginConnectionState:(NSDictionary<NSString *, id> * _Nonnull)params;
-@end
-
-
-SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoUIKitInvitationService")
-@interface ZegoUIKitInvitationService : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)onUsersInRoomAttributesUpdated:(NSArray<NSString *> * _Nullable)updateKeys oldAttributes:(NSArray<ZegoUserInRoomAttributesInfo *> * _Nullable)oldAttributes attributes:(NSArray<ZegoUserInRoomAttributesInfo *> * _Nullable)attributes editor:(ZegoUIKitUser * _Nullable)editor;
+- (void)onRoomMemberLeft:(NSArray<NSString *> * _Nullable)userIDList roomID:(NSString * _Nonnull)roomID;
 @end
 
 
@@ -613,10 +615,29 @@ typedef SWIFT_ENUM(NSUInteger, ZegoUIKitRoomStateChangedReason, open) {
 };
 
 
+SWIFT_CLASS("_TtC12ZegoUIKitSDK28ZegoUIKitSignalingPluginImpl")
+@interface ZegoUIKitSignalingPluginImpl : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC12ZegoUIKitSDK13ZegoUIKitUser")
 @interface ZegoUIKitUser : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK28ZegoUserInRoomAttributesInfo")
+@interface ZegoUserInRoomAttributesInfo : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK36ZegoUsersInRoomAttributesQueryConfig")
+@interface ZegoUsersInRoomAttributesQueryConfig : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #if __has_attribute(external_source_symbol)
