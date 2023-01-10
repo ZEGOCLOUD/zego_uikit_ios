@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		twlX6Co7jOYCFPwCRrlV5daUPOs=
+		cCRsh98PBqE4TjLE7upBgw3idJ8=
 		</data>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<data>
@@ -18,15 +18,15 @@
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		J1MFOXbBgGLtCHSbURw8DfHmAJU=
+		MroOcfefJ061XjtUun1C5Zu2lMo=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		J3/oNEM0KDDFnN0YUdi2g1V8W8w=
+		gs4RXl87AaJ4HsUv2UhtMBRdKuY=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		DYS9XXmwPnnxM8lau+FvA+RT3gU=
+		fM9T16GrIVNyGqwY8KYS9sbldpo=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		DYS9XXmwPnnxM8lau+FvA+RT3gU=
+		fM9T16GrIVNyGqwY8KYS9sbldpo=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		GQsWDez6SvPbIGODQVAKlCAwSaY=
+		1IQVrv4v2mqdL/N9qL3DGW1pt+Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NayjkBmu/YfwImmRskOCIWI/0CF8opRNTms4OOpYPFk=
+			bWcaozPA9ZBRpINVur7AoJTdQnJbxlP2Sn42FJ/mIoQ=
 			</data>
 		</dict>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
@@ -65,21 +65,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J4DWlj82z7WirUqp1m5i9WntjcDMkQg3RbQP+tbJVB8=
+			2yOI+X1WcfIo7Y4WTNaZ2b72h2OHyZxUKZFzsweb7SI=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nor0G2wlUZfuxohd/xIkHQVuztCXkr6Xlb9Dw+alSqY=
+			2nSUK+LktjsdLeTsxdZCVIaAbKOUD90IPpl4mBQjia0=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aHR1rXbPUtTyGkL6DlYP0gxCFQMSvQzOdHpr/hK1UYw=
+			YzqYl3IVKREvZKFAF8SN3jXXDbjQmeRBNQsHaNevGVc=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -93,14 +93,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aHR1rXbPUtTyGkL6DlYP0gxCFQMSvQzOdHpr/hK1UYw=
+			YzqYl3IVKREvZKFAF8SN3jXXDbjQmeRBNQsHaNevGVc=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f65z1aqzKrOFBYDv3bKa/n57OfTR8BzK1B6fY5YwBBs=
+			YoNoJ7JWNX8B2EPyvLO0m+TQFOePKWDMz/wOOd7if2o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

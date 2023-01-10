@@ -21185,6 +21185,484 @@
         "printedName": "ZegoSignalingInRoomTextMessage",
         "children": [
           {
+            "kind": "Var",
+            "name": "messageID",
+            "printedName": "messageID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9messageIDs5Int64Vvp",
+            "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9messageIDs5Int64Vvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9messageIDs5Int64Vvg",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9messageIDs5Int64Vvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9messageIDs5Int64Vvs",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9messageIDs5Int64Vvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9messageIDs5Int64VvM",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9messageIDs5Int64VvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9timestamps5Int64Vvp",
+            "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9timestamps5Int64Vvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9timestamps5Int64Vvg",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9timestamps5Int64Vvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9timestamps5Int64Vvs",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9timestamps5Int64Vvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9timestamps5Int64VvM",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC9timestamps5Int64VvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "orderKey",
+            "printedName": "orderKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC8orderKeys5Int64Vvp",
+            "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC8orderKeys5Int64Vvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC8orderKeys5Int64Vvg",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC8orderKeys5Int64Vvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC8orderKeys5Int64Vvs",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC8orderKeys5Int64Vvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC8orderKeys5Int64VvM",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC8orderKeys5Int64VvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "senderUserID",
+            "printedName": "senderUserID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC12senderUserIDSSSgvp",
+            "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC12senderUserIDSSSgvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC12senderUserIDSSSgvg",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC12senderUserIDSSSgvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC12senderUserIDSSSgvs",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC12senderUserIDSSSgvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC12senderUserIDSSSgvM",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC12senderUserIDSSSgvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "text",
+            "printedName": "text",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC4textSSSgvp",
+            "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC4textSSSgvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC4textSSSgvg",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC4textSSSgvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC4textSSSgvs",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC4textSSSgvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A26SignalingInRoomTextMessageC4textSSSgvM",
+                "mangledName": "$s12ZegoUIKitSDK0A26SignalingInRoomTextMessageC4textSSSgvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -28714,112 +29192,112 @@
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 196,
+      "offset": 203,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 225,
+      "offset": 239,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 253,
+      "offset": 274,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Array",
-      "offset": 513,
+      "offset": 548,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Array",
-      "offset": 596,
+      "offset": 631,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Dictionary",
-      "offset": 656,
+      "offset": 691,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 10997,
+      "offset": 11032,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 11020,
+      "offset": 11055,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 11049,
+      "offset": 11084,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 12234,
+      "offset": 12269,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 13760,
+      "offset": 13795,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 13798,
+      "offset": 13833,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 13826,
+      "offset": 13861,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Dictionary",
-      "offset": 28348,
+      "offset": 28383,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "StringLiteral",
-      "offset": 28451,
+      "offset": 28486,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios\/ZegoUIKit\/ZegoUIKit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 28482,
+      "offset": 28517,
       "length": 3,
       "value": "100"
     },

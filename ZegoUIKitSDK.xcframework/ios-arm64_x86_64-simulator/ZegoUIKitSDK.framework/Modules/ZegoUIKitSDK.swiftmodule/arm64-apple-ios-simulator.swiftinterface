@@ -582,6 +582,11 @@ public enum ZegoViewPosition : Swift.Int {
   }
 }
 @objc @_inheritsConvenienceInitializers public class ZegoSignalingInRoomTextMessage : ObjectiveC.NSObject {
+  public var messageID: Swift.Int64
+  public var timestamp: Swift.Int64
+  public var orderKey: Swift.Int64
+  public var senderUserID: Swift.String?
+  public var text: Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }
