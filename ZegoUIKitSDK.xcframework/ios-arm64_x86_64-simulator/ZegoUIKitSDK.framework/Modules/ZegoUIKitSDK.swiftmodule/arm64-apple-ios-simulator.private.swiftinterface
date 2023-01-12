@@ -1,36 +1,14 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZegoUIKitSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
+import Foundation/*.NSObject*/
 import Swift
 import UIKit
 import ZegoExpressEngine
 import _Concurrency
 import _StringProcessing
-@objc public protocol ZegoInRoomMessageInputDelegate {
-  @objc func onSubmit()
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoInRoomMessageInput : UIKit.UIView {
-  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoInRoomMessageInputDelegate?
-  @objc @_Concurrency.MainActor(unsafe) public var placeHolder: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor(unsafe) public var iconSend: UIKit.UIImage? {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor(unsafe) public var enable: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor(unsafe) public var minHeight: CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @objc @_Concurrency.MainActor(unsafe) public func startEdit()
-  @objc deinit
-}
 extension ZegoUIKitSDK.ZegoUIKit {
   public func joinRoom(_ userID: Swift.String, userName: Swift.String, roomID: Swift.String, markAsLargeRoom: Swift.Bool = false)
   public func leaveRoom()
@@ -39,160 +17,63 @@ extension ZegoUIKitSDK.ZegoUIKit {
   public func updateRoomProperties(_ roomProperties: [Swift.String : Swift.String], callback: ZegoUIKitSDK.ZegoUIKitCallBack?)
   public func removeUserFromRoom(_ userIDs: [Swift.String])
 }
-@objc @_Concurrency.MainActor(unsafe) public class ZegoCameraStateIcon : UIKit.UIImageView {
-  @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
-    get
-    set
+@objc @_inheritsConvenienceInitializers public class ZegoLayoutConfig : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol ZegoStartInvitationButtonDelegate {
+  @objc func onStartInvitationButtonClick(_ data: [Swift.String : Swift.AnyObject]?)
+}
+@objc @_Concurrency.MainActor(unsafe) open class ZegoStartInvitationButton : UIKit.UIButton {
+  @objc @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage? {
+    @objc get
+    @objc set
   }
-  @_Concurrency.MainActor(unsafe) public var iconCameraOn: UIKit.UIImage?
-  @_Concurrency.MainActor(unsafe) public var iconCameraOff: UIKit.UIImage?
-  @_Concurrency.MainActor(unsafe) public var isOn: Swift.Bool {
+  @objc @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var invitees: [Swift.String]
+  @objc @_Concurrency.MainActor(unsafe) public var data: Swift.String?
+  @objc @_Concurrency.MainActor(unsafe) public var timeout: Swift.UInt32
+  @objc @_Concurrency.MainActor(unsafe) public var type: Swift.Int
+  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoStartInvitationButtonDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public init(_ type: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) open func buttonClick()
+  @objc deinit
+}
+@objc @objcMembers open class ZegoInRoomMessage : ObjectiveC.NSObject {
+  @objc public var message: Swift.String?
+  @objc public var messageID: Swift.Int64
+  @objc public var sendTime: Swift.UInt64
+  @objc public var user: ZegoUIKitSDK.ZegoUIKitUser?
+  @objc public var state: ZegoUIKitSDK.ZegoInRoomMessageState
+  @objc public init(_ message: Swift.String, messageID: Swift.Int64, sendTime: Swift.UInt64, user: ZegoUIKitSDK.ZegoUIKitUser)
+  @objc deinit
+}
+public protocol LeaveButtonDelegate : AnyObject {
+  func onLeaveButtonClick(_ isLeave: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers public class ZegoLeaveConfirmDialogInfo : ObjectiveC.NSObject {
+  public var title: Swift.String?
+  public var message: Swift.String?
+  public var cancelButtonName: Swift.String?
+  public var confirmButtonName: Swift.String?
+  weak public var dialogPresentVC: UIKit.UIViewController?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ZegoLeaveButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.LeaveButtonDelegate?
+  @_Concurrency.MainActor(unsafe) public var quitConfirmDialogInfo: ZegoUIKitSDK.ZegoLeaveConfirmDialogInfo
+  @_Concurrency.MainActor(unsafe) public var iconLeave: UIKit.UIImage {
     get
     set
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-}
-public protocol ZegoRefuseInvitationButtonDelegate : AnyObject {
-  func onRefuseInvitationButtonClick()
-}
-@objc @_Concurrency.MainActor(unsafe) public class ZegoRefuseInvitationButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoRefuseInvitationButtonDelegate?
-  @_Concurrency.MainActor(unsafe) public var inviterID: Swift.String?
-  @_Concurrency.MainActor(unsafe) public var data: Swift.String?
-  @_Concurrency.MainActor(unsafe) public init(_ inviterID: Swift.String)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class ZegoLayoutPictureInPictureConfig : ZegoUIKitSDK.ZegoLayoutConfig {
-  public var isSmallViewDraggable: Swift.Bool
-  public var smallViewBackgroundColor: UIKit.UIColor
-  public var largeViewBackgroundColor: UIKit.UIColor
-  public var smallViewBackgroundImage: UIKit.UIImage?
-  public var largeViewBackgroundImage: UIKit.UIImage?
-  public var smallViewPostion: ZegoUIKitSDK.ZegoViewPosition
-  public var switchLargeOrSmallViewByClick: Swift.Bool
-  public var smallViewSize: CoreFoundation.CGSize
-  public var spacingBetweenSmallViews: CoreFoundation.CGFloat
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class ZegoLayoutGalleryConfig : ZegoUIKitSDK.ZegoLayoutConfig {
-  public var addBorderRadiusAndSpacingBetweenView: Swift.Bool
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc public protocol ZegoInRoomChatViewDelegate {
-  @objc optional func getChatViewItemView(_ tableView: UIKit.UITableView, indexPath: Foundation.IndexPath, message: ZegoUIKitSDK.ZegoInRoomMessage) -> UIKit.UITableViewCell?
-  @objc optional func getChatViewItemHeight(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath, message: ZegoUIKitSDK.ZegoInRoomMessage) -> CoreFoundation.CGFloat
-  @objc optional func getChatViewHeaderHeight(_ tableView: UIKit.UITableView, section: Swift.Int) -> CoreFoundation.CGFloat
-  @objc optional func getChatViewForHeaderInSection(_ tableView: UIKit.UITableView, section: Swift.Int) -> UIKit.UIView?
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoInRoomChatView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoInRoomChatViewDelegate?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @objc @_Concurrency.MainActor(unsafe) public func registerCell(_ cellClass: Swift.AnyClass?, forCellReuseIdentifier: Swift.String)
-  @objc @_Concurrency.MainActor(unsafe) public func registerNibCell(_ nib: UIKit.UINib?, forCellReuseIdentifier: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func scrollToLastLine()
-  @objc deinit
-}
-public typealias ZegoUIKitSendMessageCallback = (Swift.Result<Any, Swift.Error>) -> Swift.Void
-public typealias ZegoSendInRoomCommnadCallback = (_ errorCode: Swift.Int32) -> Swift.Void
-extension ZegoUIKitSDK.ZegoUIKit {
-  public func getInRoomMessages() -> [ZegoUIKitSDK.ZegoInRoomMessage]
-  public func sendInRoomMessage(_ message: Swift.String)
-  public func resendInRoomMessage(_ message: ZegoUIKitSDK.ZegoInRoomMessage)
-  public func sendInRoomCommand(_ command: Swift.String, toUserIDs: [Swift.String], callback: ZegoUIKitSDK.ZegoSendInRoomCommnadCallback?)
-}
-public protocol ToggleAudioOutputButtonDelegate : AnyObject {
-  func onAudioOutputButtonClick(_ isSpeaker: Swift.Bool)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ZegoSwitchAudioOutputButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) public var iconSpeaker: UIKit.UIImage
-  @_Concurrency.MainActor(unsafe) public var iconEarSpeaker: UIKit.UIImage
-  @_Concurrency.MainActor(unsafe) public var iconBluetooth: UIKit.UIImage
-  @_Concurrency.MainActor(unsafe) public var useSpeaker: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ToggleAudioOutputButtonDelegate?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-public typealias ZegoUIKitCallBack = (_ data: Swift.Dictionary<Swift.String, Swift.AnyObject>?) -> ()
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKit : ObjectiveC.NSObject {
-  public static let shared: ZegoUIKitSDK.ZegoUIKit
-  public var localUserInfo: ZegoUIKitSDK.ZegoUIKitUser?
-  public var userList: [ZegoUIKitSDK.ZegoUIKitUser] {
-    get
-  }
-  final public let room: ZegoUIKitSDK.ZegoUIKitRoom?
-  public var enableAudioVideoPlaying: Swift.Bool {
-    get
-    set
-  }
-  public func initWithAppID(appID: Swift.UInt32, appSign: Swift.String)
-  public func uninit()
-  public func getVersion() -> Swift.String
-  public func addEventHandler(_ eventHandle: ZegoUIKitSDK.ZegoUIKitEventHandle?)
-  public static func getSignalingPlugin() -> ZegoUIKitSDK.ZegoUIKitSignalingPluginImpl
-  @objc deinit
-}
-public protocol ZegoAudioVideoContainerDelegate : AnyObject {
-  func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> UIKit.UIView?
-  func sortAudioVideo(_ userList: [ZegoUIKitSDK.ZegoUIKitUser]) -> [ZegoUIKitSDK.ZegoUIKitUser]?
-}
-@objc @_inheritsConvenienceInitializers public class ZegoAudioVideoContainer : ObjectiveC.NSObject {
-  weak public var delegate: ZegoUIKitSDK.ZegoAudioVideoContainerDelegate?
-  public var view: ZegoUIKitSDK.ZegoAudioVideoContainerView!
-  @objc override dynamic public init()
-  public func setLayout(_ mode: ZegoUIKitSDK.ZegoUIKitLayoutMode, config: ZegoUIKitSDK.ZegoLayoutConfig, audioVideoConfig: ZegoUIKitSDK.ZegoAudioVideoViewConfig)
-  public func setLayout(_ layout: ZegoUIKitSDK.ZegoLayout, audioVideoConfig: ZegoUIKitSDK.ZegoAudioVideoViewConfig)
-  public func reload()
-  @objc deinit
-}
-@objc public protocol ZegoUIKitEventHandle {
-  @objc optional func onRemoteUserJoin(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
-  @objc optional func onRemoteUserLeave(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
-  @objc optional func onOnlySelfInRoom()
-  @objc optional func onUserCountOrPropertyChanged(_ userList: [ZegoUIKitSDK.ZegoUIKitUser]?)
-  @objc optional func onRoomStateChanged(_ reason: ZegoUIKitSDK.ZegoUIKitRoomStateChangedReason, errorCode: Swift.Int32, extendedData: [Swift.AnyHashable : Any], roomID: Swift.String)
-  @objc optional func onRoomPropertyUpdated(_ key: Swift.String, oldValue: Swift.String, newValue: Swift.String)
-  @objc optional func onRoomPropertiesFullUpdated(_ updateKeys: [Swift.String], oldProperties: [Swift.String : Swift.String], properties: [Swift.String : Swift.String])
-  @objc optional func onCameraOn(_ user: ZegoUIKitSDK.ZegoUIKitUser, isOn: Swift.Bool)
-  @objc optional func onMicrophoneOn(_ user: ZegoUIKitSDK.ZegoUIKitUser, isOn: Swift.Bool)
-  @objc optional func onSoundLevelUpdate(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser, level: Swift.Double)
-  @objc optional func onAudioVideoAvailable(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
-  @objc optional func onAudioVideoUnavailable(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
-  @objc optional func onAudioOutputDeviceChange(_ audioRoute: ZegoUIKitSDK.ZegoUIKitAudioOutputDevice)
-  @objc optional func onInvitationReceived(_ inviter: ZegoUIKitSDK.ZegoUIKitUser, type: Swift.Int, data: Swift.String?)
-  @objc optional func onInvitationTimeout(_ inviter: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
-  @objc optional func onInvitationResponseTimeout(_ invitees: [ZegoUIKitSDK.ZegoUIKitUser], data: Swift.String?)
-  @objc optional func onInvitationAccepted(_ invitee: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
-  @objc optional func onInvitationRefused(_ invitee: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
-  @objc optional func onInvitationCanceled(_ inviter: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
-  @objc optional func onInRoomMessageReceived(_ messageList: [ZegoUIKitSDK.ZegoInRoomMessage])
-  @objc optional func onInRoomMessageSendingStateChanged(_ message: ZegoUIKitSDK.ZegoInRoomMessage)
-  @objc optional func onSignalingPluginConnectionState(_ params: [Swift.String : Swift.AnyObject])
-  @objc optional func onInRoomCommandReceived(_ fromUser: ZegoUIKitSDK.ZegoUIKitUser, command: Swift.String)
-  @objc optional func onInRoomTextMessageReceived(_ messages: [ZegoUIKitSDK.ZegoSignalingInRoomTextMessage], roomID: Swift.String)
-  @objc optional func onUsersInRoomAttributesUpdated(_ updateKeys: [Swift.String]?, oldAttributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, attributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, editor: ZegoUIKitSDK.ZegoUIKitUser?)
-  @objc optional func onRoomMemberLeft(_ userIDList: [Swift.String]?, roomID: Swift.String)
-  @objc optional func onMeRemovedFromRoom()
-  @objc optional func onTurnOnYourCameraRequest(_ fromUser: ZegoUIKitSDK.ZegoUIKitUser)
-  @objc optional func onTurnOnYourMicrophoneRequest(_ fromUser: ZegoUIKitSDK.ZegoUIKitUser)
 }
 public protocol ToggleMicrophoneButtonDelegate : AnyObject {
   func onToggleMicButtonClick(_ isOn: Swift.Bool)
@@ -218,6 +99,26 @@ public protocol ToggleMicrophoneButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
+public protocol ZegoCancelInvitationButtonDelegate : AnyObject {
+  func onCancelInvitationButtonClick()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ZegoCancelInvitationButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var invitees: [Swift.String]
+  @_Concurrency.MainActor(unsafe) public var data: Swift.String?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoCancelInvitationButtonDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) open func buttonClick()
+  @objc deinit
+}
 public protocol ZegoSwitchCameraButtonDelegate : AnyObject {
   func onSwitchCameraButtonClick(_ isFrontFacing: Swift.Bool)
 }
@@ -239,26 +140,41 @@ public protocol ZegoSwitchCameraButtonDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-public protocol LeaveButtonDelegate : AnyObject {
-  func onLeaveButtonClick(_ isLeave: Swift.Bool)
-}
-@objc @_inheritsConvenienceInitializers public class ZegoLeaveConfirmDialogInfo : ObjectiveC.NSObject {
-  public var title: Swift.String?
-  public var message: Swift.String?
-  public var cancelButtonName: Swift.String?
-  public var confirmButtonName: Swift.String?
-  weak public var dialogPresentVC: UIKit.UIViewController?
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ZegoLeaveButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.LeaveButtonDelegate?
-  @_Concurrency.MainActor(unsafe) public var quitConfirmDialogInfo: ZegoUIKitSDK.ZegoLeaveConfirmDialogInfo
-  @_Concurrency.MainActor(unsafe) public var iconLeave: UIKit.UIImage {
+@objc @_Concurrency.MainActor(unsafe) public class ZegoCameraStateIcon : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var iconCameraOn: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) public var iconCameraOff: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) public var isOn: Swift.Bool {
     get
     set
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension ZegoUIKitSDK.ZegoUIKit {
+  public func login(_ userID: Swift.String, userName: Swift.String)
+  public func getUser(_ userID: Swift.String) -> ZegoUIKitSDK.ZegoUIKitUser?
+  public func getAllUsers() -> [ZegoUIKitSDK.ZegoUIKitUser]
+}
+public protocol ZegoAcceptInvitationButtonDelegate : AnyObject {
+  func onAcceptInvitationButtonClick()
+}
+@objc @_Concurrency.MainActor(unsafe) public class ZegoAcceptInvitationButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoAcceptInvitationButtonDelegate?
+  @_Concurrency.MainActor(unsafe) public var inviterID: Swift.String?
+  @_Concurrency.MainActor(unsafe) public init(_ inviterID: Swift.String)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
@@ -285,38 +201,6 @@ public protocol LeaveButtonDelegate : AnyObject {
   @objc @_Concurrency.MainActor(unsafe) public func registerNibCell(_ nib: UIKit.UINib?, forCellReuseIdentifier: Swift.String)
   @objc deinit
 }
-public protocol ZegoToggleCameraButtonDelegate : AnyObject {
-  func onToggleCameraButtonClick(_ isOn: Swift.Bool)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ZegoToggleCameraButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoToggleCameraButtonDelegate?
-  @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var iconCameraOn: UIKit.UIImage? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var iconCameraOff: UIKit.UIImage? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var isOn: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public func buttonClick(sender: UIKit.UIButton)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoAudioVideoContainerView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) public func reload()
-  @objc deinit
-}
 public typealias PluginCallBack = (_ data: Swift.Dictionary<Swift.String, Swift.AnyObject>?) -> ()
 public enum ZegoUIKitPluginType : Swift.String {
   case signaling
@@ -336,157 +220,30 @@ public enum ZegoUIKitPluginType : Swift.String {
   @objc override dynamic public init()
   @objc deinit
 }
-extension ZegoUIKitSDK.ZegoUIKit {
-  public func login(_ userID: Swift.String, userName: Swift.String)
-  public func getUser(_ userID: Swift.String) -> ZegoUIKitSDK.ZegoUIKitUser?
-  public func getAllUsers() -> [ZegoUIKitSDK.ZegoUIKitUser]
-}
-extension ZegoUIKitSDK.ZegoUIKit {
-  public func useFrontFacingCamera(isFrontFacing: Swift.Bool)
-  public func setAudioOutputToSpeaker(enable: Swift.Bool)
-  public func isMicrophoneOn(_ userID: Swift.String) -> Swift.Bool
-  public func isCameraOn(_ userID: Swift.String) -> Swift.Bool
-  public func turnMicrophoneOn(_ userID: Swift.String, isOn: Swift.Bool)
-  public func turnCameraOn(_ userID: Swift.String, isOn: Swift.Bool)
-  public func startPlayingAllAudioVideo()
-  public func stopPlayingAllAudioVideo()
-}
-@objc @objcMembers open class ZegoInRoomMessage : ObjectiveC.NSObject {
-  @objc public var message: Swift.String?
-  @objc public var messageID: Swift.Int64
-  @objc public var sendTime: Swift.UInt64
-  @objc public var user: ZegoUIKitSDK.ZegoUIKitUser?
-  @objc public var state: ZegoUIKitSDK.ZegoInRoomMessageState
-  @objc public init(_ message: Swift.String, messageID: Swift.Int64, sendTime: Swift.UInt64, user: ZegoUIKitSDK.ZegoUIKitUser)
-  @objc deinit
-}
-public protocol ZegoAcceptInvitationButtonDelegate : AnyObject {
-  func onAcceptInvitationButtonClick()
-}
-@objc @_Concurrency.MainActor(unsafe) public class ZegoAcceptInvitationButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoAcceptInvitationButtonDelegate?
-  @_Concurrency.MainActor(unsafe) public var inviterID: Swift.String?
-  @_Concurrency.MainActor(unsafe) public init(_ inviterID: Swift.String)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitUser : ObjectiveC.NSObject, Swift.Codable {
-  public var userID: Swift.String?
-  public var userName: Swift.String?
-  public var isCameraOn: Swift.Bool
-  public var isMicrophoneOn: Swift.Bool
-  public var inRoomAttributes: [Swift.String : Swift.String]
-  public init(_ userID: Swift.String, _ userName: Swift.String, _ isCameraOn: Swift.Bool = false, _ isMicrophoneOn: Swift.Bool = false)
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
-}
-public protocol AudioVideoViewDelegate : AnyObject {
-  func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> UIKit.UIView?
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoAudioVideoView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.AudioVideoViewDelegate? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var roomID: Swift.String?
-  @_Concurrency.MainActor(unsafe) public var audioViewBackgroudImage: UIKit.UIImage? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var showVoiceWave: Swift.Bool?
-  @_Concurrency.MainActor(unsafe) public var soundWaveColor: UIKit.UIColor {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var videoFillMode: ZegoUIKitSDK.ZegoUIKitVideoFillMode {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var avatarAlignment: ZegoUIKitSDK.ZegoAvatarAlignment {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var avatarSize: CoreFoundation.CGSize? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class ZegoAudioVideoViewConfig : ObjectiveC.NSObject {
-  public var showSoundWavesInAudioMode: Swift.Bool
-  public var useVideoViewAspectFill: Swift.Bool
-  public var avatarAlignment: ZegoUIKitSDK.ZegoAvatarAlignment
-  public var avatarSize: CoreFoundation.CGSize?
-  @objc override dynamic public init()
-  @objc deinit
-}
 @objc public protocol ZegoPluginEventHandle {
   @objc optional func onPluginEvent(_ event: Swift.String, data: Swift.Dictionary<Swift.String, Swift.AnyObject>?)
 }
-extension UIKit.UIColor {
-  public class func colorWithHexString(_ hexString: Swift.String, alpha: CoreFoundation.CGFloat = 1) -> UIKit.UIColor
+@objc public protocol ZegoInRoomMessageInputDelegate {
+  @objc func onSubmit()
 }
-@objc public protocol ZegoStartInvitationButtonDelegate {
-  @objc func onStartInvitationButtonClick(_ data: [Swift.String : Swift.AnyObject]?)
-}
-@objc @_Concurrency.MainActor(unsafe) open class ZegoStartInvitationButton : UIKit.UIButton {
-  @objc @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage? {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoInRoomMessageInput : UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoInRoomMessageInputDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public var placeHolder: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
+  @objc @_Concurrency.MainActor(unsafe) public var iconSend: UIKit.UIImage? {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) public var invitees: [Swift.String]
-  @objc @_Concurrency.MainActor(unsafe) public var data: Swift.String?
-  @objc @_Concurrency.MainActor(unsafe) public var timeout: Swift.UInt32
-  @objc @_Concurrency.MainActor(unsafe) public var type: Swift.Int
-  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoStartInvitationButtonDelegate?
-  @objc @_Concurrency.MainActor(unsafe) public init(_ type: Swift.Int)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) open func buttonClick()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class ZegoLayoutConfig : ObjectiveC.NSObject {
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc public protocol ZegoMemberListDelegate {
-  @objc optional func getMemberListItemView(_ tableView: UIKit.UITableView, indexPath: Foundation.IndexPath, userInfo: ZegoUIKitSDK.ZegoUIKitUser) -> UIKit.UITableViewCell?
-  @objc optional func getMemberListItemHeight(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser) -> CoreFoundation.CGFloat
-  @objc optional func getMemberListHeaderHeight(_ tableView: UIKit.UITableView, section: Swift.Int) -> CoreFoundation.CGFloat
-  @objc optional func getMemberListviewForHeaderInSection(_ tableView: UIKit.UITableView, section: Swift.Int) -> UIKit.UIView?
-  @objc optional func sortUserList(_ userList: [ZegoUIKitSDK.ZegoUIKitUser]) -> [ZegoUIKitSDK.ZegoUIKitUser]
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoMemberList : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoMemberListDelegate?
-  @_Concurrency.MainActor(unsafe) public var showMicrophoneState: Swift.Bool
-  @_Concurrency.MainActor(unsafe) public var showCameraState: Swift.Bool
-  @_Concurrency.MainActor(unsafe) public var tableView: UIKit.UITableView {
-    get
-    set
+  @objc @_Concurrency.MainActor(unsafe) public var enable: Swift.Bool {
+    @objc get
+    @objc set
   }
+  @objc @_Concurrency.MainActor(unsafe) public var minHeight: CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @objc @_Concurrency.MainActor(unsafe) public func registerCell(_ cellClass: Swift.AnyClass?, forCellReuseIdentifier: Swift.String)
-  @objc @_Concurrency.MainActor(unsafe) public func registerNibCell(_ nib: UIKit.UINib?, forCellReuseIdentifier: Swift.String)
-  @objc @_Concurrency.MainActor(unsafe) public func reloadData()
+  @objc @_Concurrency.MainActor(unsafe) public func startEdit()
   @objc deinit
 }
 public enum ZegoUIKitVideoFillMode : Swift.UInt {
@@ -581,6 +338,147 @@ public enum ZegoViewPosition : Swift.Int {
     get
   }
 }
+public typealias ZegoUIKitSendMessageCallback = (Swift.Result<Any, Swift.Error>) -> Swift.Void
+public typealias ZegoSendInRoomCommnadCallback = (_ errorCode: Swift.Int32) -> Swift.Void
+extension ZegoUIKitSDK.ZegoUIKit {
+  public func getInRoomMessages() -> [ZegoUIKitSDK.ZegoInRoomMessage]
+  public func sendInRoomMessage(_ message: Swift.String)
+  public func resendInRoomMessage(_ message: ZegoUIKitSDK.ZegoInRoomMessage)
+  public func sendInRoomCommand(_ command: Swift.String, toUserIDs: [Swift.String], callback: ZegoUIKitSDK.ZegoSendInRoomCommnadCallback?)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitUser : ObjectiveC.NSObject, Swift.Codable {
+  public var userID: Swift.String?
+  public var userName: Swift.String?
+  public var isCameraOn: Swift.Bool
+  public var isMicrophoneOn: Swift.Bool
+  public var inRoomAttributes: [Swift.String : Swift.String]
+  public init(_ userID: Swift.String, _ userName: Swift.String, _ isCameraOn: Swift.Bool = false, _ isMicrophoneOn: Swift.Bool = false)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public protocol ToggleAudioOutputButtonDelegate : AnyObject {
+  func onAudioOutputButtonClick(_ isSpeaker: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ZegoSwitchAudioOutputButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var iconSpeaker: UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public var iconEarSpeaker: UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public var iconBluetooth: UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public var useSpeaker: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ToggleAudioOutputButtonDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public typealias ZegoUIKitCallBack = (_ data: Swift.Dictionary<Swift.String, Swift.AnyObject>?) -> ()
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKit : ObjectiveC.NSObject {
+  public static let shared: ZegoUIKitSDK.ZegoUIKit
+  public var localUserInfo: ZegoUIKitSDK.ZegoUIKitUser?
+  public var userList: [ZegoUIKitSDK.ZegoUIKitUser] {
+    get
+  }
+  final public let room: ZegoUIKitSDK.ZegoUIKitRoom?
+  public var enableAudioVideoPlaying: Swift.Bool {
+    get
+    set
+  }
+  public func initWithAppID(appID: Swift.UInt32, appSign: Swift.String)
+  public func uninit()
+  public func getVersion() -> Swift.String
+  public func addEventHandler(_ eventHandle: ZegoUIKitSDK.ZegoUIKitEventHandle?)
+  public static func getSignalingPlugin() -> ZegoUIKitSDK.ZegoUIKitSignalingPluginImpl
+  @objc deinit
+}
+public protocol ZegoRefuseInvitationButtonDelegate : AnyObject {
+  func onRefuseInvitationButtonClick()
+}
+@objc @_Concurrency.MainActor(unsafe) public class ZegoRefuseInvitationButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoRefuseInvitationButtonDelegate?
+  @_Concurrency.MainActor(unsafe) public var inviterID: Swift.String?
+  @_Concurrency.MainActor(unsafe) public var data: Swift.String?
+  @_Concurrency.MainActor(unsafe) public init(_ inviterID: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public func buttonClick()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoAudioVideoContainerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func reload()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoInRoomMessageView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frame: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ZegoLayout : ObjectiveC.NSObject {
+  public var mode: ZegoUIKitSDK.ZegoUIKitLayoutMode
+  public var config: ZegoUIKitSDK.ZegoLayoutConfig?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIColor {
+  public class func colorWithHexString(_ hexString: Swift.String, alpha: CoreFoundation.CGFloat = 1) -> UIKit.UIColor
+}
+@objc @_inheritsConvenienceInitializers public class ZegoLayoutGalleryConfig : ZegoUIKitSDK.ZegoLayoutConfig {
+  public var addBorderRadiusAndSpacingBetweenView: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol AudioVideoViewDelegate : AnyObject {
+  func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> UIKit.UIView?
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoAudioVideoView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.AudioVideoViewDelegate? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var roomID: Swift.String?
+  @_Concurrency.MainActor(unsafe) public var audioViewBackgroudImage: UIKit.UIImage? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var showVoiceWave: Swift.Bool?
+  @_Concurrency.MainActor(unsafe) public var soundWaveColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var videoFillMode: ZegoUIKitSDK.ZegoUIKitVideoFillMode {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var avatarAlignment: ZegoUIKitSDK.ZegoAvatarAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var avatarSize: CoreFoundation.CGSize? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers public class ZegoSignalingInRoomTextMessage : ObjectiveC.NSObject {
   public var messageID: Swift.Int64
   public var timestamp: Swift.Int64
@@ -588,6 +486,13 @@ public enum ZegoViewPosition : Swift.Int {
   public var senderUserID: Swift.String?
   public var text: Swift.String?
   @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class ZegoSignalingPluginNotificationConfig : ObjectiveC.NSObject {
+  final public let resourceID: Swift.String
+  final public let title: Swift.String
+  final public let message: Swift.String
+  public init(resourceID: Swift.String, title: Swift.String, message: Swift.String)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitSignalingPluginImpl : ObjectiveC.NSObject {
@@ -598,7 +503,7 @@ public enum ZegoViewPosition : Swift.Int {
   public func uninit()
   public func login(_ userID: Swift.String, userName: Swift.String, callback: ZegoUIKitSDK.PluginCallBack?)
   public func loginOut()
-  public func sendInvitation(_ invitees: [Swift.String], timeout: Swift.UInt32, type: Swift.Int, data: Swift.String?, callback: ZegoUIKitSDK.PluginCallBack?)
+  public func sendInvitation(_ invitees: [Swift.String], timeout: Swift.UInt32, type: Swift.Int, data: Swift.String?, notificationConfig: ZegoUIKitSDK.ZegoSignalingPluginNotificationConfig?, callback: ZegoUIKitSDK.PluginCallBack?)
   public func cancelInvitation(_ invitees: [Swift.String], data: Swift.String?, callback: ZegoUIKitSDK.PluginCallBack?)
   public func refuseInvitation(_ inviterID: Swift.String, data: Swift.String?)
   public func acceptInvitation(_ inviterID: Swift.String, data: Swift.String?)
@@ -612,6 +517,8 @@ public enum ZegoViewPosition : Swift.Int {
   public func beginRoomPropertiesBatchOperation(_ isForce: Swift.Bool = false, isDeleteAfterOwnerLeft: Swift.Bool = false, isUpdateOwner: Swift.Bool = false)
   public func endRoomPropertiesBatchOperation(_ callBack: ZegoUIKitSDK.PluginCallBack?)
   public func queryRoomProperties(_ callBack: ZegoUIKitSDK.PluginCallBack?)
+  public func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Swift.Bool, isSandboxEnvironment: Swift.Bool)
+  public func setRemoteNotificationsDeviceToken(_ deviceToken: Foundation.Data)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ZegoUserInRoomAttributesInfo : ObjectiveC.NSObject {
@@ -626,60 +533,38 @@ public enum ZegoViewPosition : Swift.Int {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) public class ZegoMicrophoneStateIcon : UIKit.UIImageView {
+@objc @_inheritsConvenienceInitializers public class ZegoAudioVideoViewConfig : ObjectiveC.NSObject {
+  public var showSoundWavesInAudioMode: Swift.Bool
+  public var useVideoViewAspectFill: Swift.Bool
+  public var avatarAlignment: ZegoUIKitSDK.ZegoAvatarAlignment
+  public var avatarSize: CoreFoundation.CGSize?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ZegoToggleCameraButtonDelegate : AnyObject {
+  func onToggleCameraButtonClick(_ isOn: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ZegoToggleCameraButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoToggleCameraButtonDelegate?
   @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var iconMicophoneOn: UIKit.UIImage
-  @_Concurrency.MainActor(unsafe) public var iconMicrophoneOff: UIKit.UIImage
-  @_Concurrency.MainActor(unsafe) public var iconMicrophoneSpeaking: UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public var iconCameraOn: UIKit.UIImage? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var iconCameraOff: UIKit.UIImage? {
+    get
+    set
+  }
   @_Concurrency.MainActor(unsafe) public var isOn: Swift.Bool {
     get
     set
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class ZegoLayout : ObjectiveC.NSObject {
-  public var mode: ZegoUIKitSDK.ZegoUIKitLayoutMode
-  public var config: ZegoUIKitSDK.ZegoLayoutConfig?
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitRoom : ObjectiveC.NSObject {
-  public var roomID: Swift.String?
-  public init(_ roomID: Swift.String)
-  @objc deinit
-}
-public protocol ZegoCancelInvitationButtonDelegate : AnyObject {
-  func onCancelInvitationButtonClick()
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ZegoCancelInvitationButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var invitees: [Swift.String]
-  @_Concurrency.MainActor(unsafe) public var data: Swift.String?
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoCancelInvitationButtonDelegate?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) open func buttonClick()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoInRoomMessageView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frame: CoreFoundation.CGRect {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc @_Concurrency.MainActor(unsafe) public func buttonClick(sender: UIKit.UIButton)
   @objc deinit
 }
 public enum ZegoPluginMethodName : Swift.String {
@@ -712,11 +597,138 @@ public enum ZegoPluginMethodName : Swift.String {
   case onRoomPropertiesUpdated_method
   case onRoomMemberLeft_method
   case onRoomTextMessageReceive_method
+  case onEnableNotifyWhenAppRunningInBackgroundOrQuit_method
+  case onSetRemoteNotificationsDeviceToken_method
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
+}
+public protocol ZegoAudioVideoContainerDelegate : AnyObject {
+  func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> UIKit.UIView?
+  func sortAudioVideo(_ userList: [ZegoUIKitSDK.ZegoUIKitUser]) -> [ZegoUIKitSDK.ZegoUIKitUser]?
+}
+@objc @_inheritsConvenienceInitializers public class ZegoAudioVideoContainer : ObjectiveC.NSObject {
+  weak public var delegate: ZegoUIKitSDK.ZegoAudioVideoContainerDelegate?
+  public var view: ZegoUIKitSDK.ZegoAudioVideoContainerView!
+  @objc override dynamic public init()
+  public func setLayout(_ mode: ZegoUIKitSDK.ZegoUIKitLayoutMode, config: ZegoUIKitSDK.ZegoLayoutConfig, audioVideoConfig: ZegoUIKitSDK.ZegoAudioVideoViewConfig)
+  public func setLayout(_ layout: ZegoUIKitSDK.ZegoLayout, audioVideoConfig: ZegoUIKitSDK.ZegoAudioVideoViewConfig)
+  public func reload()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ZegoLayoutPictureInPictureConfig : ZegoUIKitSDK.ZegoLayoutConfig {
+  public var isSmallViewDraggable: Swift.Bool
+  public var smallViewBackgroundColor: UIKit.UIColor
+  public var largeViewBackgroundColor: UIKit.UIColor
+  public var smallViewBackgroundImage: UIKit.UIImage?
+  public var largeViewBackgroundImage: UIKit.UIImage?
+  public var smallViewPostion: ZegoUIKitSDK.ZegoViewPosition
+  public var switchLargeOrSmallViewByClick: Swift.Bool
+  public var smallViewSize: CoreFoundation.CGSize
+  public var spacingBetweenSmallViews: CoreFoundation.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitRoom : ObjectiveC.NSObject {
+  public var roomID: Swift.String?
+  public init(_ roomID: Swift.String)
+  @objc deinit
+}
+@objc public protocol ZegoMemberListDelegate {
+  @objc optional func getMemberListItemView(_ tableView: UIKit.UITableView, indexPath: Foundation.IndexPath, userInfo: ZegoUIKitSDK.ZegoUIKitUser) -> UIKit.UITableViewCell?
+  @objc optional func getMemberListItemHeight(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser) -> CoreFoundation.CGFloat
+  @objc optional func getMemberListHeaderHeight(_ tableView: UIKit.UITableView, section: Swift.Int) -> CoreFoundation.CGFloat
+  @objc optional func getMemberListviewForHeaderInSection(_ tableView: UIKit.UITableView, section: Swift.Int) -> UIKit.UIView?
+  @objc optional func sortUserList(_ userList: [ZegoUIKitSDK.ZegoUIKitUser]) -> [ZegoUIKitSDK.ZegoUIKitUser]
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoMemberList : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoMemberListDelegate?
+  @_Concurrency.MainActor(unsafe) public var showMicrophoneState: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var showCameraState: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var tableView: UIKit.UITableView {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc @_Concurrency.MainActor(unsafe) public func registerCell(_ cellClass: Swift.AnyClass?, forCellReuseIdentifier: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func registerNibCell(_ nib: UIKit.UINib?, forCellReuseIdentifier: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func reloadData()
+  @objc deinit
+}
+@objc public protocol ZegoInRoomChatViewDelegate {
+  @objc optional func getChatViewItemView(_ tableView: UIKit.UITableView, indexPath: Foundation.IndexPath, message: ZegoUIKitSDK.ZegoInRoomMessage) -> UIKit.UITableViewCell?
+  @objc optional func getChatViewItemHeight(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath, message: ZegoUIKitSDK.ZegoInRoomMessage) -> CoreFoundation.CGFloat
+  @objc optional func getChatViewHeaderHeight(_ tableView: UIKit.UITableView, section: Swift.Int) -> CoreFoundation.CGFloat
+  @objc optional func getChatViewForHeaderInSection(_ tableView: UIKit.UITableView, section: Swift.Int) -> UIKit.UIView?
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoInRoomChatView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoInRoomChatViewDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc @_Concurrency.MainActor(unsafe) public func registerCell(_ cellClass: Swift.AnyClass?, forCellReuseIdentifier: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func registerNibCell(_ nib: UIKit.UINib?, forCellReuseIdentifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func scrollToLastLine()
+  @objc deinit
+}
+@objc public protocol ZegoUIKitEventHandle {
+  @objc optional func onRemoteUserJoin(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
+  @objc optional func onRemoteUserLeave(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
+  @objc optional func onOnlySelfInRoom()
+  @objc optional func onUserCountOrPropertyChanged(_ userList: [ZegoUIKitSDK.ZegoUIKitUser]?)
+  @objc optional func onRoomStateChanged(_ reason: ZegoUIKitSDK.ZegoUIKitRoomStateChangedReason, errorCode: Swift.Int32, extendedData: [Swift.AnyHashable : Any], roomID: Swift.String)
+  @objc optional func onRoomPropertyUpdated(_ key: Swift.String, oldValue: Swift.String, newValue: Swift.String)
+  @objc optional func onRoomPropertiesFullUpdated(_ updateKeys: [Swift.String], oldProperties: [Swift.String : Swift.String], properties: [Swift.String : Swift.String])
+  @objc optional func onCameraOn(_ user: ZegoUIKitSDK.ZegoUIKitUser, isOn: Swift.Bool)
+  @objc optional func onMicrophoneOn(_ user: ZegoUIKitSDK.ZegoUIKitUser, isOn: Swift.Bool)
+  @objc optional func onSoundLevelUpdate(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser, level: Swift.Double)
+  @objc optional func onAudioVideoAvailable(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
+  @objc optional func onAudioVideoUnavailable(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
+  @objc optional func onAudioOutputDeviceChange(_ audioRoute: ZegoUIKitSDK.ZegoUIKitAudioOutputDevice)
+  @objc optional func onInvitationReceived(_ inviter: ZegoUIKitSDK.ZegoUIKitUser, type: Swift.Int, data: Swift.String?)
+  @objc optional func onInvitationTimeout(_ inviter: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
+  @objc optional func onInvitationResponseTimeout(_ invitees: [ZegoUIKitSDK.ZegoUIKitUser], data: Swift.String?)
+  @objc optional func onInvitationAccepted(_ invitee: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
+  @objc optional func onInvitationRefused(_ invitee: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
+  @objc optional func onInvitationCanceled(_ inviter: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
+  @objc optional func onInRoomMessageReceived(_ messageList: [ZegoUIKitSDK.ZegoInRoomMessage])
+  @objc optional func onInRoomMessageSendingStateChanged(_ message: ZegoUIKitSDK.ZegoInRoomMessage)
+  @objc optional func onSignalingPluginConnectionState(_ params: [Swift.String : Swift.AnyObject])
+  @objc optional func onInRoomCommandReceived(_ fromUser: ZegoUIKitSDK.ZegoUIKitUser, command: Swift.String)
+  @objc optional func onInRoomTextMessageReceived(_ messages: [ZegoUIKitSDK.ZegoSignalingInRoomTextMessage], roomID: Swift.String)
+  @objc optional func onUsersInRoomAttributesUpdated(_ updateKeys: [Swift.String]?, oldAttributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, attributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, editor: ZegoUIKitSDK.ZegoUIKitUser?)
+  @objc optional func onRoomMemberLeft(_ userIDList: [Swift.String]?, roomID: Swift.String)
+  @objc optional func onMeRemovedFromRoom()
+  @objc optional func onTurnOnYourCameraRequest(_ fromUser: ZegoUIKitSDK.ZegoUIKitUser)
+  @objc optional func onTurnOnYourMicrophoneRequest(_ fromUser: ZegoUIKitSDK.ZegoUIKitUser)
+}
+@objc @_Concurrency.MainActor(unsafe) public class ZegoMicrophoneStateIcon : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var iconMicophoneOn: UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public var iconMicrophoneOff: UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public var iconMicrophoneSpeaking: UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public var isOn: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension ZegoUIKitSDK.ZegoUIKit {
+  public func useFrontFacingCamera(isFrontFacing: Swift.Bool)
+  public func setAudioOutputToSpeaker(enable: Swift.Bool)
+  public func isMicrophoneOn(_ userID: Swift.String) -> Swift.Bool
+  public func isCameraOn(_ userID: Swift.String) -> Swift.Bool
+  public func turnMicrophoneOn(_ userID: Swift.String, isOn: Swift.Bool)
+  public func turnCameraOn(_ userID: Swift.String, isOn: Swift.Bool)
+  public func startPlayingAllAudioVideo()
+  public func stopPlayingAllAudioVideo()
 }
 extension ZegoUIKitSDK.ZegoUIKitPluginType : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoUIKitPluginType : Swift.Hashable {}

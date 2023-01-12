@@ -4,103 +4,108 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Assets.car</key>
-		<data>
-		cCRsh98PBqE4TjLE7upBgw3idJ8=
-		</data>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<data>
-		huH633Uzu737CG2Lea1HvXN3YFw=
+		xg8Awoka8tOyrwUrApxQu3G0UE0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WFobvI5ki+34DyiL/rXihPSTwSA=
+		KwdSAcMHQeykIePKxdPHecR8eMc=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		MroOcfefJ061XjtUun1C5Zu2lMo=
+		7gtJjqBzRiLPAD5fGSSqRoHtx2k=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		gs4RXl87AaJ4HsUv2UhtMBRdKuY=
+		ZlkDMuVCa1WOu39OTcOcFRt2WG0=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		fM9T16GrIVNyGqwY8KYS9sbldpo=
+		bJUKZfhVlmvfgJp6Oqg6BjMy9xA=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Pc/mmLCQ6ElytDoP99ssXuUSg6w=
+		gUIKaCfB5eelcHatLmRan/YtKIc=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		fM9T16GrIVNyGqwY8KYS9sbldpo=
+		bJUKZfhVlmvfgJp6Oqg6BjMy9xA=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		1IQVrv4v2mqdL/N9qL3DGW1pt+Y=
+		XKXcUgQSO+CjPQz2BY+CbzHx8P8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		YYdiy1HJp/ldm5x2yeXFFZly6WQ=
 		</data>
+		<key>ZegoUIKit.bundle/Assets.car</key>
+		<data>
+		qgAzIXWPq02Ym89cnjimtocWzOU=
+		</data>
+		<key>ZegoUIKit.bundle/Info.plist</key>
+		<data>
+		xqM1H4y4W9UFzLYNxlLmqrbCRjI=
+		</data>
+		<key>ZegoUIKit.bundle/ZegoUIKit</key>
+		<data>
+		jbiKXXNBEmYIsULb7shzkG7ao1c=
+		</data>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
+		<data>
+		RBzrIoaRk0bhmdRLx3ze8Q9AaGE=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Assets.car</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bWcaozPA9ZBRpINVur7AoJTdQnJbxlP2Sn42FJ/mIoQ=
-			</data>
-		</dict>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+og1PIp+VmVOoqXIkkRrgCo7koZ0kG4htch7MXW60OI=
+			0NPqmPCl+pPRflGF9pt/VceM91pOOEzloE7sRNA+hrA=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2yOI+X1WcfIo7Y4WTNaZ2b72h2OHyZxUKZFzsweb7SI=
+			LAiH3uC5TutB6f5vcRvHHxHBMN5Qw2Rb7z2Z6zJv3oY=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2nSUK+LktjsdLeTsxdZCVIaAbKOUD90IPpl4mBQjia0=
+			ofv0MpPHCNT5pXu3RuSi0QM8WMLK/ycdEED7QD2SHFg=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YzqYl3IVKREvZKFAF8SN3jXXDbjQmeRBNQsHaNevGVc=
+			JeXMtl0wEqcbZXw6eZhEM+vRQpK0j1ZIsRQ3T4O0lfQ=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MQziJXZhCMfS4HRWCygv5SrRxgsXnLeHLpoMlRBhG5o=
+			sxrq9nKDHXyfjdym4tpoz4pXGPCEajKtfQN4ECb2rOs=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YzqYl3IVKREvZKFAF8SN3jXXDbjQmeRBNQsHaNevGVc=
+			JeXMtl0wEqcbZXw6eZhEM+vRQpK0j1ZIsRQ3T4O0lfQ=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YoNoJ7JWNX8B2EPyvLO0m+TQFOePKWDMz/wOOd7if2o=
+			9u6nUlk9JMgRjQOIJ3y818LcGN0BeB07QBNQobCnfB0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -108,6 +113,34 @@
 			<key>hash2</key>
 			<data>
 			6x57pblCHFDj8/p2fPAS+YWwvpHGw5qtKePAeLCqjjE=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Y/7m/Q9AyAwYr6VokjnACq8QzxZgpqnHDi72kUQoDCk=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/v3lEJwFMTz68x48mPUv6b0v9Uq6Tt4Q0bM0dyX9UdE=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/ZegoUIKit</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			K3BED2p+KKx0Zym8IVCHPts4ok8IpygtfONSZlXX75I=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2SdY/nPNngkFXhkYJU9yHRl/jwc9MuDk7cMIPRMfuPY=
 			</data>
 		</dict>
 	</dict>
