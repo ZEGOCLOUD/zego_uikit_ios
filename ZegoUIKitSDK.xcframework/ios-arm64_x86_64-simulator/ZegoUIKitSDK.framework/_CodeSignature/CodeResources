@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		3PDGj5EDYYm1veaES/rlezSiaYk=
+		K7rjpxcrOAbcStvkHM94yuF5sdA=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		MjPrELFOr4vm6tUb0LkVG+XzX38=
+		Ae/O4IHlDZxL/geIDEZKixJj1uI=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>ZegoUIKit.bundle/Assets.car</key>
 		<data>
-		F17d+s0a2T1WcBYJwSerpHtNgRU=
+		oFl61HTSypMKLy0MCkdjQtVevOU=
 		</data>
 		<key>ZegoUIKit.bundle/Info.plist</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>ZegoUIKit.bundle/ZegoUIKit</key>
 		<data>
-		u1hVEQcBnZDwDKLsqKVxcOuiRUE=
+		YGMGzJ7fl8z83J2+/sZJtL+7k1E=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		IvVFCLYpry4iuEQ+dU8DawxdLe4=
+		u+GToqQ6D0IZWxcjbVP7XE5Hm8Q=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0DkiAKv8DdoSv96QDGuUFvDJzr5Ggt7Zv1zIGpECZvM=
+			gsgXteSQDDYCz8QxH6nlYMPz1JtK+X5oVWvUv1g9IEw=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			z1yOLI0b3Csriw6PqUXZTVCA6ODqVEb4eShuQMeVlHM=
+			3p+syaFtzoaehU7MA1HqlsUkFCAphz02q2GgSJRCRd8=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -185,7 +185,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ep3Tkw5Cx8IV9nG0QXkct/gC3/CCcFdsmpRPKHw1Qes=
+			5lW5nYOiQiONaadXPPmvYNIBENFi9esAHrSG2mzqi1c=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/Info.plist</key>
@@ -199,14 +199,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+LXiJxhbzGcVNSmJSx8N402Qt7Kf9xeTOpkIr8n3HFg=
+			KHI5T6t0ThmhFyE+AjDmigu6KxuoYbKpJFoGLYhubZQ=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G3mZS2HWLBvrZ5V3u7QDby0xPYuGWlH+pN8SkT2sGFk=
+			2au62wi7baagX64ND05+JiS7udC80UplALQw2zQgpgY=
 			</data>
 		</dict>
 	</dict>
