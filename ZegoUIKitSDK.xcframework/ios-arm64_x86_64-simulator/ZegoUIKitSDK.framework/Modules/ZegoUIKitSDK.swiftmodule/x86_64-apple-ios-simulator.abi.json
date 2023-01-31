@@ -27859,2128 +27859,2128 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/ZegoUIKit+Room.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/ZegoUIKit+Room.swift",
       "kind": "BooleanLiteral",
       "offset": 258,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoStartInvitationButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoStartInvitationButton.swift",
       "kind": "Array",
       "offset": 778,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoStartInvitationButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoStartInvitationButton.swift",
       "kind": "IntegerLiteral",
       "offset": 855,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoStartInvitationButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoStartInvitationButton.swift",
       "kind": "IntegerLiteral",
       "offset": 891,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoStartInvitationButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoStartInvitationButton.swift",
       "kind": "StringLiteral",
       "offset": 386,
       "length": 25,
       "value": "\"ZegoUIKitSDK.ZegoStartInvitationButton\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "StringLiteral",
       "offset": 217,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "StringLiteral",
       "offset": 247,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
       "offset": 311,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
       "offset": 337,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "StringLiteral",
       "offset": 504,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "StringLiteral",
       "offset": 143,
       "length": 15,
       "value": "\"ZegoUIKitSDK.ZegoParticipant\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "Array",
       "offset": 1242,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "IntegerLiteral",
       "offset": 1277,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "Dictionary",
       "offset": 1327,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "IntegerLiteral",
       "offset": 1362,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
       "offset": 1392,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
       "offset": 1430,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoInRoomMessage.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoInRoomMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 220,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoInRoomMessage.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoInRoomMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 256,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoInRoomMessage.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoInRoomMessage.swift",
       "kind": "StringLiteral",
       "offset": 124,
       "length": 17,
       "value": "\"ZegoUIKitSDK.ZegoInRoomMessage\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoToggleMicrophoneButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoToggleMicrophoneButton.swift",
       "kind": "BooleanLiteral",
       "offset": 613,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoCancelInvitationButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoCancelInvitationButton.swift",
       "kind": "Array",
       "offset": 654,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
       "kind": "BooleanLiteral",
       "offset": 876,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
       "kind": "BooleanLiteral",
       "offset": 951,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1012,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1086,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchCameraButton.swift",
       "kind": "BooleanLiteral",
       "offset": 787,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoCameraStateIcon.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoCameraStateIcon.swift",
       "kind": "BooleanLiteral",
       "offset": 582,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoCameraStateIcon.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoCameraStateIcon.swift",
       "kind": "StringLiteral",
       "offset": 137,
       "length": 19,
       "value": "\"ZegoUIKitSDK.ZegoCameraStateIcon\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoCameraStateIcon.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoCameraStateIcon.swift",
       "kind": "StringLiteral",
       "offset": 137,
       "length": 19,
       "value": "\"ZegoUIKitSDK.ZegoCameraStateIcon\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageModelBuilder.swift",
       "kind": "FloatLiteral",
       "offset": 149,
       "length": 4,
       "value": "33.0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 289,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 324,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
       "kind": "StringLiteral",
       "offset": 539,
       "length": 9,
       "value": "\"#2A2A2A\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
       "kind": "FloatLiteral",
       "offset": 557,
       "length": 3,
       "value": "0.3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
       "kind": "BooleanLiteral",
       "offset": 599,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
       "kind": "IntegerLiteral",
       "offset": 640,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
       "kind": "IntegerLiteral",
       "offset": 776,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageNotificationCell.swift",
       "kind": "StringLiteral",
       "offset": 831,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoAcceptInvitationButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoAcceptInvitationButton.swift",
       "kind": "StringLiteral",
       "offset": 323,
       "length": 26,
       "value": "\"ZegoUIKitSDK.ZegoAcceptInvitationButton\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "BooleanLiteral",
       "offset": 202,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "IntegerLiteral",
       "offset": 1364,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "IntegerLiteral",
       "offset": 1903,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "IntegerLiteral",
       "offset": 1909,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "IntegerLiteral",
       "offset": 3021,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "IntegerLiteral",
       "offset": 3027,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "StringLiteral",
       "offset": 1121,
       "length": 26,
       "value": "\"ZegoUIKitSDK.ZegoInRoomNotificationView\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "BooleanLiteral",
       "offset": 11611,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomNotificationView.swift",
       "kind": "BooleanLiteral",
       "offset": 11642,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "BooleanLiteral",
       "offset": 683,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "IntegerLiteral",
       "offset": 821,
       "length": 2,
       "value": "55"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "IntegerLiteral",
       "offset": 867,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "IntegerLiteral",
       "offset": 1017,
       "length": 2,
       "value": "14"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "FloatLiteral",
       "offset": 1082,
       "length": 4,
       "value": "17.5"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "IntegerLiteral",
       "offset": 1094,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "FloatLiteral",
       "offset": 1106,
       "length": 4,
       "value": "17.5"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "IntegerLiteral",
       "offset": 1119,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "BooleanLiteral",
       "offset": 1203,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
       "kind": "IntegerLiteral",
       "offset": 1246,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 257,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 358,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 440,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 257,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 358,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 440,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 257,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 358,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 440,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 544,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 590,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 601,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 544,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 590,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 601,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 544,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 590,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 601,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 674,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 692,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 712,
       "length": 11,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 674,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 692,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 712,
       "length": 11,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 674,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 692,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 712,
       "length": 11,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 1082,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 1415,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 1641,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 1810,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2021,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2226,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2444,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2716,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2918,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 1082,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 1415,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 1641,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 1810,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2021,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2226,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2444,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2716,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 2918,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3027,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3068,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3116,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3157,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3216,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3259,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3027,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3068,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3116,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3157,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3216,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3259,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3335,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3352,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3369,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3335,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3352,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3369,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3461,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3481,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3500,
       "length": 12,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3461,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3481,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3500,
       "length": 12,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3586,
       "length": 5,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3601,
       "length": 3,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3586,
       "length": 5,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "IntegerLiteral",
       "offset": 3601,
       "length": 3,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "StringLiteral",
       "offset": 5009,
       "length": 15,
       "value": "\"im.zego.uikit\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 728,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
       "kind": "FloatLiteral",
       "offset": 870,
       "length": 4,
       "value": "12.0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 967,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 1067,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
       "kind": "BooleanLiteral",
       "offset": 249,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
       "kind": "BooleanLiteral",
       "offset": 293,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
       "kind": "Dictionary",
       "offset": 352,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
       "kind": "BooleanLiteral",
       "offset": 490,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Models\/ZegoUIKitUser.swift",
       "kind": "BooleanLiteral",
       "offset": 522,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchAudioOutputButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchAudioOutputButton.swift",
       "kind": "BooleanLiteral",
       "offset": 827,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchAudioOutputButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchAudioOutputButton.swift",
       "kind": "BooleanLiteral",
       "offset": 979,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchAudioOutputButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoSwitchAudioOutputButton.swift",
       "kind": "BooleanLiteral",
       "offset": 652,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Internal\/Extension\/UIView+ZGUIKit.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Internal\/Extension\/UIView+ZGUIKit.swift",
       "kind": "BooleanLiteral",
       "offset": 21829,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Internal\/Extension\/UIView+ZGUIKit.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Internal\/Extension\/UIView+ZGUIKit.swift",
       "kind": "BooleanLiteral",
       "offset": 21875,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Services\/ZegoUIKit.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/ZegoUIKit.swift",
       "kind": "BooleanLiteral",
       "offset": 792,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoRefuseInvitationButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/Components\/ZegoRefuseInvitationButton.swift",
       "kind": "StringLiteral",
       "offset": 324,
       "length": 26,
       "value": "\"ZegoUIKitSDK.ZegoRefuseInvitationButton\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
       "kind": "IntegerLiteral",
       "offset": 195,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
       "kind": "IntegerLiteral",
       "offset": 388,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
       "kind": "IntegerLiteral",
       "offset": 419,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
       "kind": "IntegerLiteral",
       "offset": 571,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
       "kind": "IntegerLiteral",
       "offset": 577,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
       "kind": "IntegerLiteral",
       "offset": 1418,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageView.swift",
       "kind": "IntegerLiteral",
       "offset": 1424,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Internal\/Extension\/UIColor+ZGHex.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Internal\/Extension\/UIColor+ZGHex.swift",
       "kind": "IntegerLiteral",
       "offset": 211,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutGalleryConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutGalleryConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 302,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "BooleanLiteral",
       "offset": 189,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "BooleanLiteral",
       "offset": 349,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "IntegerLiteral",
       "offset": 808,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "StringLiteral",
       "offset": 1101,
       "length": 9,
       "value": "\"%@(You)\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "BooleanLiteral",
       "offset": 1363,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "IntegerLiteral",
       "offset": 1402,
       "length": 2,
       "value": "18"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "StringLiteral",
       "offset": 1463,
       "length": 9,
       "value": "\"#D8D8D8\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "StringLiteral",
       "offset": 1526,
       "length": 9,
       "value": "\"#222222\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "IntegerLiteral",
       "offset": 1620,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "IntegerLiteral",
       "offset": 1808,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/internal\/ZegoMemberListCell.swift",
       "kind": "StringLiteral",
       "offset": 1885,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 516,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 592,
       "length": 9,
       "value": "\"#222222\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 662,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 820,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 895,
       "length": 9,
       "value": "\"#CDCDCD\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 1148,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 1197,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 1272,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "BooleanLiteral",
       "offset": 1420,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 1732,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 2131,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 2237,
       "length": 9,
       "value": "\"#CDCDCD\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 2304,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 2358,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 2401,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 2472,
       "length": 3,
       "value": "\"0\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 2480,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 2694,
       "length": 9,
       "value": "\"#A4A4A4\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 2761,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "IntegerLiteral",
       "offset": 2815,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 3028,
       "length": 3,
       "value": "\" \""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 3213,
       "length": 3,
       "value": "\" \""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 3508,
       "length": 9,
       "value": "\"#0055FF\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "StringLiteral",
       "offset": 3548,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "FloatLiteral",
       "offset": 3565,
       "length": 3,
       "value": "0.1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "BooleanLiteral",
       "offset": 3681,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "BooleanLiteral",
       "offset": 3887,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitInRoomChatViewCell.swift",
       "kind": "BooleanLiteral",
       "offset": 4057,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 599,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1074,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1121,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1190,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1238,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1433,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1764,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1849,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "StringLiteral",
       "offset": 2049,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 2871,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 2923,
       "length": 2,
       "value": "23"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "StringLiteral",
       "offset": 3037,
       "length": 9,
       "value": "\"#222222\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "StringLiteral",
       "offset": 3107,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "StringLiteral",
       "offset": 3444,
       "length": 16,
       "value": "\"radarAnimation\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 10891,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
       "offset": 203,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
       "offset": 239,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
       "offset": 274,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 37,
       "value": "\"ZegoUIKitSDK.ZegoSignalingPluginNotificationConfig\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Array",
       "offset": 887,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Array",
       "offset": 970,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Dictionary",
       "offset": 1030,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
       "offset": 11499,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
       "offset": 11522,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
       "offset": 11551,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
       "offset": 12736,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
       "offset": 14262,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
       "offset": 14300,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
       "offset": 14328,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Dictionary",
       "offset": 29637,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "StringLiteral",
       "offset": 29740,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
       "offset": 29771,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoAudioVideoViewConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoAudioVideoViewConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 292,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoAudioVideoViewConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoAudioVideoViewConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 418,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoToggleCameraButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoToggleCameraButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1020,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoToggleCameraButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoToggleCameraButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1080,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoToggleCameraButton.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoToggleCameraButton.swift",
       "kind": "BooleanLiteral",
       "offset": 940,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 226,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
       "kind": "StringLiteral",
       "offset": 310,
       "length": 9,
       "value": "\"#333437\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
       "kind": "StringLiteral",
       "offset": 399,
       "length": 9,
       "value": "\"#4A4B4D\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 625,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 683,
       "length": 2,
       "value": "95"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 695,
       "length": 3,
       "value": "169"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutPictureInPictureConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 751,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 586,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 618,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
       "offset": 760,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 797,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 825,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 971,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 10152,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 10203,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 10253,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 10327,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 10378,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 10108,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
       "offset": 10508,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
       "offset": 10666,
       "length": 9,
       "value": "\"#333437\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 10730,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
       "offset": 10930,
       "length": 9,
       "value": "\"#333437\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 10965,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
       "offset": 12251,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
       "offset": 12429,
       "length": 9,
       "value": "\"#222222\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
       "offset": 12502,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 12563,
       "length": 2,
       "value": "23"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 12625,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
       "offset": 12838,
       "length": 9,
       "value": "\"#222222\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
       "offset": 12911,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 12972,
       "length": 2,
       "value": "23"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
       "offset": 13034,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 13229,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
       "offset": 13304,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
       "kind": "BooleanLiteral",
       "offset": 823,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
       "kind": "BooleanLiteral",
       "offset": 867,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
       "kind": "StringLiteral",
       "offset": 973,
       "length": 25,
       "value": "\"ZegoUIkitMemberListCell\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
       "kind": "Array",
       "offset": 1036,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
       "kind": "StringLiteral",
       "offset": 1237,
       "length": 9,
       "value": "\"#222222\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
       "kind": "FloatLiteral",
       "offset": 1254,
       "length": 3,
       "value": "0.8"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomChatView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomChatView.swift",
       "kind": "BooleanLiteral",
       "offset": 893,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomChatView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomChatView.swift",
       "kind": "IntegerLiteral",
       "offset": 1067,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomChatView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomChatView.swift",
       "kind": "IntegerLiteral",
       "offset": 1073,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
       "kind": "StringLiteral",
       "offset": 500,
       "length": 9,
       "value": "\"#010712\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
       "kind": "FloatLiteral",
       "offset": 518,
       "length": 3,
       "value": "0.3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
       "kind": "BooleanLiteral",
       "offset": 560,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
       "kind": "IntegerLiteral",
       "offset": 601,
       "length": 2,
       "value": "13"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
       "kind": "IntegerLiteral",
       "offset": 738,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitMessageCell.swift",
       "kind": "StringLiteral",
       "offset": 793,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 187,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 293,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 328,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 408,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 442,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 479,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 862,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/MessageNotificationModelBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 892,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/RoomChatMessageModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/RoomChatMessageModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 179,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/RoomChatMessageModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/RoomChatMessageModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 285,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/RoomChatMessageModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/RoomChatMessageModelBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 320,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/RoomChatMessageModelBuilder.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/RoomChatMessageModelBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 467,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
       "kind": "IntegerLiteral",
       "offset": 277,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
       "kind": "StringLiteral",
       "offset": 453,
       "length": 18,
       "value": "\"Say something...\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
       "kind": "IntegerLiteral",
       "offset": 519,
       "length": 2,
       "value": "14"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
       "kind": "StringLiteral",
       "offset": 576,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/Internal\/ZegoUIKitTextView.swift",
       "kind": "FloatLiteral",
       "offset": 594,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoMicrophoneStateIcon.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoMicrophoneStateIcon.swift",
       "kind": "BooleanLiteral",
       "offset": 658,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoMicrophoneStateIcon.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoMicrophoneStateIcon.swift",
       "kind": "StringLiteral",
       "offset": 134,
       "length": 23,
       "value": "\"ZegoUIKitSDK.ZegoMicrophoneStateIcon\""
     },
     {
-      "filePath": "\/Users\/zego\/Documents\/zego_uikit_ios\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoMicrophoneStateIcon.swift",
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoMicrophoneStateIcon.swift",
       "kind": "StringLiteral",
       "offset": 134,
       "length": 23,
