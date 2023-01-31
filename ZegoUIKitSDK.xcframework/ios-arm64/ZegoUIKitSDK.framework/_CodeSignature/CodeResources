@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		+tmwWgpfeYKpCu+p98SIAuXG220=
+		</data>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<data>
 		qUoFL2s5vDXJ1v9ATkr54cIya4o=
@@ -48,13 +52,25 @@
 		<data>
 		pFPiG8oo4siGMtP38VReRZgSCV0=
 		</data>
-		<key>ZegoUIKit.bundle/ZegoUIKit</key>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		7GFdcnWZq+7oolKKWvM1x2+8RuQ=
+		yaKmLGh/l+ITvxvIl98QpRS5T0o=
+		</data>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
+		<data>
+		gWs0rl8rj/m1uOAgsy16gKyUgTk=
+		</data>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		L7ftSStc0nuy5MBJcRqRCPRCyfo=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		AkFhDP6m+MgnvgSNCIFMPVb3VRM=
+		QJlKJRWy8EAi7XF8kw3ONWakm2o=
+		</data>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
+		<data>
+		1U1fntVmeJ8/PfVH6envLGf9tTg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -129,18 +145,39 @@
 			Q+qaWaPF9l0j315cedhzlpNtphawm5cZ9TiwXI41Bk8=
 			</data>
 		</dict>
-		<key>ZegoUIKit.bundle/ZegoUIKit</key>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X0Vd8bcPQYXCAjO3Czn5B1d050Tv4y6MXtX/rxyiGrI=
+			IxywUimrZ9Q0456nfzawaaz7OJU9vQFtX60QLE0MiBM=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			H6spiM15uyWFvcqyiiUfe6U5DFBc5uNh1lqIXiLhFw4=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cQUqTXGPmnC1+Js4JRFaiC8mSmRXdj8CG9znbh3p6ok=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c3pf3Nc9R/esmznvYGPrelY15YBJIj3/K10IE86gqHI=
+			NomPpzpFQu5k1Og5xNyKspeCbFeXFvDUP7nDwc1RUmc=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FD1jJek/4ScRdcAK+0EjEW6+Fbw1BMDSc8wPUMS1ie8=
 			</data>
 		</dict>
 	</dict>

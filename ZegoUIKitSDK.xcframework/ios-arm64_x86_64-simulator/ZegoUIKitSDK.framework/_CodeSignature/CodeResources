@@ -72,13 +72,25 @@
 		<data>
 		eXEFj0loc2Dduha7CuPiAiLZeB4=
 		</data>
-		<key>ZegoUIKit.bundle/ZegoUIKit</key>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		hXWYCa4e//I1MouB1RlmXxNdJGQ=
+		Y4sxIWB4L9gSGM5FoZokresQMY0=
+		</data>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
+		<data>
+		OnX22wWFKRSOFN1+obRynMCeyXM=
+		</data>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		JADMTFRhoLwP+RQfXUavtprXf3I=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		xBGeDRi5F+ghDOSooycOMPLaSb4=
+		hBmp/nhOPxoNpOEae6hmSr+5Les=
+		</data>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
+		<data>
+		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -195,18 +207,39 @@
 			Tcju+AyfqxSXCOFrg7IFzoQ34fCm8DlNDMq2fn6zdbs=
 			</data>
 		</dict>
-		<key>ZegoUIKit.bundle/ZegoUIKit</key>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			32Rx2hSWrLwlwuMKvN3iVpv9fpOGEQ+FzKLNgty04zo=
+			lnKoWvV1ux69Xz2qlbyMB4J7+ISiAezK7BJZlxrthqk=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DKtSW++gCOr3tFRbFoef3u8d5Ly+ZZIa0deGyPagpj0=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n8+gQ800sfMoW8tbvqOipt+lg8W0S70RA9olPbZCI0g=
+			7q3JVW3CB76X4TsKNF2nxGuvc4lqYoT1nIl2lOFXKVg=
+			</data>
+		</dict>
+		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
 			</data>
 		</dict>
 	</dict>
