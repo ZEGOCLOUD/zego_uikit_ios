@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		+QcxTtysvTsE1kXhG+gfkbdxwtA=
-		</data>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<data>
 		/ErfclFZhNes5BoZz0wkTDM4kMg=
@@ -18,7 +14,7 @@
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		3ZqSI/Ekd1OLFpEk7kOLl0g0r+w=
+		E7cT3oQhWDMw+HJwCetkPUMo6Z0=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -50,19 +46,19 @@
 		</data>
 		<key>ZegoUIKit.bundle/Info.plist</key>
 		<data>
-		qnlO9lO+abSbzHZGzyMjaLBHivU=
+		/ChskWyu99l2CK+Y9A6TcLcLNSY=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		zOPEJqEej86lIGkbAkY9Z1jO7bc=
+		zOdid+Auicpbr03dfRsEcwL7oGU=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
-		gWs0rl8rj/m1uOAgsy16gKyUgTk=
+		NEdQ0cHuJhyYeirhDobI/DPRPjA=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		LR8BbRKoeVSPutRmMlok7nP2hpY=
+		9Z9E0g1C1MEDU1Iwr/wfBGWz77s=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -70,7 +66,7 @@
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
 		<data>
-		QrK7X1ZEiqIw051ih6COggoSNXg=
+		TAQeVI5OsakSJXV8l33dvqPVYCk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -86,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EnuZ7M09TrXpmYQasJz+s76KmB2GMu8Lz4b1SDd29yM=
+			pILmEmFJccpU8HmNfBXWxhePRZ43CSTUVqBDcNaZ9Y8=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -142,28 +138,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+urG9REq0wQJM6PiuwsqlfIhbEhkwu1OUEa7YC8nH/w=
+			ZuZzMEFQfiinm0abcinmyiu0GyH/mLniJtYqX1UV5Eo=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lleKzAakY3kia6t3jVrvJJRsfgmeIt/3hmxdAgRvWbg=
+			GVyOtIdbnHXsrNp8X4bktPsPZc3I3qzSji0oR+X7I24=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H6spiM15uyWFvcqyiiUfe6U5DFBc5uNh1lqIXiLhFw4=
+			cMb1yGWUxztw4dGF4e38V0m8WjkN3igsuuLU0pgFgF8=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements-1</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pcx6lhaqpqWAIWzXph2E/X0SJL1RiuTJlEBMEmv1H4U=
+			PYPgLBZw2uzWHLYcwlnK83mcDIW22lDGpuT/BDQ/MW0=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
@@ -177,7 +173,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4rIRcjGwjPVFlEyWpxTlA9Yy2vbPGYZ6sr9fQanb0fc=
+			GMemmSF2ihQZozCYmrahg762NCk7FNaiQdF004GlLiM=
 			</data>
 		</dict>
 	</dict>
