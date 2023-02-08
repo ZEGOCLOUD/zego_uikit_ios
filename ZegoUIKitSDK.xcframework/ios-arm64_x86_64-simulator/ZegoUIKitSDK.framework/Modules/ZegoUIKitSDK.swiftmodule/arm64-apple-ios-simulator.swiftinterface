@@ -489,7 +489,7 @@ public typealias PluginCallBack = (_ data: Swift.Dictionary<Swift.String, Swift.
   public func beginRoomPropertiesBatchOperation(_ isForce: Swift.Bool = false, isDeleteAfterOwnerLeft: Swift.Bool = false, isUpdateOwner: Swift.Bool = false)
   public func endRoomPropertiesBatchOperation(_ callBack: ZegoUIKitSDK.PluginCallBack?)
   public func queryRoomProperties(_ callBack: ZegoUIKitSDK.PluginCallBack?)
-  public func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Swift.Bool, isIOSDevelopmentEnvironment: Swift.Bool)
+  public func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Swift.Bool, isSandboxEnvironment: Swift.Bool)
   public func setRemoteNotificationsDeviceToken(_ deviceToken: Foundation.Data)
   @objc deinit
 }

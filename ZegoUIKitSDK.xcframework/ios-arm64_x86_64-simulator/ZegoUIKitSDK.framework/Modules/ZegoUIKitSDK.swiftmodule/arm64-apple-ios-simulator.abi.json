@@ -17491,7 +17491,7 @@
           {
             "kind": "Function",
             "name": "enableNotifyWhenAppRunningInBackgroundOrQuit",
-            "printedName": "enableNotifyWhenAppRunningInBackgroundOrQuit(_:isIOSDevelopmentEnvironment:)",
+            "printedName": "enableNotifyWhenAppRunningInBackgroundOrQuit(_:isSandboxEnvironment:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -17512,8 +17512,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12ZegoUIKitSDK0aB19SignalingPluginImplC44enableNotifyWhenAppRunningInBackgroundOrQuit_27isIOSDevelopmentEnvironmentySb_SbtF",
-            "mangledName": "$s12ZegoUIKitSDK0aB19SignalingPluginImplC44enableNotifyWhenAppRunningInBackgroundOrQuit_27isIOSDevelopmentEnvironmentySb_SbtF",
+            "usr": "s:12ZegoUIKitSDK0aB19SignalingPluginImplC44enableNotifyWhenAppRunningInBackgroundOrQuit_20isSandboxEnvironmentySb_SbtF",
+            "mangledName": "$s12ZegoUIKitSDK0aB19SignalingPluginImplC44enableNotifyWhenAppRunningInBackgroundOrQuit_20isSandboxEnvironmentySb_SbtF",
             "moduleName": "ZegoUIKitSDK",
             "declAttributes": [
               "AccessControl"
@@ -28644,21 +28644,21 @@
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Dictionary",
-      "offset": 18612,
+      "offset": 18591,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "StringLiteral",
-      "offset": 18715,
+      "offset": 18694,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 18746,
+      "offset": 18725,
       "length": 3,
       "value": "100"
     },
