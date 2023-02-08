@@ -7,6 +7,7 @@ import Foundation/*.NSObject*/
 import Swift
 import UIKit
 import ZegoExpressEngine
+import ZegoPluginAdapter
 import _Concurrency
 import _StringProcessing
 extension ZegoUIKitSDK.ZegoUIKit {
@@ -201,25 +202,6 @@ public protocol ZegoAcceptInvitationButtonDelegate : AnyObject {
   @objc @_Concurrency.MainActor(unsafe) public func registerNibCell(_ nib: UIKit.UINib?, forCellReuseIdentifier: Swift.String)
   @objc deinit
 }
-public typealias PluginCallBack = (_ data: Swift.Dictionary<Swift.String, Swift.AnyObject>?) -> ()
-public enum ZegoUIKitPluginType : Swift.String {
-  case signaling
-  case beauty
-  case whiteboard
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers open class ZegoUIKitPlugin : ObjectiveC.NSObject {
-  open func getPluginType() -> ZegoUIKitSDK.ZegoUIKitPluginType?
-  open func getVersion() -> Swift.String?
-  open func invoke(_ method: Swift.String, params: Swift.Dictionary<Swift.String, Swift.AnyObject>?, callBack: ZegoUIKitSDK.PluginCallBack?)
-  open func registerPluginEventHandler(_ object: ZegoUIKitSDK.ZegoPluginEventHandle)
-  @objc override dynamic public init()
-  @objc deinit
-}
 @objc public protocol ZegoPluginEventHandle {
   @objc optional func onPluginEvent(_ event: Swift.String, data: Swift.Dictionary<Swift.String, Swift.AnyObject>?)
 }
@@ -311,17 +293,6 @@ public enum ZegoViewPosition : Swift.Int {
   case sending
   case success
   case failed
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum ZegoPluginConnectionState : Swift.Int {
-  case disconnected
-  case connecting
-  case connected
-  case reconnecting
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -441,6 +412,22 @@ extension UIKit.UIColor {
   @objc override dynamic public init()
   @objc deinit
 }
+extension ZegoUIKitSDK.ZegoUIKitSignalingPluginImpl : ZegoPluginAdapter.ZegoSignalingPluginEventHandler {
+  @objc dynamic public func onConnectionStateChanged(_ state: ZegoPluginAdapter.ZegoSignalingPluginConnectionState)
+  @objc dynamic public func onTokenWillExpire(in second: Swift.UInt32)
+  @objc dynamic public func onCallInvitationReceived(_ callID: Swift.String, inviterID: Swift.String, data: Swift.String)
+  @objc dynamic public func onCallInvitationCancelled(_ callID: Swift.String, inviterID: Swift.String, data: Swift.String)
+  @objc dynamic public func onCallInvitationAccepted(_ callID: Swift.String, inviteeID: Swift.String, data: Swift.String)
+  @objc dynamic public func onCallInvitationRejected(_ callID: Swift.String, inviteeID: Swift.String, data: Swift.String)
+  @objc dynamic public func onCallInvitationTimeout(_ callID: Swift.String)
+  @objc dynamic public func onCallInviteesAnsweredTimeout(_ callID: Swift.String, invitees: [Swift.String])
+  public func onRoomPropertiesUpdated(_ properties: [[Swift.String : Swift.String]], actions: [Swift.UInt], roomID: Swift.String)
+  @objc dynamic public func onUsersInRoomAttributesUpdated(_ attributesMap: [Swift.String : [Swift.String : Swift.String]], editor: Swift.String, roomID: Swift.String)
+  @objc dynamic public func onRoomPropertiesUpdated(_ setProperties: [[Swift.String : Swift.String]], deleteProperties: [[Swift.String : Swift.String]], roomID: Swift.String)
+  @objc dynamic public func onRoomMemberLeft(_ userIDList: [Swift.String], roomID: Swift.String)
+  @objc dynamic public func onRoomMemberJoined(_ userIDList: [Swift.String], roomID: Swift.String)
+  @objc dynamic public func onInRoomTextMessageReceived(_ messages: [ZegoPluginAdapter.ZegoSignalingInRoomTextMessage], roomID: Swift.String)
+}
 public protocol AudioVideoViewDelegate : AnyObject {
   func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> UIKit.UIView?
 }
@@ -479,31 +466,16 @@ public protocol AudioVideoViewDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class ZegoSignalingInRoomTextMessage : ObjectiveC.NSObject {
-  public var messageID: Swift.Int64
-  public var timestamp: Swift.Int64
-  public var orderKey: Swift.Int64
-  public var senderUserID: Swift.String?
-  public var text: Swift.String?
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc public class ZegoSignalingPluginNotificationConfig : ObjectiveC.NSObject {
-  final public let resourceID: Swift.String
-  final public let title: Swift.String
-  final public let message: Swift.String
-  public init(resourceID: Swift.String, title: Swift.String, message: Swift.String)
-  @objc deinit
-}
+public typealias PluginCallBack = (_ data: Swift.Dictionary<Swift.String, Swift.AnyObject>?) -> ()
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitSignalingPluginImpl : ObjectiveC.NSObject {
   public static let shared: ZegoUIKitSDK.ZegoUIKitSignalingPluginImpl
-  public func installPlugins(_ plugins: [ZegoUIKitSDK.ZegoUIKitPlugin])
-  public func getPlugin(_ type: ZegoUIKitSDK.ZegoUIKitPluginType) -> ZegoUIKitSDK.ZegoUIKitPlugin?
+  public func installPlugins(_ plugins: [ZegoPluginAdapter.ZegoPluginProtocol])
+  public func getPlugin(_ type: ZegoPluginAdapter.ZegoPluginType) -> ZegoPluginAdapter.ZegoPluginProtocol?
   public func initWithAppID(appID: Swift.UInt32, appSign: Swift.String)
   public func uninit()
   public func login(_ userID: Swift.String, userName: Swift.String, callback: ZegoUIKitSDK.PluginCallBack?)
   public func loginOut()
-  public func sendInvitation(_ invitees: [Swift.String], timeout: Swift.UInt32, type: Swift.Int, data: Swift.String?, notificationConfig: ZegoUIKitSDK.ZegoSignalingPluginNotificationConfig?, callback: ZegoUIKitSDK.PluginCallBack?)
+  public func sendInvitation(_ invitees: [Swift.String], timeout: Swift.UInt32, type: Swift.Int, data: Swift.String?, notificationConfig: ZegoPluginAdapter.ZegoSignalingPluginNotificationConfig?, callback: ZegoUIKitSDK.PluginCallBack?)
   public func cancelInvitation(_ invitees: [Swift.String], data: Swift.String?, callback: ZegoUIKitSDK.PluginCallBack?)
   public func refuseInvitation(_ inviterID: Swift.String, data: Swift.String?)
   public func acceptInvitation(_ inviterID: Swift.String, data: Swift.String?)
@@ -517,7 +489,7 @@ public protocol AudioVideoViewDelegate : AnyObject {
   public func beginRoomPropertiesBatchOperation(_ isForce: Swift.Bool = false, isDeleteAfterOwnerLeft: Swift.Bool = false, isUpdateOwner: Swift.Bool = false)
   public func endRoomPropertiesBatchOperation(_ callBack: ZegoUIKitSDK.PluginCallBack?)
   public func queryRoomProperties(_ callBack: ZegoUIKitSDK.PluginCallBack?)
-  public func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Swift.Bool, isSandboxEnvironment: Swift.Bool)
+  public func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Swift.Bool, isIOSDevelopmentEnvironment: Swift.Bool)
   public func setRemoteNotificationsDeviceToken(_ deviceToken: Foundation.Data)
   @objc deinit
 }
@@ -628,6 +600,7 @@ public protocol ZegoAudioVideoContainerDelegate : AnyObject {
   public var switchLargeOrSmallViewByClick: Swift.Bool
   public var smallViewSize: CoreFoundation.CGSize
   public var spacingBetweenSmallViews: CoreFoundation.CGFloat
+  public var removeViewWhenAudioVideoUnavailable: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
 }
@@ -697,7 +670,7 @@ public protocol ZegoAudioVideoContainerDelegate : AnyObject {
   @objc optional func onInRoomMessageSendingStateChanged(_ message: ZegoUIKitSDK.ZegoInRoomMessage)
   @objc optional func onSignalingPluginConnectionState(_ params: [Swift.String : Swift.AnyObject])
   @objc optional func onInRoomCommandReceived(_ fromUser: ZegoUIKitSDK.ZegoUIKitUser, command: Swift.String)
-  @objc optional func onInRoomTextMessageReceived(_ messages: [ZegoUIKitSDK.ZegoSignalingInRoomTextMessage], roomID: Swift.String)
+  @objc optional func onInRoomTextMessageReceived(_ messages: [ZegoPluginAdapter.ZegoSignalingInRoomTextMessage], roomID: Swift.String)
   @objc optional func onUsersInRoomAttributesUpdated(_ updateKeys: [Swift.String]?, oldAttributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, attributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, editor: ZegoUIKitSDK.ZegoUIKitUser?)
   @objc optional func onRoomMemberLeft(_ userIDList: [Swift.String]?, roomID: Swift.String)
   @objc optional func onMeRemovedFromRoom()
@@ -730,9 +703,6 @@ extension ZegoUIKitSDK.ZegoUIKit {
   public func startPlayingAllAudioVideo()
   public func stopPlayingAllAudioVideo()
 }
-extension ZegoUIKitSDK.ZegoUIKitPluginType : Swift.Equatable {}
-extension ZegoUIKitSDK.ZegoUIKitPluginType : Swift.Hashable {}
-extension ZegoUIKitSDK.ZegoUIKitPluginType : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoUIKitVideoFillMode : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoUIKitVideoFillMode : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoUIKitVideoFillMode : Swift.RawRepresentable {}
@@ -751,9 +721,6 @@ extension ZegoUIKitSDK.ZegoUIKitAudioOutputDevice : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoInRoomMessageState : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoInRoomMessageState : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoInRoomMessageState : Swift.RawRepresentable {}
-extension ZegoUIKitSDK.ZegoPluginConnectionState : Swift.Equatable {}
-extension ZegoUIKitSDK.ZegoPluginConnectionState : Swift.Hashable {}
-extension ZegoUIKitSDK.ZegoPluginConnectionState : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoAvatarAlignment : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoAvatarAlignment : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoAvatarAlignment : Swift.RawRepresentable {}

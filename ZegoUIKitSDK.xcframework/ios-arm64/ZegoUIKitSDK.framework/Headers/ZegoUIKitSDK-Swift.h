@@ -234,6 +234,7 @@ using UInt = size_t;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
+@import ZegoPluginAdapter;
 #endif
 
 #endif
@@ -492,13 +493,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK23ZegoMicrophoneStateIcon")
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
 @end
 
-typedef SWIFT_ENUM(NSInteger, ZegoPluginConnectionState, open) {
-  ZegoPluginConnectionStateDisconnected = 0,
-  ZegoPluginConnectionStateConnecting = 1,
-  ZegoPluginConnectionStateConnected = 2,
-  ZegoPluginConnectionStateReconnecting = 3,
-};
-
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK21ZegoPluginEventHandle_")
 @protocol ZegoPluginEventHandle
@@ -512,19 +506,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoRefuseInvitationButton")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC12ZegoUIKitSDK30ZegoSignalingInRoomTextMessage")
-@interface ZegoSignalingInRoomTextMessage : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC12ZegoUIKitSDK37ZegoSignalingPluginNotificationConfig")
-@interface ZegoSignalingPluginNotificationConfig : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @protocol ZegoStartInvitationButtonDelegate;
@@ -607,6 +588,7 @@ typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
 };
 
 enum ZegoUIKitRoomStateChangedReason : NSUInteger;
+@class ZegoSignalingInRoomTextMessage;
 @class ZegoUserInRoomAttributesInfo;
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
@@ -644,12 +626,6 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 @end
 
 
-SWIFT_CLASS("_TtC12ZegoUIKitSDK15ZegoUIKitPlugin")
-@interface ZegoUIKitPlugin : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_CLASS("_TtC12ZegoUIKitSDK13ZegoUIKitRoom")
 @interface ZegoUIKitRoom : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -682,6 +658,23 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK28ZegoUIKitSignalingPluginImpl")
 @interface ZegoUIKitSignalingPluginImpl : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@interface ZegoUIKitSignalingPluginImpl (SWIFT_EXTENSION(ZegoUIKitSDK)) <ZegoSignalingPluginEventHandler>
+- (void)onConnectionStateChanged:(enum ZegoSignalingPluginConnectionState)state;
+- (void)onTokenWillExpireIn:(uint32_t)second;
+- (void)onCallInvitationReceived:(NSString * _Nonnull)callID inviterID:(NSString * _Nonnull)inviterID data:(NSString * _Nonnull)data;
+- (void)onCallInvitationCancelled:(NSString * _Nonnull)callID inviterID:(NSString * _Nonnull)inviterID data:(NSString * _Nonnull)data;
+- (void)onCallInvitationAccepted:(NSString * _Nonnull)callID inviteeID:(NSString * _Nonnull)inviteeID data:(NSString * _Nonnull)data;
+- (void)onCallInvitationRejected:(NSString * _Nonnull)callID inviteeID:(NSString * _Nonnull)inviteeID data:(NSString * _Nonnull)data;
+- (void)onCallInvitationTimeout:(NSString * _Nonnull)callID;
+- (void)onCallInviteesAnsweredTimeout:(NSString * _Nonnull)callID invitees:(NSArray<NSString *> * _Nonnull)invitees;
+- (void)onUsersInRoomAttributesUpdated:(NSDictionary<NSString *, NSDictionary<NSString *, NSString *> *> * _Nonnull)attributesMap editor:(NSString * _Nonnull)editor roomID:(NSString * _Nonnull)roomID;
+- (void)onRoomPropertiesUpdated:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nonnull)setProperties deleteProperties:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nonnull)deleteProperties roomID:(NSString * _Nonnull)roomID;
+- (void)onRoomMemberLeft:(NSArray<NSString *> * _Nonnull)userIDList roomID:(NSString * _Nonnull)roomID;
+- (void)onRoomMemberJoined:(NSArray<NSString *> * _Nonnull)userIDList roomID:(NSString * _Nonnull)roomID;
+- (void)onInRoomTextMessageReceived:(NSArray<ZegoSignalingInRoomTextMessage *> * _Nonnull)messages roomID:(NSString * _Nonnull)roomID;
 @end
 
 
