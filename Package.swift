@@ -26,7 +26,7 @@ let package = Package(
             .product(name: "ZegoPluginAdapter", package: "zego_plugin_adapter_ios"),
             .product(name: "ZegoExpressEngine", package: "express-video-ios")]),
         
-            .binaryTarget(name: "ZegoUIKitSDK", url: "", checksum: ""),
+            .binaryTarget(name: "ZegoUIKitSDK", url: "https://github.com/ZEGOCLOUD/zego_uikit_ios/releases/download/2.0.0/ZegoUIKitSDK.xcframework.zip", checksum: "d3ba833322dd933ce1e46702c11455b8afe25a5fbb78c46e8f302af2f7bb2418"),
         
     ]
 )
