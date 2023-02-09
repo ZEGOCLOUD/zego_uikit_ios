@@ -14,7 +14,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ZEGOCLOUD/zego_plugin_adapter_ios.git",
       "state" : {
-        "revision" : "60ba537e7fb98676c9d0e3c25461abb3afabd0ba",
+        "revision" : "b0a897f8ed5ff79daa2f0a43fe795c0db5626ebb",
         "version" : "2.0.0"
       }
     }

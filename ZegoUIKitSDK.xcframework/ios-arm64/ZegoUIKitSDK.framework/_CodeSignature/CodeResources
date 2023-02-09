@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		8pcftUb3/V/YtsZgNAB9oi5CID0=
+		</data>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<data>
 		/ErfclFZhNes5BoZz0wkTDM4kMg=
@@ -42,7 +46,7 @@
 		</data>
 		<key>ZegoUIKit.bundle/Assets.car</key>
 		<data>
-		h9BPGAEgWCE7A8lxdQqM/L+pU+E=
+		irkFeob9sprwypy1HT42tl3SVP8=
 		</data>
 		<key>ZegoUIKit.bundle/Info.plist</key>
 		<data>
@@ -50,7 +54,7 @@
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		zOdid+Auicpbr03dfRsEcwL7oGU=
+		hMbDWE1wh7J0Y8cQwbgsHrvzanI=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -58,15 +62,15 @@
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		9Z9E0g1C1MEDU1Iwr/wfBGWz77s=
+		iXevm81B+tj9IKt1Iz6BZ5hMjj8=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		QJlKJRWy8EAi7XF8kw3ONWakm2o=
+		u5hr+ynKUk68itF+fjmG3hyVskU=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
 		<data>
-		TAQeVI5OsakSJXV8l33dvqPVYCk=
+		uRzB4OBhDD0xBAhdl2BdRescTW0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -131,7 +135,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rDy1Gg8jzm9iox0mSc8rBg9m+OXna0uJNf5m2sElFbc=
+			jC2GKj1YpWMhj5CMreUrjyKJqgoA53/lDdN0rK+v/AM=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/Info.plist</key>
@@ -145,7 +149,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GVyOtIdbnHXsrNp8X4bktPsPZc3I3qzSji0oR+X7I24=
+			hQxleRxgS/5m7Zw9Ffh0KlMRJyiRyvShE+DJbdtqNiY=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
@@ -159,21 +163,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PYPgLBZw2uzWHLYcwlnK83mcDIW22lDGpuT/BDQ/MW0=
+			dxDPsFjldAddKjLJ8fXS3rU6Rvnxn8NJ/sTlxHXNCZM=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NomPpzpFQu5k1Og5xNyKspeCbFeXFvDUP7nDwc1RUmc=
+			wpoMyRS5J1KdPRPDai3l8yxSntefUQ5ElH0xsfCm3Dg=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GMemmSF2ihQZozCYmrahg762NCk7FNaiQdF004GlLiM=
+			ZBvhpU7RZylJpKVW5YfkkDi6EMPLkzxYlCQwEymzsBk=
 			</data>
 		</dict>
 	</dict>
