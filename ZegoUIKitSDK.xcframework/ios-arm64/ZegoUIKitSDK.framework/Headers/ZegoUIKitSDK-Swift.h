@@ -258,6 +258,7 @@ using UInt = size_t;
 
 
 
+
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoAcceptInvitationButton")
@@ -280,6 +281,14 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK27ZegoAudioVideoContainerView")
 - (void)layoutSubviews;
 @end
 
+typedef SWIFT_ENUM(NSUInteger, ZegoAudioVideoResourceMode, open) {
+  ZegoAudioVideoResourceModeDefault = 0,
+  ZegoAudioVideoResourceModeCDNOnly = 1,
+  ZegoAudioVideoResourceModeL3Only = 2,
+  ZegoAudioVideoResourceModeRTCOnly = 3,
+  ZegoAudioVideoResourceModeCDNPlus = 4,
+};
+
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK18ZegoAudioVideoView")
 @interface ZegoAudioVideoView : UIView
@@ -300,6 +309,62 @@ typedef SWIFT_ENUM(NSInteger, ZegoAvatarAlignment, open) {
   ZegoAvatarAlignmentEnd = 2,
 };
 
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK32ZegoBaseAudioVideoForegroundView")
+@interface ZegoBaseAudioVideoForegroundView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+@class ZegoUIKitUser;
+enum ZegoUIKitRoomStateChangedReason : NSUInteger;
+@class NSString;
+enum ZegoUIKitAudioOutputDevice : NSUInteger;
+@class ZegoInRoomMessage;
+@class ZegoSignalingInRoomTextMessage;
+@class ZegoUserInRoomAttributesInfo;
+
+SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
+@protocol ZegoUIKitEventHandle
+@optional
+- (void)onRemoteUserJoin:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onRemoteUserLeave:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onOnlySelfInRoom;
+- (void)onUserCountOrPropertyChanged:(NSArray<ZegoUIKitUser *> * _Nullable)userList;
+- (void)onRoomStateChanged:(enum ZegoUIKitRoomStateChangedReason)reason errorCode:(int32_t)errorCode extendedData:(NSDictionary * _Nonnull)extendedData roomID:(NSString * _Nonnull)roomID;
+- (void)onRoomPropertyUpdated:(NSString * _Nonnull)key oldValue:(NSString * _Nonnull)oldValue newValue:(NSString * _Nonnull)newValue;
+- (void)onRoomPropertiesFullUpdated:(NSArray<NSString *> * _Nonnull)updateKeys oldProperties:(NSDictionary<NSString *, NSString *> * _Nonnull)oldProperties properties:(NSDictionary<NSString *, NSString *> * _Nonnull)properties;
+- (void)onCameraOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
+- (void)onMicrophoneOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
+- (void)onSoundLevelUpdate:(ZegoUIKitUser * _Nonnull)userInfo level:(double)level;
+- (void)onAudioVideoAvailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onAudioVideoUnavailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onAudioOutputDeviceChange:(enum ZegoUIKitAudioOutputDevice)audioRoute;
+- (void)onInvitationReceived:(ZegoUIKitUser * _Nonnull)inviter type:(NSInteger)type data:(NSString * _Nullable)data;
+- (void)onInvitationTimeout:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
+- (void)onInvitationResponseTimeout:(NSArray<ZegoUIKitUser *> * _Nonnull)invitees data:(NSString * _Nullable)data;
+- (void)onInvitationAccepted:(ZegoUIKitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
+- (void)onInvitationRefused:(ZegoUIKitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
+- (void)onInvitationCanceled:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
+- (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
+- (void)onInRoomMessageSendingStateChanged:(ZegoInRoomMessage * _Nonnull)message;
+- (void)onSignalingPluginConnectionState:(NSDictionary<NSString *, id> * _Nonnull)params;
+- (void)onInRoomCommandReceived:(ZegoUIKitUser * _Nonnull)fromUser command:(NSString * _Nonnull)command;
+- (void)onInRoomTextMessageReceived:(NSArray<ZegoSignalingInRoomTextMessage *> * _Nonnull)messages roomID:(NSString * _Nonnull)roomID;
+- (void)onUsersInRoomAttributesUpdated:(NSArray<NSString *> * _Nullable)updateKeys oldAttributes:(NSArray<ZegoUserInRoomAttributesInfo *> * _Nullable)oldAttributes attributes:(NSArray<ZegoUserInRoomAttributesInfo *> * _Nullable)attributes editor:(ZegoUIKitUser * _Nullable)editor;
+- (void)onRoomMemberLeft:(NSArray<NSString *> * _Nullable)userIDList roomID:(NSString * _Nonnull)roomID;
+- (void)onMeRemovedFromRoom;
+- (void)onTurnOnYourCameraRequest:(ZegoUIKitUser * _Nonnull)fromUser;
+- (void)onTurnOnYourMicrophoneRequest:(ZegoUIKitUser * _Nonnull)fromUser;
+@end
+
+
+@interface ZegoBaseAudioVideoForegroundView (SWIFT_EXTENSION(ZegoUIKitSDK)) <ZegoUIKitEventHandle>
+- (void)onCameraOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
+- (void)onMicrophoneOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
+- (void)onUsersInRoomAttributesUpdated:(NSArray<NSString *> * _Nullable)updateKeys oldAttributes:(NSArray<ZegoUserInRoomAttributesInfo *> * _Nullable)oldAttributes attributes:(NSArray<ZegoUserInRoomAttributesInfo *> * _Nullable)attributes editor:(ZegoUIKitUser * _Nullable)editor;
+@end
+
 @class UIImage;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK19ZegoCameraStateIcon")
@@ -318,7 +383,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoCancelInvitationButton")
 - (void)buttonClick;
 @end
 
-@class NSString;
 @class UINib;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK18ZegoInRoomChatView")
@@ -332,7 +396,6 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK18ZegoInRoomChatView")
 
 @class UITableView;
 @class NSIndexPath;
-@class ZegoInRoomMessage;
 @class UITableViewCell;
 
 SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK26ZegoInRoomChatViewDelegate_")
@@ -344,7 +407,6 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK26ZegoInRoomChatViewDelegate_")
 - (UIView * _Nullable)getChatViewForHeaderInSection:(UITableView * _Nonnull)tableView section:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class ZegoUIKitUser;
 enum ZegoInRoomMessageState : NSInteger;
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK17ZegoInRoomMessage")
@@ -587,43 +649,6 @@ typedef SWIFT_ENUM(NSUInteger, ZegoUIKitAudioOutputDevice, open) {
   ZegoUIKitAudioOutputDeviceAirPlay = 5,
 };
 
-enum ZegoUIKitRoomStateChangedReason : NSUInteger;
-@class ZegoSignalingInRoomTextMessage;
-@class ZegoUserInRoomAttributesInfo;
-
-SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
-@protocol ZegoUIKitEventHandle
-@optional
-- (void)onRemoteUserJoin:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
-- (void)onRemoteUserLeave:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
-- (void)onOnlySelfInRoom;
-- (void)onUserCountOrPropertyChanged:(NSArray<ZegoUIKitUser *> * _Nullable)userList;
-- (void)onRoomStateChanged:(enum ZegoUIKitRoomStateChangedReason)reason errorCode:(int32_t)errorCode extendedData:(NSDictionary * _Nonnull)extendedData roomID:(NSString * _Nonnull)roomID;
-- (void)onRoomPropertyUpdated:(NSString * _Nonnull)key oldValue:(NSString * _Nonnull)oldValue newValue:(NSString * _Nonnull)newValue;
-- (void)onRoomPropertiesFullUpdated:(NSArray<NSString *> * _Nonnull)updateKeys oldProperties:(NSDictionary<NSString *, NSString *> * _Nonnull)oldProperties properties:(NSDictionary<NSString *, NSString *> * _Nonnull)properties;
-- (void)onCameraOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
-- (void)onMicrophoneOn:(ZegoUIKitUser * _Nonnull)user isOn:(BOOL)isOn;
-- (void)onSoundLevelUpdate:(ZegoUIKitUser * _Nonnull)userInfo level:(double)level;
-- (void)onAudioVideoAvailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
-- (void)onAudioVideoUnavailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
-- (void)onAudioOutputDeviceChange:(enum ZegoUIKitAudioOutputDevice)audioRoute;
-- (void)onInvitationReceived:(ZegoUIKitUser * _Nonnull)inviter type:(NSInteger)type data:(NSString * _Nullable)data;
-- (void)onInvitationTimeout:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
-- (void)onInvitationResponseTimeout:(NSArray<ZegoUIKitUser *> * _Nonnull)invitees data:(NSString * _Nullable)data;
-- (void)onInvitationAccepted:(ZegoUIKitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
-- (void)onInvitationRefused:(ZegoUIKitUser * _Nonnull)invitee data:(NSString * _Nullable)data;
-- (void)onInvitationCanceled:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
-- (void)onInRoomMessageReceived:(NSArray<ZegoInRoomMessage *> * _Nonnull)messageList;
-- (void)onInRoomMessageSendingStateChanged:(ZegoInRoomMessage * _Nonnull)message;
-- (void)onSignalingPluginConnectionState:(NSDictionary<NSString *, id> * _Nonnull)params;
-- (void)onInRoomCommandReceived:(ZegoUIKitUser * _Nonnull)fromUser command:(NSString * _Nonnull)command;
-- (void)onInRoomTextMessageReceived:(NSArray<ZegoSignalingInRoomTextMessage *> * _Nonnull)messages roomID:(NSString * _Nonnull)roomID;
-- (void)onUsersInRoomAttributesUpdated:(NSArray<NSString *> * _Nullable)updateKeys oldAttributes:(NSArray<ZegoUserInRoomAttributesInfo *> * _Nullable)oldAttributes attributes:(NSArray<ZegoUserInRoomAttributesInfo *> * _Nullable)attributes editor:(ZegoUIKitUser * _Nullable)editor;
-- (void)onRoomMemberLeft:(NSArray<NSString *> * _Nullable)userIDList roomID:(NSString * _Nonnull)roomID;
-- (void)onMeRemovedFromRoom;
-- (void)onTurnOnYourCameraRequest:(ZegoUIKitUser * _Nonnull)fromUser;
-- (void)onTurnOnYourMicrophoneRequest:(ZegoUIKitUser * _Nonnull)fromUser;
-@end
 
 
 SWIFT_CLASS("_TtC12ZegoUIKitSDK13ZegoUIKitRoom")

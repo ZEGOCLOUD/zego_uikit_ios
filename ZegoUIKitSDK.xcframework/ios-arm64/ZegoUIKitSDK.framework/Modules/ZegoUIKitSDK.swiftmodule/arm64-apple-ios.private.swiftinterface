@@ -309,6 +309,18 @@ public enum ZegoViewPosition : Swift.Int {
     get
   }
 }
+@objc public enum ZegoAudioVideoResourceMode : Swift.UInt {
+  case `default`
+  case CDNOnly
+  case L3Only
+  case RTCOnly
+  case CDNPlus
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
 public typealias ZegoUIKitSendMessageCallback = (Swift.Result<Any, Swift.Error>) -> Swift.Void
 public typealias ZegoSendInRoomCommnadCallback = (_ errorCode: Swift.Int32) -> Swift.Void
 extension ZegoUIKitSDK.ZegoUIKit {
@@ -347,15 +359,14 @@ public protocol ToggleAudioOutputButtonDelegate : AnyObject {
 public typealias ZegoUIKitCallBack = (_ data: Swift.Dictionary<Swift.String, Swift.AnyObject>?) -> ()
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKit : ObjectiveC.NSObject {
   public static let shared: ZegoUIKitSDK.ZegoUIKit
-  public var localUserInfo: ZegoUIKitSDK.ZegoUIKitUser?
+  public var localUserInfo: ZegoUIKitSDK.ZegoUIKitUser? {
+    get
+  }
   public var userList: [ZegoUIKitSDK.ZegoUIKitUser] {
     get
   }
   final public let room: ZegoUIKitSDK.ZegoUIKitRoom?
-  public var enableAudioVideoPlaying: Swift.Bool {
-    get
-    set
-  }
+  public var enableAudioVideoPlaying: Swift.Bool
   public func initWithAppID(appID: Swift.UInt32, appSign: Swift.String)
   public func uninit()
   public func getVersion() -> Swift.String
@@ -429,7 +440,7 @@ extension ZegoUIKitSDK.ZegoUIKitSignalingPluginImpl : ZegoPluginAdapter.ZegoSign
   @objc dynamic public func onInRoomTextMessageReceived(_ messages: [ZegoPluginAdapter.ZegoSignalingInRoomTextMessage], roomID: Swift.String)
 }
 public protocol AudioVideoViewDelegate : AnyObject {
-  func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> UIKit.UIView?
+  func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView?
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoAudioVideoView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.AudioVideoViewDelegate? {
@@ -578,7 +589,7 @@ public enum ZegoPluginMethodName : Swift.String {
   }
 }
 public protocol ZegoAudioVideoContainerDelegate : AnyObject {
-  func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> UIKit.UIView?
+  func getForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView?
   func sortAudioVideo(_ userList: [ZegoUIKitSDK.ZegoUIKitUser]) -> [ZegoUIKitSDK.ZegoUIKitUser]?
 }
 @objc @_inheritsConvenienceInitializers public class ZegoAudioVideoContainer : ObjectiveC.NSObject {
@@ -603,6 +614,23 @@ public protocol ZegoAudioVideoContainerDelegate : AnyObject {
   public var removeViewWhenAudioVideoUnavailable: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
+}
+public protocol ZegoBaseAudioVideoForegroundViewDelegate : AnyObject {
+  func onForegroundViewCreated(_ uikitUser: ZegoUIKitSDK.ZegoUIKitUser?)
+  func onCameraStateChanged(_ isCameraOn: Swift.Bool)
+  func onMicrophoneStateChanged(_ isMicrophoneOn: Swift.Bool)
+  func onInRoomAttributesUpdated(_ inRoomAttributes: [Swift.String : Swift.String])
+}
+@objc @_Concurrency.MainActor(unsafe) open class ZegoBaseAudioVideoForegroundView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate?
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, userID: Swift.String?, delegate: ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView : ZegoUIKitSDK.ZegoUIKitEventHandle {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func onCameraOn(_ user: ZegoUIKitSDK.ZegoUIKitUser, isOn: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func onMicrophoneOn(_ user: ZegoUIKitSDK.ZegoUIKitUser, isOn: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func onUsersInRoomAttributesUpdated(_ updateKeys: [Swift.String]?, oldAttributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, attributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, editor: ZegoUIKitSDK.ZegoUIKitUser?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitRoom : ObjectiveC.NSObject {
   public var roomID: Swift.String?
@@ -694,6 +722,7 @@ public protocol ZegoAudioVideoContainerDelegate : AnyObject {
   @objc deinit
 }
 extension ZegoUIKitSDK.ZegoUIKit {
+  public func setAudioVideoResourceMode(_ model: ZegoUIKitSDK.ZegoAudioVideoResourceMode)
   public func useFrontFacingCamera(isFrontFacing: Swift.Bool)
   public func setAudioOutputToSpeaker(enable: Swift.Bool)
   public func isMicrophoneOn(_ userID: Swift.String) -> Swift.Bool
@@ -724,6 +753,9 @@ extension ZegoUIKitSDK.ZegoInRoomMessageState : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoAvatarAlignment : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoAvatarAlignment : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoAvatarAlignment : Swift.RawRepresentable {}
+extension ZegoUIKitSDK.ZegoAudioVideoResourceMode : Swift.Equatable {}
+extension ZegoUIKitSDK.ZegoAudioVideoResourceMode : Swift.Hashable {}
+extension ZegoUIKitSDK.ZegoAudioVideoResourceMode : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.RawRepresentable {}

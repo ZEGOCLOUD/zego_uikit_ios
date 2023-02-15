@@ -7466,6 +7466,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZegoUIKitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "ZegoInRoomMessageInputDelegate",
         "printedName": "ZegoInRoomMessageInputDelegate",
@@ -10421,6 +10431,337 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "ZegoAudioVideoResourceMode",
+        "printedName": "ZegoAudioVideoResourceMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type) -> ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoAudioVideoResourceMode",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoAudioVideoResourceMode",
+                        "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                        "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode@ZegoAudioVideoResourceModeDefault",
+            "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO7defaultyA2CmF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "CDNOnly",
+            "printedName": "CDNOnly",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type) -> ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoAudioVideoResourceMode",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoAudioVideoResourceMode",
+                        "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                        "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode@ZegoAudioVideoResourceModeCDNOnly",
+            "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO7CDNOnlyyA2CmF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "L3Only",
+            "printedName": "L3Only",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type) -> ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoAudioVideoResourceMode",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoAudioVideoResourceMode",
+                        "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                        "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode@ZegoAudioVideoResourceModeL3Only",
+            "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO6L3OnlyyA2CmF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "RTCOnly",
+            "printedName": "RTCOnly",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type) -> ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoAudioVideoResourceMode",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoAudioVideoResourceMode",
+                        "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                        "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode@ZegoAudioVideoResourceModeRTCOnly",
+            "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO7RTCOnlyyA2CmF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "CDNPlus",
+            "printedName": "CDNPlus",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type) -> ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoAudioVideoResourceMode",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoAudioVideoResourceMode",
+                        "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                        "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode@ZegoAudioVideoResourceModeCDNPlus",
+            "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO7CDNPlusyA2CmF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoAudioVideoResourceMode",
+                    "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZegoUIKitSDK0A22AudioVideoResourceModeO8rawValueACSgSu_tcfc",
+            "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO8rawValueACSgSu_tcfc",
+            "moduleName": "ZegoUIKitSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A22AudioVideoResourceModeO8rawValueSuvp",
+            "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO8rawValueSuvp",
+            "moduleName": "ZegoUIKitSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A22AudioVideoResourceModeO8rawValueSuvg",
+                "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO8rawValueSuvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode",
+        "mangledName": "$s12ZegoUIKitSDK0A22AudioVideoResourceModeO",
+        "moduleName": "ZegoUIKitSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "UInt",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -11956,11 +12297,8 @@
             "mangledName": "$s12ZegoUIKitSDK0aB0C13localUserInfoAA0abE0CSgvp",
             "moduleName": "ZegoUIKitSDK",
             "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
               "AccessControl"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -11986,58 +12324,7 @@
                 "usr": "s:12ZegoUIKitSDK0aB0C13localUserInfoAA0abE0CSgvg",
                 "mangledName": "$s12ZegoUIKitSDK0aB0C13localUserInfoAA0abE0CSgvg",
                 "moduleName": "ZegoUIKitSDK",
-                "implicit": true,
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "ZegoUIKitSDK.ZegoUIKitUser?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ZegoUIKitUser",
-                        "printedName": "ZegoUIKitSDK.ZegoUIKitUser",
-                        "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUIKitUser"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12ZegoUIKitSDK0aB0C13localUserInfoAA0abE0CSgvs",
-                "mangledName": "$s12ZegoUIKitSDK0aB0C13localUserInfoAA0abE0CSgvs",
-                "moduleName": "ZegoUIKitSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12ZegoUIKitSDK0aB0C13localUserInfoAA0abE0CSgvM",
-                "mangledName": "$s12ZegoUIKitSDK0aB0C13localUserInfoAA0abE0CSgvM",
-                "moduleName": "ZegoUIKitSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
               }
             ]
           },
@@ -12276,8 +12563,7 @@
             "mangledName": "$s12ZegoUIKitSDK0aB0C13initWithAppID03appG00H4Signys6UInt32V_SStF",
             "moduleName": "ZegoUIKitSDK",
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -12928,6 +13214,33 @@
             "declKind": "Func",
             "usr": "s:12ZegoUIKitSDK0aB0C17sendInRoomCommand_9toUserIDs8callbackySS_SaySSGys5Int32VcSgtF",
             "mangledName": "$s12ZegoUIKitSDK0aB0C17sendInRoomCommand_9toUserIDs8callbackySS_SaySSGys5Int32VcSgtF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setAudioVideoResourceMode",
+            "printedName": "setAudioVideoResourceMode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZegoAudioVideoResourceMode",
+                "printedName": "ZegoUIKitSDK.ZegoAudioVideoResourceMode",
+                "usr": "c:@M@ZegoUIKitSDK@E@ZegoAudioVideoResourceMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZegoUIKitSDK0aB0C25setAudioVideoResourceModeyyAA0aefgH0OF",
+            "mangledName": "$s12ZegoUIKitSDK0aB0C25setAudioVideoResourceModeyyAA0aefgH0OF",
             "moduleName": "ZegoUIKitSDK",
             "declAttributes": [
               "AccessControl"
@@ -14435,6 +14748,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZegoUIKitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "ZegoLayout",
         "printedName": "ZegoLayout",
@@ -15057,13 +15380,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "UIKit.UIView?",
+                "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
+                    "name": "ZegoBaseAudioVideoForegroundView",
+                    "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView",
+                    "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView"
                   }
                 ],
                 "usr": "s:Sq"
@@ -15084,8 +15407,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12ZegoUIKitSDK22AudioVideoViewDelegateP013getForegroundF0ySo6UIViewCSgAA0aB4UserCSgF",
-            "mangledName": "$s12ZegoUIKitSDK22AudioVideoViewDelegateP013getForegroundF0ySo6UIViewCSgAA0aB4UserCSgF",
+            "usr": "s:12ZegoUIKitSDK22AudioVideoViewDelegateP013getForegroundF0yAA0a4BasedeiF0CSgAA0aB4UserCSgF",
+            "mangledName": "$s12ZegoUIKitSDK22AudioVideoViewDelegateP013getForegroundF0yAA0a4BasedeiF0CSgAA0aB4UserCSgF",
             "moduleName": "ZegoUIKitSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.AudioVideoViewDelegate>",
             "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.AudioVideoViewDelegate>",
@@ -21442,13 +21765,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "UIKit.UIView?",
+                "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
+                    "name": "ZegoBaseAudioVideoForegroundView",
+                    "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView",
+                    "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView"
                   }
                 ],
                 "usr": "s:Sq"
@@ -21469,8 +21792,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12ZegoUIKitSDK0A27AudioVideoContainerDelegateP17getForegroundViewySo6UIViewCSgAA0aB4UserCSgF",
-            "mangledName": "$s12ZegoUIKitSDK0A27AudioVideoContainerDelegateP17getForegroundViewySo6UIViewCSgAA0aB4UserCSgF",
+            "usr": "s:12ZegoUIKitSDK0A27AudioVideoContainerDelegateP17getForegroundViewyAA0a4BasedeiJ0CSgAA0aB4UserCSgF",
+            "mangledName": "$s12ZegoUIKitSDK0A27AudioVideoContainerDelegateP17getForegroundViewyAA0a4BasedeiJ0CSgAA0aB4UserCSgF",
             "moduleName": "ZegoUIKitSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoAudioVideoContainerDelegate>",
             "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoAudioVideoContainerDelegate>",
@@ -22975,6 +23298,673 @@
         "moduleName": "ZegoUIKitSDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZegoUIKitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZegoBaseAudioVideoForegroundViewDelegate",
+        "printedName": "ZegoBaseAudioVideoForegroundViewDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onForegroundViewCreated",
+            "printedName": "onForegroundViewCreated(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZegoUIKitSDK.ZegoUIKitUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoUIKitUser",
+                    "printedName": "ZegoUIKitSDK.ZegoUIKitUser",
+                    "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUIKitUser"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP02ongH7CreatedyyAA0aB4UserCSgF",
+            "mangledName": "$s12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP02ongH7CreatedyyAA0aB4UserCSgF",
+            "moduleName": "ZegoUIKitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate>",
+            "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onCameraStateChanged",
+            "printedName": "onCameraStateChanged(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP20onCameraStateChangedyySbF",
+            "mangledName": "$s12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP20onCameraStateChangedyySbF",
+            "moduleName": "ZegoUIKitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate>",
+            "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onMicrophoneStateChanged",
+            "printedName": "onMicrophoneStateChanged(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP24onMicrophoneStateChangedyySbF",
+            "mangledName": "$s12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP24onMicrophoneStateChangedyySbF",
+            "moduleName": "ZegoUIKitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate>",
+            "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onInRoomAttributesUpdated",
+            "printedName": "onInRoomAttributesUpdated(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP25onInRoomAttributesUpdatedyySDyS2SGF",
+            "mangledName": "$s12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP25onInRoomAttributesUpdatedyySDyS2SGF",
+            "moduleName": "ZegoUIKitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate>",
+            "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP",
+        "mangledName": "$s12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP",
+        "moduleName": "ZegoUIKitSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZegoBaseAudioVideoForegroundView",
+        "printedName": "ZegoBaseAudioVideoForegroundView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC8delegateAA0adefgH8Delegate_pSgvp",
+            "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC8delegateAA0adefgH8Delegate_pSgvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "Custom",
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoBaseAudioVideoForegroundViewDelegate",
+                        "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate",
+                        "usr": "s:12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC8delegateAA0adefgH8Delegate_pSgvg",
+                "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC8delegateAA0adefgH8Delegate_pSgvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoBaseAudioVideoForegroundViewDelegate",
+                        "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate",
+                        "usr": "s:12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC8delegateAA0adefgH8Delegate_pSgvs",
+                "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC8delegateAA0adefgH8Delegate_pSgvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC8delegateAA0adefgH8Delegate_pSgvM",
+                "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC8delegateAA0adefgH8Delegate_pSgvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:userID:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZegoBaseAudioVideoForegroundView",
+                "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView",
+                "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoBaseAudioVideoForegroundViewDelegate",
+                    "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundViewDelegate",
+                    "usr": "s:12ZegoUIKitSDK0A36BaseAudioVideoForegroundViewDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC5frame6userID8delegateACSo6CGRectV_SSSgAA0adefgH8Delegate_pSgtcfc",
+            "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC5frame6userID8delegateACSo6CGRectV_SSSgAA0adefgH8Delegate_pSgtcfc",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoBaseAudioVideoForegroundView",
+                    "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView",
+                    "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView(im)initWithCoder:",
+            "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "ZegoUIKitSDK",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZegoBaseAudioVideoForegroundView",
+                "printedName": "ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView",
+                "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView(im)initWithFrame:",
+            "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "ZegoUIKitSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "onCameraOn",
+            "printedName": "onCameraOn(_:isOn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZegoUIKitUser",
+                "printedName": "ZegoUIKitSDK.ZegoUIKitUser",
+                "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUIKitUser"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView(im)onCameraOn:isOn:",
+            "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC10onCameraOn_02isK0yAA0aB4UserC_SbtF",
+            "moduleName": "ZegoUIKitSDK",
+            "isOpen": true,
+            "objc_name": "onCameraOn:isOn:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onMicrophoneOn",
+            "printedName": "onMicrophoneOn(_:isOn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZegoUIKitUser",
+                "printedName": "ZegoUIKitSDK.ZegoUIKitUser",
+                "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUIKitUser"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView(im)onMicrophoneOn:isOn:",
+            "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC14onMicrophoneOn_02isK0yAA0aB4UserC_SbtF",
+            "moduleName": "ZegoUIKitSDK",
+            "isOpen": true,
+            "objc_name": "onMicrophoneOn:isOn:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onUsersInRoomAttributesUpdated",
+            "printedName": "onUsersInRoomAttributesUpdated(_:oldAttributes:attributes:editor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoUserInRoomAttributesInfo",
+                        "printedName": "ZegoUIKitSDK.ZegoUserInRoomAttributesInfo",
+                        "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUserInRoomAttributesInfo"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoUserInRoomAttributesInfo",
+                        "printedName": "ZegoUIKitSDK.ZegoUserInRoomAttributesInfo",
+                        "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUserInRoomAttributesInfo"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZegoUIKitSDK.ZegoUIKitUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoUIKitUser",
+                    "printedName": "ZegoUIKitSDK.ZegoUIKitUser",
+                    "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUIKitUser"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView(im)onUsersInRoomAttributesUpdated:oldAttributes:attributes:editor:",
+            "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC30onUsersInRoomAttributesUpdated_03oldM010attributes6editorySaySSGSg_SayAA0a4UserklM4InfoCGSgAmA0abR0CSgtF",
+            "moduleName": "ZegoUIKitSDK",
+            "isOpen": true,
+            "objc_name": "onUsersInRoomAttributesUpdated:oldAttributes:attributes:editor:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoBaseAudioVideoForegroundView",
+        "mangledName": "$s12ZegoUIKitSDK0A28BaseAudioVideoForegroundViewC",
+        "moduleName": "ZegoUIKitSDK",
+        "isOpen": true,
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ZegoUIKitEventHandle",
+            "printedName": "ZegoUIKitEventHandle",
+            "usr": "c:@M@ZegoUIKitSDK@objc(pl)ZegoUIKitEventHandle",
+            "mangledName": "$s12ZegoUIKitSDK0aB11EventHandleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
         ]
       },
       {
@@ -27040,8 +28030,15 @@
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "kind": "Dictionary",
+      "offset": 505,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "StringLiteral",
-      "offset": 504,
+      "offset": 554,
       "length": 2,
       "value": "\"\""
     },
@@ -27054,43 +28051,36 @@
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
-      "kind": "Array",
-      "offset": 1161,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 1196,
+      "offset": 1545,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "Dictionary",
-      "offset": 1246,
+      "offset": 1595,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 1281,
+      "offset": 1630,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1311,
+      "offset": 1660,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1349,
+      "offset": 1698,
       "length": 5,
       "value": "false"
     },
@@ -27317,6 +28307,34 @@
       "offset": 11642,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/internal\/ZegoAudioVideoHeadView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 440,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/internal\/ZegoAudioVideoHeadView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 734,
+      "length": 2,
+      "value": "23"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/internal\/ZegoAudioVideoHeadView.swift",
+      "kind": "StringLiteral",
+      "offset": 848,
+      "length": 9,
+      "value": "\"#222222\""
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/internal\/ZegoAudioVideoHeadView.swift",
+      "kind": "StringLiteral",
+      "offset": 918,
+      "length": 9,
+      "value": "\"#DBDDE3\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/Message\/ZegoInRoomMessageInput.swift",
@@ -27992,36 +29010,92 @@
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3552,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3569,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3585,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3602,
+      "length": 7,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3552,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3569,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3585,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3602,
+      "length": 7,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "StringLiteral",
-      "offset": 4872,
+      "offset": 5014,
       "length": 15,
       "value": "\"im.zego.uikit\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 728,
+      "offset": 754,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
       "kind": "FloatLiteral",
-      "offset": 870,
+      "offset": 896,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 967,
+      "offset": 993,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoPipLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1067,
+      "offset": 1093,
       "length": 1,
       "value": "0"
     },
@@ -28098,7 +29172,7 @@
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/ZegoUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 792,
+      "offset": 944,
       "length": 4,
       "value": "true"
     },
@@ -28448,105 +29522,91 @@
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 599,
+      "offset": 624,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1074,
+      "offset": 1098,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1121,
+      "offset": 1145,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1190,
+      "offset": 1213,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1238,
+      "offset": 1261,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
+      "kind": "StringLiteral",
+      "offset": 1401,
+      "length": 8,
+      "value": "\"avatar\""
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1433,
+      "offset": 1557,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1764,
+      "offset": 2068,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1849,
+      "offset": 2153,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "StringLiteral",
-      "offset": 2049,
+      "offset": 2353,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2871,
+      "offset": 3190,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2923,
-      "length": 2,
-      "value": "23"
-    },
-    {
-      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "StringLiteral",
-      "offset": 3037,
-      "length": 9,
-      "value": "\"#222222\""
-    },
-    {
-      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
-      "kind": "StringLiteral",
-      "offset": 3107,
-      "length": 9,
-      "value": "\"#DBDDE3\""
-    },
-    {
-      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
-      "kind": "StringLiteral",
-      "offset": 3444,
+      "offset": 3525,
       "length": 16,
       "value": "\"radarAnimation\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoAudioVideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10891,
+      "offset": 10838,
       "length": 5,
       "value": "false"
     },
@@ -28595,70 +29655,70 @@
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 13499,
+      "offset": 15516,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 13522,
+      "offset": 15539,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 13551,
+      "offset": 15568,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 14384,
+      "offset": 16401,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 15532,
+      "offset": 17549,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 15570,
+      "offset": 17587,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 15598,
+      "offset": 17615,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "Dictionary",
-      "offset": 18591,
+      "offset": 20608,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "StringLiteral",
-      "offset": 18694,
+      "offset": 20711,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Plugins\/Invitation\/ZegoUIKitSignalingPluginImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 18725,
+      "offset": 20742,
       "length": 3,
       "value": "100"
     },
@@ -28756,198 +29816,205 @@
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 586,
+      "offset": 612,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 618,
+      "offset": 644,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
-      "offset": 760,
+      "offset": 786,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 797,
+      "offset": 823,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 825,
+      "offset": 851,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 971,
+      "offset": 997,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 10152,
+      "offset": 10230,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10203,
+      "offset": 10281,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10253,
+      "offset": 10331,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10327,
+      "offset": 10405,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10378,
+      "offset": 10456,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 10108,
+      "offset": 10186,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
-      "offset": 10508,
+      "offset": 10586,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 10666,
+      "offset": 10744,
       "length": 9,
       "value": "\"#333437\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10730,
+      "offset": 10808,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 10930,
+      "offset": 11008,
       "length": 9,
       "value": "\"#333437\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10965,
+      "offset": 11043,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
-      "offset": 12251,
+      "offset": 12355,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 12429,
+      "offset": 12533,
       "length": 9,
       "value": "\"#222222\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 12502,
+      "offset": 12606,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12563,
+      "offset": 12667,
       "length": 2,
       "value": "23"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 12625,
+      "offset": 12729,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 12838,
+      "offset": 12942,
       "length": 9,
       "value": "\"#222222\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 12911,
+      "offset": 13015,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12972,
+      "offset": 13076,
       "length": 2,
       "value": "23"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 13034,
+      "offset": 13138,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 13229,
+      "offset": 13333,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 13304,
+      "offset": 13408,
       "length": 9,
       "value": "\"#FFFFFF\""
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoBaseAudioVideoForegroundView.swift",
+      "kind": "StringLiteral",
+      "offset": 760,
+      "length": 32,
+      "value": "\"ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/User\/ZegoMemberList.swift",
