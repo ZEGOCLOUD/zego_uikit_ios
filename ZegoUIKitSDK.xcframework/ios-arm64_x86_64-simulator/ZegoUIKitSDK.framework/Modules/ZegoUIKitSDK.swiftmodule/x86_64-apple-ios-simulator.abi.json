@@ -10762,6 +10762,255 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "ZegoShowFullscreenModeToggleButtonRules",
+        "printedName": "ZegoShowFullscreenModeToggleButtonRules",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "showWhenScreenPressed",
+            "printedName": "showWhenScreenPressed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules.Type) -> ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoShowFullscreenModeToggleButtonRules",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoShowFullscreenModeToggleButtonRules",
+                        "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                        "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules@ZegoShowFullscreenModeToggleButtonRulesShowWhenScreenPressed",
+            "mangledName": "$s12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO21showWhenScreenPressedyA2CmF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "alwaysShow",
+            "printedName": "alwaysShow",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules.Type) -> ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoShowFullscreenModeToggleButtonRules",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoShowFullscreenModeToggleButtonRules",
+                        "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                        "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules@ZegoShowFullscreenModeToggleButtonRulesAlwaysShow",
+            "mangledName": "$s12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO06alwaysD0yA2CmF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "alwaysHide",
+            "printedName": "alwaysHide",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules.Type) -> ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoShowFullscreenModeToggleButtonRules",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoShowFullscreenModeToggleButtonRules",
+                        "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                        "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules@ZegoShowFullscreenModeToggleButtonRulesAlwaysHide",
+            "mangledName": "$s12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO10alwaysHideyA2CmF",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoShowFullscreenModeToggleButtonRules",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO8rawValueACSgSu_tcfc",
+            "mangledName": "$s12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO8rawValueACSgSu_tcfc",
+            "moduleName": "ZegoUIKitSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO8rawValueSuvp",
+            "mangledName": "$s12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO8rawValueSuvp",
+            "moduleName": "ZegoUIKitSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO8rawValueSuvg",
+                "mangledName": "$s12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO8rawValueSuvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules",
+        "mangledName": "$s12ZegoUIKitSDK0A35ShowFullscreenModeToggleButtonRulesO",
+        "moduleName": "ZegoUIKitSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "UInt",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -15187,6 +15436,264 @@
                 "declKind": "Accessor",
                 "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC36addBorderRadiusAndSpacingBetweenViewSbvM",
                 "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC36addBorderRadiusAndSpacingBetweenViewSbvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "removeViewWhenAudioVideoUnavailable",
+            "printedName": "removeViewWhenAudioVideoUnavailable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC35removeViewWhenAudioVideoUnavailableSbvp",
+            "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC35removeViewWhenAudioVideoUnavailableSbvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC35removeViewWhenAudioVideoUnavailableSbvg",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC35removeViewWhenAudioVideoUnavailableSbvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC35removeViewWhenAudioVideoUnavailableSbvs",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC35removeViewWhenAudioVideoUnavailableSbvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC35removeViewWhenAudioVideoUnavailableSbvM",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC35removeViewWhenAudioVideoUnavailableSbvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "showNewScreenSharingViewInFullscreenMode",
+            "printedName": "showNewScreenSharingViewInFullscreenMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC40showNewScreenSharingViewInFullscreenModeSbvp",
+            "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC40showNewScreenSharingViewInFullscreenModeSbvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC40showNewScreenSharingViewInFullscreenModeSbvg",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC40showNewScreenSharingViewInFullscreenModeSbvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC40showNewScreenSharingViewInFullscreenModeSbvs",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC40showNewScreenSharingViewInFullscreenModeSbvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC40showNewScreenSharingViewInFullscreenModeSbvM",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC40showNewScreenSharingViewInFullscreenModeSbvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "showScreenSharingFullscreenModeToggleButtonRules",
+            "printedName": "showScreenSharingFullscreenModeToggleButtonRules",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZegoShowFullscreenModeToggleButtonRules",
+                "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC48showScreenSharingFullscreenModeToggleButtonRulesAA0a4ShowjklmN0Ovp",
+            "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC48showScreenSharingFullscreenModeToggleButtonRulesAA0a4ShowjklmN0Ovp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoShowFullscreenModeToggleButtonRules",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC48showScreenSharingFullscreenModeToggleButtonRulesAA0a4ShowjklmN0Ovg",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC48showScreenSharingFullscreenModeToggleButtonRulesAA0a4ShowjklmN0Ovg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoShowFullscreenModeToggleButtonRules",
+                    "printedName": "ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules",
+                    "usr": "c:@M@ZegoUIKitSDK@E@ZegoShowFullscreenModeToggleButtonRules"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC48showScreenSharingFullscreenModeToggleButtonRulesAA0a4ShowjklmN0Ovs",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC48showScreenSharingFullscreenModeToggleButtonRulesAA0a4ShowjklmN0Ovs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A19LayoutGalleryConfigC48showScreenSharingFullscreenModeToggleButtonRulesAA0a4ShowjklmN0OvM",
+                "mangledName": "$s12ZegoUIKitSDK0A19LayoutGalleryConfigC48showScreenSharingFullscreenModeToggleButtonRulesAA0a4ShowjklmN0OvM",
                 "moduleName": "ZegoUIKitSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -23978,6 +24485,493 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "ZegoScreenSharingViewDelegate",
+        "printedName": "ZegoScreenSharingViewDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getScreenShareForegroundView",
+            "printedName": "getScreenShareForegroundView(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZegoUIKitSDK.ZegoUIKitUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoUIKitUser",
+                    "printedName": "ZegoUIKitSDK.ZegoUIKitUser",
+                    "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUIKitUser"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZegoUIKitSDK0A25ScreenSharingViewDelegateP03getd15ShareForegroundF0ySo6UIViewCSgAA0aB4UserCSgF",
+            "mangledName": "$s12ZegoUIKitSDK0A25ScreenSharingViewDelegateP03getd15ShareForegroundF0ySo6UIViewCSgAA0aB4UserCSgF",
+            "moduleName": "ZegoUIKitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoScreenSharingViewDelegate>",
+            "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoScreenSharingViewDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12ZegoUIKitSDK0A25ScreenSharingViewDelegateP",
+        "mangledName": "$s12ZegoUIKitSDK0A25ScreenSharingViewDelegateP",
+        "moduleName": "ZegoUIKitSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZegoScreenSharingView",
+        "printedName": "ZegoScreenSharingView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "ZegoUIKitSDK.ZegoScreenSharingViewDelegate?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC8delegateAA0adeF8Delegate_pSgvp",
+            "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC8delegateAA0adeF8Delegate_pSgvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZegoUIKitSDK.ZegoScreenSharingViewDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoScreenSharingViewDelegate",
+                        "printedName": "ZegoUIKitSDK.ZegoScreenSharingViewDelegate",
+                        "usr": "s:12ZegoUIKitSDK0A25ScreenSharingViewDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC8delegateAA0adeF8Delegate_pSgvg",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC8delegateAA0adeF8Delegate_pSgvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZegoUIKitSDK.ZegoScreenSharingViewDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZegoScreenSharingViewDelegate",
+                        "printedName": "ZegoUIKitSDK.ZegoScreenSharingViewDelegate",
+                        "usr": "s:12ZegoUIKitSDK0A25ScreenSharingViewDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC8delegateAA0adeF8Delegate_pSgvs",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC8delegateAA0adeF8Delegate_pSgvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC8delegateAA0adeF8Delegate_pSgvM",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC8delegateAA0adeF8Delegate_pSgvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userID",
+            "printedName": "userID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC6userIDSSSgvp",
+            "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC6userIDSSSgvp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC6userIDSSSgvg",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC6userIDSSSgvg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC6userIDSSSgvs",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC6userIDSSSgvs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC6userIDSSSgvM",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC6userIDSSSgvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "videoFillMode",
+            "printedName": "videoFillMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZegoUIKitVideoFillMode",
+                "printedName": "ZegoUIKitSDK.ZegoUIKitVideoFillMode",
+                "usr": "s:12ZegoUIKitSDK0aB13VideoFillModeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC13videoFillModeAA0ab5VideohI0Ovp",
+            "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC13videoFillModeAA0ab5VideohI0Ovp",
+            "moduleName": "ZegoUIKitSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoUIKitVideoFillMode",
+                    "printedName": "ZegoUIKitSDK.ZegoUIKitVideoFillMode",
+                    "usr": "s:12ZegoUIKitSDK0aB13VideoFillModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC13videoFillModeAA0ab5VideohI0Ovg",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC13videoFillModeAA0ab5VideohI0Ovg",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoUIKitVideoFillMode",
+                    "printedName": "ZegoUIKitSDK.ZegoUIKitVideoFillMode",
+                    "usr": "s:12ZegoUIKitSDK0aB13VideoFillModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC13videoFillModeAA0ab5VideohI0Ovs",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC13videoFillModeAA0ab5VideohI0Ovs",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZegoUIKitSDK0A17ScreenSharingViewC13videoFillModeAA0ab5VideohI0OvM",
+                "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC13videoFillModeAA0ab5VideohI0OvM",
+                "moduleName": "ZegoUIKitSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "layoutSubviews",
+            "printedName": "layoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoScreenSharingView(im)layoutSubviews",
+            "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC14layoutSubviewsyyF",
+            "moduleName": "ZegoUIKitSDK",
+            "overriding": true,
+            "objc_name": "layoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoScreenSharingView",
+        "mangledName": "$s12ZegoUIKitSDK0A17ScreenSharingViewC",
+        "moduleName": "ZegoUIKitSDK",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZegoUIKitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "ZegoExpressEngine",
         "printedName": "ZegoExpressEngine",
@@ -25641,6 +26635,23 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZegoUIKitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZegoExpressEngine",
+        "printedName": "ZegoExpressEngine",
+        "declKind": "Import",
+        "moduleName": "ZegoUIKitSDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -26183,6 +27194,84 @@
             "declKind": "Func",
             "usr": "c:@M@ZegoUIKitSDK@objc(pl)ZegoUIKitEventHandle(im)onAudioVideoUnavailable:",
             "mangledName": "$s12ZegoUIKitSDK0aB11EventHandleP23onAudioVideoUnavailableyySayAA0aB4UserCGF",
+            "moduleName": "ZegoUIKitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoUIKitEventHandle>",
+            "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoUIKitEventHandle>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onScreenSharingAvailable",
+            "printedName": "onScreenSharingAvailable(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ZegoUIKitSDK.ZegoUIKitUser]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoUIKitUser",
+                    "printedName": "ZegoUIKitSDK.ZegoUIKitUser",
+                    "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUIKitUser"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZegoUIKitSDK@objc(pl)ZegoUIKitEventHandle(im)onScreenSharingAvailable:",
+            "mangledName": "$s12ZegoUIKitSDK0aB11EventHandleP24onScreenSharingAvailableyySayAA0aB4UserCGF",
+            "moduleName": "ZegoUIKitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoUIKitEventHandle>",
+            "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoUIKitEventHandle>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onScreenSharingUnavailable",
+            "printedName": "onScreenSharingUnavailable(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ZegoUIKitSDK.ZegoUIKitUser]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZegoUIKitUser",
+                    "printedName": "ZegoUIKitSDK.ZegoUIKitUser",
+                    "usr": "c:@M@ZegoUIKitSDK@objc(cs)ZegoUIKitUser"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZegoUIKitSDK@objc(pl)ZegoUIKitEventHandle(im)onScreenSharingUnavailable:",
+            "mangledName": "$s12ZegoUIKitSDK0aB11EventHandleP26onScreenSharingUnavailableyySayAA0aB4UserCGF",
             "moduleName": "ZegoUIKitSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : ZegoUIKitSDK.ZegoUIKitEventHandle>",
             "sugared_genericSig": "<Self where Self : ZegoUIKitSDK.ZegoUIKitEventHandle>",
@@ -28016,29 +29105,36 @@
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
+      "kind": "StringLiteral",
+      "offset": 280,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 311,
+      "offset": 387,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 337,
+      "offset": 413,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "Dictionary",
-      "offset": 505,
+      "offset": 649,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "StringLiteral",
-      "offset": 554,
+      "offset": 698,
       "length": 2,
       "value": "\"\""
     },
@@ -28052,35 +29148,35 @@
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 1545,
+      "offset": 1753,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "Dictionary",
-      "offset": 1595,
+      "offset": 1803,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 1630,
+      "offset": 1838,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1660,
+      "offset": 1868,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Services\/Internal\/ZegoUIKitCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1698,
+      "offset": 1906,
       "length": 5,
       "value": "false"
     },
@@ -29066,8 +30162,36 @@
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3719,
+      "length": 10,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3739,
+      "length": 10,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3719,
+      "length": 10,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3739,
+      "length": 10,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Enum\/ZegoUIKitEnum.swift",
       "kind": "StringLiteral",
-      "offset": 5014,
+      "offset": 5214,
       "length": 15,
       "value": "\"im.zego.uikit\""
     },
@@ -29243,6 +30367,20 @@
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutGalleryConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 302,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutGalleryConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 366,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/ZegoLayoutGalleryConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 436,
       "length": 4,
       "value": "true"
     },
@@ -29816,198 +30954,282 @@
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 612,
+      "offset": 566,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 644,
+      "offset": 598,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
-      "offset": 786,
+      "offset": 724,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "Array",
+      "offset": 772,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "Array",
+      "offset": 824,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 823,
+      "offset": 861,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 851,
+      "offset": 889,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 997,
+      "offset": 1094,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "StringLiteral",
+      "offset": 11489,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 10230,
+      "offset": 17837,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10281,
+      "offset": 17888,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10331,
+      "offset": 17943,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17993,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18029,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18080,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18135,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10405,
+      "offset": 18186,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18259,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10456,
+      "offset": 18315,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18365,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 10186,
+      "offset": 17793,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
-      "offset": 10586,
+      "offset": 18495,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 10744,
+      "offset": 18662,
       "length": 9,
       "value": "\"#333437\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10808,
+      "offset": 18726,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 11008,
+      "offset": 18914,
       "length": 9,
       "value": "\"#333437\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11043,
+      "offset": 18978,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "StringLiteral",
+      "offset": 19178,
+      "length": 9,
+      "value": "\"#333437\""
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 19213,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "Array",
-      "offset": 12355,
+      "offset": 21768,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 12533,
+      "offset": 21946,
       "length": 9,
       "value": "\"#222222\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 12606,
+      "offset": 22019,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12667,
+      "offset": 22080,
       "length": 2,
       "value": "23"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 12729,
+      "offset": 22142,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 12942,
+      "offset": 22355,
       "length": 9,
       "value": "\"#222222\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 13015,
+      "offset": 22428,
       "length": 9,
       "value": "\"#DBDDE3\""
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 13076,
+      "offset": 22489,
       "length": 2,
       "value": "23"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 13138,
+      "offset": 22551,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "IntegerLiteral",
-      "offset": 13333,
+      "offset": 22746,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
       "kind": "StringLiteral",
-      "offset": 13408,
+      "offset": 22821,
       "length": 9,
       "value": "\"#FFFFFF\""
+    },
+    {
+      "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideoContainer\/internal\/ZegoGroupCallLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 24969,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/zego\/Documents\/coding\/zego_uikit_ios_current\/zego_uikit\/ZegoUIKitSDK\/Components\/AudioVideo\/ZegoBaseAudioVideoForegroundView.swift",

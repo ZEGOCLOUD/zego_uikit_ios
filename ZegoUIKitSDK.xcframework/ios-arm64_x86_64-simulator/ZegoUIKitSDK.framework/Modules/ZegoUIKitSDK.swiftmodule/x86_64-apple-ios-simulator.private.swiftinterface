@@ -321,6 +321,16 @@ public enum ZegoViewPosition : Swift.Int {
     get
   }
 }
+@objc public enum ZegoShowFullscreenModeToggleButtonRules : Swift.UInt {
+  case showWhenScreenPressed
+  case alwaysShow
+  case alwaysHide
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
 public typealias ZegoUIKitSendMessageCallback = (Swift.Result<Any, Swift.Error>) -> Swift.Void
 public typealias ZegoSendInRoomCommnadCallback = (_ errorCode: Swift.Int32) -> Swift.Void
 extension ZegoUIKitSDK.ZegoUIKit {
@@ -420,6 +430,9 @@ extension UIKit.UIColor {
 }
 @objc @_inheritsConvenienceInitializers public class ZegoLayoutGalleryConfig : ZegoUIKitSDK.ZegoLayoutConfig {
   public var addBorderRadiusAndSpacingBetweenView: Swift.Bool
+  public var removeViewWhenAudioVideoUnavailable: Swift.Bool
+  public var showNewScreenSharingViewInFullscreenMode: Swift.Bool
+  public var showScreenSharingFullscreenModeToggleButtonRules: ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules
   @objc override dynamic public init()
   @objc deinit
 }
@@ -632,6 +645,25 @@ extension ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView : ZegoUIKitSDK.ZegoUIKit
   @_Concurrency.MainActor(unsafe) @objc dynamic open func onMicrophoneOn(_ user: ZegoUIKitSDK.ZegoUIKitUser, isOn: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc dynamic open func onUsersInRoomAttributesUpdated(_ updateKeys: [Swift.String]?, oldAttributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, attributes: [ZegoUIKitSDK.ZegoUserInRoomAttributesInfo]?, editor: ZegoUIKitSDK.ZegoUIKitUser?)
 }
+public protocol ZegoScreenSharingViewDelegate : AnyObject {
+  func getScreenShareForegroundView(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser?) -> UIKit.UIView?
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ZegoScreenSharingView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ZegoUIKitSDK.ZegoScreenSharingViewDelegate? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var userID: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var videoFillMode: ZegoUIKitSDK.ZegoUIKitVideoFillMode {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ZegoUIKitRoom : ObjectiveC.NSObject {
   public var roomID: Swift.String?
   public init(_ roomID: Swift.String)
@@ -687,6 +719,8 @@ extension ZegoUIKitSDK.ZegoBaseAudioVideoForegroundView : ZegoUIKitSDK.ZegoUIKit
   @objc optional func onSoundLevelUpdate(_ userInfo: ZegoUIKitSDK.ZegoUIKitUser, level: Swift.Double)
   @objc optional func onAudioVideoAvailable(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
   @objc optional func onAudioVideoUnavailable(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
+  @objc optional func onScreenSharingAvailable(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
+  @objc optional func onScreenSharingUnavailable(_ userList: [ZegoUIKitSDK.ZegoUIKitUser])
   @objc optional func onAudioOutputDeviceChange(_ audioRoute: ZegoUIKitSDK.ZegoUIKitAudioOutputDevice)
   @objc optional func onInvitationReceived(_ inviter: ZegoUIKitSDK.ZegoUIKitUser, type: Swift.Int, data: Swift.String?)
   @objc optional func onInvitationTimeout(_ inviter: ZegoUIKitSDK.ZegoUIKitUser, data: Swift.String?)
@@ -756,6 +790,9 @@ extension ZegoUIKitSDK.ZegoAvatarAlignment : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoAudioVideoResourceMode : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoAudioVideoResourceMode : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoAudioVideoResourceMode : Swift.RawRepresentable {}
+extension ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules : Swift.Equatable {}
+extension ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules : Swift.Hashable {}
+extension ZegoUIKitSDK.ZegoShowFullscreenModeToggleButtonRules : Swift.RawRepresentable {}
 extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.Equatable {}
 extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.Hashable {}
 extension ZegoUIKitSDK.ZegoPluginMethodName : Swift.RawRepresentable {}

@@ -339,6 +339,8 @@ SWIFT_PROTOCOL("_TtP12ZegoUIKitSDK20ZegoUIKitEventHandle_")
 - (void)onSoundLevelUpdate:(ZegoUIKitUser * _Nonnull)userInfo level:(double)level;
 - (void)onAudioVideoAvailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
 - (void)onAudioVideoUnavailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onScreenSharingAvailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
+- (void)onScreenSharingUnavailable:(NSArray<ZegoUIKitUser *> * _Nonnull)userList;
 - (void)onAudioOutputDeviceChange:(enum ZegoUIKitAudioOutputDevice)audioRoute;
 - (void)onInvitationReceived:(ZegoUIKitUser * _Nonnull)inviter type:(NSInteger)type data:(NSString * _Nullable)data;
 - (void)onInvitationTimeout:(ZegoUIKitUser * _Nonnull)inviter data:(NSString * _Nullable)data;
@@ -569,6 +571,20 @@ SWIFT_CLASS("_TtC12ZegoUIKitSDK26ZegoRefuseInvitationButton")
 - (void)buttonClick;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
+
+
+SWIFT_CLASS("_TtC12ZegoUIKitSDK21ZegoScreenSharingView")
+@interface ZegoScreenSharingView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+@end
+
+typedef SWIFT_ENUM(NSUInteger, ZegoShowFullscreenModeToggleButtonRules, open) {
+  ZegoShowFullscreenModeToggleButtonRulesShowWhenScreenPressed = 0,
+  ZegoShowFullscreenModeToggleButtonRulesAlwaysShow = 1,
+  ZegoShowFullscreenModeToggleButtonRulesAlwaysHide = 2,
+};
 
 @protocol ZegoStartInvitationButtonDelegate;
 
