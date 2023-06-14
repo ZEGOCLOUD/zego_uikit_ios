@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/ZegoUIKitSDK-Swift.h</key>
 		<data>
-		jRzFD5uu/Ez8Y46oNlPAr4LF2YQ=
+		j+tQXJGG7FPa7DB3nHi0bunaeDM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Xk2bwV46mJE+OoHHDaxtizSi54E=
+		rbPcZEUMudKqwW+dCbbw4SWgJ7k=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -18,19 +18,19 @@
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ntYhjszLaWlDp9bBqGCPKBQ1suY=
+		OJRdN1pnbleM8FIcgSzCcz69JcY=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		JYIfIuEJWwF1+t7NtsPHCGUvvlA=
+		B68+29Kc5xvhREXwnJ7vJ2sr40A=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ntYhjszLaWlDp9bBqGCPKBQ1suY=
+		OJRdN1pnbleM8FIcgSzCcz69JcY=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZUpohbODYoiiIZKeZkSYxHbwM/k=
+		ldAIFBv3sgIIiAjgzV57/GpJpac=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -38,19 +38,19 @@
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		UyaKaLBwJf5Ylvff4y+mcfsrXXo=
+		SYYONX1i7aIccC28jXi85MDHPBo=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KLsyOOlnim/yQa29oAUa2VL0Ax4=
+		279wKLXhFsowarlFfBwiQqRM2go=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UyaKaLBwJf5Ylvff4y+mcfsrXXo=
+		SYYONX1i7aIccC28jXi85MDHPBo=
 		</data>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pZi81V1xn48FeSPF70XSBM4EZ3M=
+		sjltflTPNrxs4LDDX5le8erkkRI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,15 +58,15 @@
 		</data>
 		<key>ZegoUIKit.bundle/Assets.car</key>
 		<data>
-		Ib5LtgTCFm3w/qWTT6bL7TYZFP8=
+		1g0rjjlBYM2rIQ4SiVFXZyCQI4I=
 		</data>
 		<key>ZegoUIKit.bundle/Info.plist</key>
 		<data>
-		uKjLzVTZyB+tsxq55+cxXie9OqU=
+		ppcK5K4eqB1lAVgmki4eWnqdW4Q=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		IL1nQ5LbtG7WtjzXEz9FyhFBEME=
+		DESo4o3d1OW2atvUxcfCGD34Ib8=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		izRNtgK6ztS/u21LQBxIMqIZm+w=
+		aKF6ezz+VZA4gCdmV5e40Eu/mDQ=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		8BcYQlU1nbI3/n47BIKenual2v4=
+		24bGlxv3dL8MViHWRTAAtlaEP9w=
 		</data>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -91,7 +91,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8AL34hUF/aHT7sGuxjdcWzmqqD1QweTLw/CdNO2Gvt4=
+			cczrvNjO5ZgZQq2LI8GZBUQwl5x63QUk0v6e2E0Dh4o=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -105,28 +105,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			42qZsWDYg+PZP9R6muuFk9IoVPPF6gSYRPlSdstyd+0=
+			YxYThuTvd5AXv0vhdn9ZECwDFmly1kp4OV05iMkLYuM=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sC3nraXjFpLD+p9/bOBrBTo7E8gU1OaOE6kBF4nwwUk=
+			Sz4mFPKJnOFxPhZ86PTfeahD6HYl2xQbZ3WIPuTkPrQ=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			42qZsWDYg+PZP9R6muuFk9IoVPPF6gSYRPlSdstyd+0=
+			YxYThuTvd5AXv0vhdn9ZECwDFmly1kp4OV05iMkLYuM=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gIJTzgNOGYKy47/b9TalP2qiKLF+KDeNMEE+9dUoyYM=
+			3VDVnCrTcJ9mctPNh3fmkDOYMQgZkYx/pmFG7Zq1B90=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -140,28 +140,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U4PlQEcuCEI4gQoIEZS7TXvPb03P8w5hFaGjS957vCQ=
+			3qTZv1Q3KEmd89fRTOZVAp9u2nJdf4wRHhIEruLWR9Y=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aSlYOsNl5j9O/krGoPNsOojYjaJHrVcx9VKHFSfGGs0=
+			Mx+wkDoIu66FtNes4kK6AJUiQXUtCIh2wLJHLSSQkSY=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U4PlQEcuCEI4gQoIEZS7TXvPb03P8w5hFaGjS957vCQ=
+			3qTZv1Q3KEmd89fRTOZVAp9u2nJdf4wRHhIEruLWR9Y=
 			</data>
 		</dict>
 		<key>Modules/ZegoUIKitSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QZWCwjJrU93NhNrwFsd26woiqTwao/2sDySXTxTOgQs=
+			oduveftS3fUUO4z823xCGUUJX9ZPjXiZm8rp7XOyXqc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -175,21 +175,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+Lod3izurk/n/BSozjVnK7EQmE1Oi1f8MZjFcbd3lLE=
+			dchP6cIlY+s5XH7M0jIxQQIqfTycCock5SUtnOPuC3I=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SYYXN1TULpBeEdKTVlBNUBtW+I0QDkbLGKR5iwOKm6M=
+			pw3Pil2uEGgjzt0m2w1WLIMNieRlpqtzQ/4DSIr77vA=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3U/GoFfeRihSppPf//19gLuJEi5ZX6DtSh56JugwTwE=
+			cbHj/UnGWHNpXyRfAD/GLy+fGGah7FETJ4TTN1YGlj4=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeRequirements</key>
@@ -203,14 +203,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LLiySMmiE4zBoBtQ95RrtusyHgiXGMF8TfYHNcumGfw=
+			Crk7+ja1vqlq3jsSB5BdbdWou19aOlEhR+AlsFMUjwM=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q3rByBaq9Wwii0xfKci5f4v07mhD0AmfiX9eXWktTGo=
+			NkauSv0ebLtrfOT15gHvzZWlULrFI8t1DrmScDBdD1o=
 			</data>
 		</dict>
 		<key>ZegoUIKit.bundle/_CodeSignature/CodeSignature</key>
