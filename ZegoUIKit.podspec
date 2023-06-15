@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoUIKit"
-  spec.version      = "2.2.3"
+  spec.version      = "2.3.0"
   spec.summary      = "ZegoUIKit iOS SDK"
 
   # This description is used to generate tags and improve search results.
@@ -90,8 +90,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  # spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "ZegoUIKit","ZegoUIKit/**/*.swift"
+  spec.resource_bundle = {'ZegoUIKit' => ['ZegoUIKit/Resource/*.{png}']}
 
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -133,6 +133,10 @@ Pod::Spec.new do |spec|
   spec.swift_versions = ['5.0']
   spec.requires_arc = true
 
+  spec.pod_target_xcconfig = {
+    'PRODUCT_BUNDLE_IDENTIFIER' => 'com.zegocloud.uikit'
+  }
+
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
@@ -147,8 +151,7 @@ Pod::Spec.new do |spec|
   #   #   main_spec.vendored_frameworks = 'UIKit/iOS/ZegoUIKit.xcframework'
   #   # end
   # end
-  spec.vendored_frameworks = 'ZegoUIKitSDK.xcframework'
   spec.dependency 'ZegoExpressEngine','~>3.2.0'
-  spec.dependency 'ZegoPluginAdapter', '>=2.0.3'
+  spec.dependency 'ZegoPluginAdapter', '>=2.1.0'
 
 end
