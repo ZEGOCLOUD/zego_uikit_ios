@@ -10,6 +10,7 @@ import ZegoPluginAdapter
 
 extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
     
+    
     public func onConnectionStateChanged(_ state: ZegoSignalingPluginConnectionState) {
         if state == .disconnected {
             self.loginOut()
@@ -302,6 +303,12 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
             delegate.onInRoomTextMessageReceived?(messages, roomID: roomID)
         }
 
+    }
+    
+    public func onInRoomCommandMessageReceived(_ messages: [ZegoSignalingInRoomCommandMessage], roomID: String) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onInRoomCommandMessageReceived?(messages, roomID: roomID)
+        }
     }
     
 }

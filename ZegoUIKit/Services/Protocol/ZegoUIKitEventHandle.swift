@@ -46,6 +46,7 @@ import ZegoPluginAdapter
     @objc optional func onSignalingPluginConnectionState(_ params: [String: AnyObject])
     @objc optional func onInRoomCommandReceived(_ fromUser: ZegoUIKitUser, command: String)
     @objc optional func onInRoomTextMessageReceived(_ messages: [ZegoSignalingInRoomTextMessage], roomID: String)
+    @objc optional func onInRoomCommandMessageReceived(_ messages: [ZegoSignalingInRoomCommandMessage], roomID: String)
     
     //MARK: - user in room attributs
     @objc optional func onUsersInRoomAttributesUpdated(_ updateKeys: [String]?, oldAttributes: [ZegoUserInRoomAttributesInfo]?, attributes: [ZegoUserInRoomAttributesInfo]?, editor: ZegoUIKitUser?)

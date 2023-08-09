@@ -7,6 +7,7 @@
 
 import UIKit
 import ZegoExpressEngine
+import ZegoPluginAdapter
 
 public typealias ZegoUIKitCallBack = (_ data: Dictionary<String, AnyObject>?) -> ()
 
@@ -248,6 +249,18 @@ fileprivate class UIKitService_Help: NSObject, ZegoUIKitEventHandle {
     func onTurnOnYourMicrophoneRequest(_ fromUser: ZegoUIKitUser) {
         for delegate in self.uikitEventDelegates.allObjects {
             delegate.onTurnOnYourMicrophoneRequest?(fromUser)
+        }
+    }
+    
+    func onInRoomTextMessageReceived(_ messages: [ZegoSignalingInRoomTextMessage], roomID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onInRoomTextMessageReceived?(messages, roomID: roomID)
+        }
+    }
+    
+    func onInRoomCommandMessageReceived(_ messages: [ZegoSignalingInRoomCommandMessage], roomID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onInRoomCommandMessageReceived?(messages, roomID: roomID)
         }
     }
 }

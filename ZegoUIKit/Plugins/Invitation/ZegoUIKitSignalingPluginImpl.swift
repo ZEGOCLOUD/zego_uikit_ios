@@ -461,6 +461,32 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         ZegoPluginAdapter.signalingPlugin?.setRemoteNotificationsDeviceToken(deviceToken)
     }
     
+    public func sendRoomMessage(_ text: String, callback: PluginCallBack?) {
+        if signalingRoomInfo.roomID.isEmpty {
+            print("[zim] roomID is empty")
+            return
+        }
+        ZegoPluginAdapter.signalingPlugin?.sendRoomMessage(text, roomID: signalingRoomInfo.roomID, callback: { errorCode, errorMessage in
+            guard let callback = callback else { return }
+            callback(["code": errorCode as AnyObject,
+                      "message": errorMessage as AnyObject,
+                     ])
+        })
+    }
+    
+    public func sendRoomCommand(_ command: String, callback: PluginCallBack?) {
+        if signalingRoomInfo.roomID.isEmpty {
+            print("[zim] roomID is empty")
+            return
+        }
+        ZegoPluginAdapter.signalingPlugin?.sendRoomCommand(command, roomID: signalingRoomInfo.roomID, callback: { errorCode, errorMessage in
+            guard let callback = callback else { return }
+            callback(["code": errorCode as AnyObject,
+                      "message": errorMessage as AnyObject,
+                     ])
+        })
+    }
+    
     
     private func removeUserInRoomAttributs(_ attribute: ZegoUserInRoomAttributesInfo, key: String) {
         
