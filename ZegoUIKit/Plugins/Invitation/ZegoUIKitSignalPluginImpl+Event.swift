@@ -32,10 +32,21 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
         var newData: [String : AnyObject]? = data?.convertStringToDictionary()
         newData?["invitationID"] = callID as AnyObject
         let user: ZegoUIKitUser = ZegoUIKitUser.init(inviterID, dataDic?["inviter_name"] as? String ?? "")
-        self.buildInvitatinData(callID, inviter: user,invitees: [], type: type)
+        let inviteesList: [String] = getInvitees(newData?["invitees"] as? [Dictionary<String, AnyObject>] ?? [])
+        self.buildInvitatinData(callID, inviter: user,invitees: inviteesList, type: type)
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
             delegate.onInvitationReceived?(user, type: type, data: newData?.jsonString)
         }
+    }
+    
+    func getInvitees(_ invitees: [Dictionary<String, AnyObject>]) -> [String] {
+        var inviteesList: [String] = []
+        for dict in invitees {
+            if let userID = dict["user_id"] as? String {
+                inviteesList.append(userID)
+            }
+        }
+        return inviteesList
     }
     
     public func onCallInvitationCancelled(_ callID: String, inviterID: String, data: String) {
