@@ -453,8 +453,10 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         })
     }
     
-    public func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Bool, isSandboxEnvironment: Bool) {
-        ZegoPluginAdapter.signalingPlugin?.enableNotifyWhenAppRunningInBackgroundOrQuit(enable, isSandboxEnvironment: isSandboxEnvironment)
+    public func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Bool,
+                                                             isSandboxEnvironment: Bool,
+                                                             certificateIndex: ZegoSignalingPluginMultiCertificate = .firstCertificate) {
+        ZegoPluginAdapter.signalingPlugin?.enableNotifyWhenAppRunningInBackgroundOrQuit(enable, isSandboxEnvironment: isSandboxEnvironment, certificateIndex: certificateIndex)
     }
     
     public func setRemoteNotificationsDeviceToken(_ deviceToken: Data) {
