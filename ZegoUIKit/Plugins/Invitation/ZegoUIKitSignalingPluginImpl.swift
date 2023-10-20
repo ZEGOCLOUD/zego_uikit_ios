@@ -170,15 +170,17 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
                 if errorCode == 0 {
                     self.invitationDB.removeValue(forKey: callID)
                 }
+                guard let callback = callback else { return }
+                callback(["code": errorCode as AnyObject, "message": errorMessage as AnyObject])
             })
         }
     }
     
     public func refuseInvitation(_ inviterID: String, data: String?) {
-        let dataDict: [String : AnyObject] = [
-            "inviterID": inviterID as AnyObject,
-            "data" : data as AnyObject
-        ]
+//        let dataDict: [String : AnyObject] = [
+//            "inviterID": inviterID as AnyObject,
+//            "data" : data as AnyObject
+//        ]
         let invitationID: String? = data?.convertStringToDictionary()?["invitationID"] as? String
         var refuseInvitationData: InvitationData?
         if let invitationID = invitationID {
@@ -190,26 +192,28 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         guard let refuseInvitationData = refuseInvitationData,
               let refuseInvitationID = refuseInvitationData.invitationID
         else { return }
-        ZegoPluginAdapter.signalingPlugin?.refuseInvitation(with: refuseInvitationID, data: dataDict.jsonString, callback: { errorCode, errorMessage in
+        ZegoPluginAdapter.signalingPlugin?.refuseInvitation(with: refuseInvitationID, data: data, callback: { errorCode, errorMessage in
             if errorCode == 0 {
                 self.invitationDB.removeValue(forKey: refuseInvitationID)
             }
         })
     }
     
-    public func acceptInvitation(_ inviterID: String, data: String?) {
-        let dataDict: [String : AnyObject] = [
-            "inviterID": inviterID as AnyObject,
-            "data" : data as AnyObject
-        ]
+    public func acceptInvitation(_ inviterID: String, data: String?, callback: PluginCallBack?) {
+//        let dataDict: [String : AnyObject] = [
+//            "inviterID": inviterID as AnyObject,
+//            "data" : data as AnyObject
+//        ]
         let acceptInvitationData: InvitationData? = self.findCallIDWithInvitation(inviterID)
         guard let acceptInvitationData = acceptInvitationData,
               let invitationID = acceptInvitationData.invitationID
         else { return }
-        ZegoPluginAdapter.signalingPlugin?.acceptInvitation(with: invitationID, data: dataDict.jsonString, callback: { errorCode, errorMessage in
+        ZegoPluginAdapter.signalingPlugin?.acceptInvitation(with: invitationID, data: data, callback: { errorCode, errorMessage in
             if errorCode == 0 {
                 self.invitationDB.removeValue(forKey: invitationID)
             }
+            guard let callback = callback else { return }
+            callback(["code": errorCode as AnyObject, "message": errorMessage as AnyObject])
         })
     }
     
@@ -375,6 +379,28 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         ZegoPluginAdapter.signalingPlugin?.updateRoomProperty([key: value], roomID: signalingRoomInfo.roomID, isForce: isForce, isDeleteAfterOwnerLeft: isDeleteAfterOwnerLeft, isUpdateOwner: isUpdateOwner, callback: { errorCode, errorMessage, errorKeys in
             if errorCode == 0 {
                 self._roomAttributes.updateValue(value, forKey: key)
+            }
+            guard let callback = callback else { return }
+            callback(
+                ["code" : errorCode as AnyObject,
+                 "message" : errorMessage as AnyObject
+                ]
+            )
+        })
+    }
+    
+    public func updateRoomProperty(_ attributes: [String : String] ,isDeleteAfterOwnerLeft: Bool = false, isForce: Bool = false, isUpdateOwner: Bool = false, callback:PluginCallBack?) {
+        if signalingRoomInfo.roomID.isEmpty {
+            print("[zim] roomID is empty")
+            return
+        }
+        ZegoPluginAdapter.signalingPlugin?.updateRoomProperty(attributes, roomID: signalingRoomInfo.roomID, isForce: isForce, isDeleteAfterOwnerLeft: isDeleteAfterOwnerLeft, isUpdateOwner: isUpdateOwner, callback: { errorCode, errorMessage, errorKeys in
+            if errorCode == 0 {
+                attributes.forEach { (key, value) in
+                    if !errorKeys.contains(key) {
+                        self._roomAttributes.updateValue(value, forKey: key)
+                    }
+                }
             }
             guard let callback = callback else { return }
             callback(

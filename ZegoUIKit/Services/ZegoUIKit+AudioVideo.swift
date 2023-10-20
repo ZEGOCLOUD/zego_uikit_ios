@@ -30,8 +30,8 @@ extension ZegoUIKit {
         return ZegoUIKitCore.shared.isCameraDeviceOn(userID)
     }
     
-    public func turnMicrophoneOn(_ userID: String, isOn: Bool) {
-        ZegoUIKitCore.shared.turnMicDeviceOn(userID, isOn: isOn)
+    public func turnMicrophoneOn(_ userID: String, isOn: Bool, mute: Bool = false) {
+        ZegoUIKitCore.shared.turnMicDeviceOn(userID, isOn: isOn, mute: mute)
     }
     
     public func turnCameraOn(_ userID: String, isOn: Bool) {
@@ -46,6 +46,46 @@ extension ZegoUIKit {
     public func stopPlayingAllAudioVideo() {
         self.enableAudioVideoPlaying = false
         ZegoUIKitCore.shared.stopPlayingAllAudioVideo()
+    }
+    
+    public func startPublishingStream(_ streamID: String) {
+        ZegoUIKitCore.shared.startPublishStream(streamID)
+    }
+    
+    public func stopPublishingStream() {
+        ZegoUIKitCore.shared.stopPublishStream()
+    }
+    
+    public func startPlayMixerStream(streamID: String, renderView: UIView, videoModel: ZegoUIKitVideoFillMode) {
+        ZegoUIKitCore.shared.playMixerStream(streamID: streamID, renderView: renderView, videoModel: videoModel)
+    }
+    
+    public func startMixerTask(_ task: ZegoMixerTask, callback: ZegoUIKitCallBack?) {
+        ZegoUIKitCore.shared.startMixerTask(task, callback: callback)
+    }
+
+    public func stopMixerTask(_ task: ZegoMixerTask, callback: ZegoUIKitCallBack?) {
+        ZegoUIKitCore.shared.stopMixerTask(task, callback: callback)
+    }
+    
+    public func mutePlayStreamAudio(streamID: String, mute: Bool) {
+        ZegoUIKitCore.shared.mutePlayStreamAudio(streamID: streamID, mute: mute)
+    }
+    
+    public func mutePlayStreamVideo(streamID: String, mute: Bool) {
+        ZegoUIKitCore.shared.mutePlayStreamVideo(streamID: streamID, mute: mute)
+    }
+    
+    public func startPlayStream(_ streamID: String, renderView: UIView?, videoModel: ZegoUIKitVideoFillMode) {
+        ZegoUIKitCore.shared.playStream(streamID: streamID, renderView: renderView, videoModel: videoModel)
+    }
+    
+    public func stopPlayStream(_ streamID: String) {
+        ZegoUIKitCore.shared.stopPlayStream(streamID)
+    }
+    
+    public func startPreview(_ renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
+        ZegoUIKitCore.shared.startPreview(renderView, videoMode: videoMode)
     }
     
     func setLocalVideoView(renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {

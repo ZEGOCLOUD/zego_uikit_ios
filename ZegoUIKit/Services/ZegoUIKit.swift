@@ -33,7 +33,17 @@ public class ZegoUIKit: NSObject {
         }
     }
     
-    public let room: ZegoUIKitRoom? = ZegoUIKitCore.shared.room
+    public var streamList: [String] {
+        get {
+            return Array(ZegoUIKitCore.shared.streamDic.keys)
+        }
+    }
+    
+    public var room: ZegoUIKitRoom? {
+        get {
+            return ZegoUIKitCore.shared.room
+        }
+    }
     
     public var enableAudioVideoPlaying: Bool = true
     
@@ -222,6 +232,18 @@ fileprivate class UIKitService_Help: NSObject, ZegoUIKitEventHandle {
         }
     }
     
+    func onSignalPluginRoomPropertyUpdated(_ key: String, oldValue: String, newValue: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onSignalPluginRoomPropertyUpdated?(key, oldValue: oldValue, newValue: newValue)
+        }
+    }
+    
+    func onSignalPluginRoomPropertyFullUpdated(_ updateKeys: [String], oldProperties: [String : String], properties: [String : String]) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onSignalPluginRoomPropertyFullUpdated?(updateKeys, oldProperties: oldProperties, properties: properties)
+        }
+    }
+    
     func onRoomMemberLeft(_ userIDList: [String]?, roomID: String) {
         for delegate in self.uikitEventDelegates.allObjects {
             delegate.onRoomMemberLeft?(userIDList, roomID: roomID)
@@ -261,6 +283,24 @@ fileprivate class UIKitService_Help: NSObject, ZegoUIKitEventHandle {
     func onInRoomCommandMessageReceived(_ messages: [ZegoSignalingInRoomCommandMessage], roomID: String) {
         for delegate in self.uikitEventDelegates.allObjects {
             delegate.onInRoomCommandMessageReceived?(messages, roomID: roomID)
+        }
+    }
+    
+    func onPlayerRecvSEI(_ seiString: String, streamID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onPlayerRecvSEI?(seiString, streamID: streamID)
+        }
+    }
+    
+    func onPlayerRecvAudioFirstFrame(_ streamID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onPlayerRecvAudioFirstFrame?(streamID)
+        }
+    }
+    
+    func onPlayerRecvVideoFirstFrame(_ streamID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onPlayerRecvVideoFirstFrame?(streamID)
         }
     }
 }

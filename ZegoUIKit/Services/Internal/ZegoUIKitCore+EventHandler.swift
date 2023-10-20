@@ -319,7 +319,7 @@ extension ZegoUIKitCore: ZegoEventHandler {
                     delegate.onTurnOnYourMicrophoneRequest?(ZegoUIKitUser.init(fromUser.userID, fromUser.userName))
                 }
             } else if key == "zego_turn_microphone_off" {
-                self.turnMicDeviceOn(self.localParticipant?.userID ?? "", isOn: false)
+                self.turnMicDeviceOn(self.localParticipant?.userID ?? "", isOn: false, mute: false)
                 
             } else if key == "zego_turn_camera_on" {
                 
@@ -336,5 +336,24 @@ extension ZegoUIKitCore: ZegoEventHandler {
         }
     }
     
+    func onPlayerRecvSEI(_ data: Data, streamID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            if let seiString = String(data: data, encoding: .utf8) {
+                delegate.onPlayerRecvSEI?(seiString, streamID: streamID)
+            }
+        }
+    }
+    
+    func onPlayerRecvAudioFirstFrame(_ streamID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onPlayerRecvAudioFirstFrame?(streamID)
+        }
+    }
+    
+    func onPlayerRecvVideoFirstFrame(_ streamID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onPlayerRecvVideoFirstFrame?(streamID)
+        }
+    }
     
 }

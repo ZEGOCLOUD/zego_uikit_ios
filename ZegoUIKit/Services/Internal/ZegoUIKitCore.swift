@@ -17,6 +17,7 @@ internal class ZegoParticipant: NSObject {
     var screenShareView: UIView = UIView()
     var camera: Bool = false
     var mic: Bool = false
+    var muteMode: Bool = false
     var network: ZegoStreamQualityLevel = .excellent
     var videoDisPlayMode: ZegoUIKitVideoFillMode = .aspectFill
     var screenShareDisplayMode: ZegoUIKitVideoFillMode = .aspectFit
@@ -64,6 +65,7 @@ internal class ZegoUIKitCore: NSObject {
     var isLargeRoom: Bool = false
     var markAsLargeRoom: Bool = false
     var resourceModel: ZegoAudioVideoResourceMode = .default
+    var muteMode: Bool = false
     
     internal let uikitEventDelegates: NSHashTable<ZegoUIKitEventHandle> = NSHashTable(options: .weakMemory)
     
@@ -113,12 +115,13 @@ extension ZegoUIKitCore {
         let participant: ZegoParticipant = self.localParticipant ?? ZegoParticipant(userID: user.userID, name: user.userName)
         participant.streamID = generateStreamID(userID: participant.userID, roomID: roomID)
         self.participantDic[participant.userID] = participant
-        self.streamDic[participant.streamID] = participant.userID
         self.localParticipant = participant
         
         let config: ZegoRoomConfig = ZegoRoomConfig()
         config.isUserStatusNotify = true
-        ZegoExpressEngine.shared().loginRoom(roomID, user: user, config: config)
+        ZegoExpressEngine.shared().loginRoom(roomID, user: user, config: config) { code, info in
+            print("login code:\(code)")
+        }
         
         // monitor sound level
         ZegoExpressEngine.shared().startSoundLevelMonitor(1000)
@@ -170,20 +173,28 @@ extension ZegoUIKitCore {
         }
     }
     
-    func turnMicDeviceOn(_ userID: String, isOn: Bool) {
+    func turnMicDeviceOn(_ userID: String, isOn: Bool, mute: Bool) {
+        muteMode = mute
         if self.isMySelf(userID) {
             self.localParticipant?.mic = isOn
             ZegoExpressEngine.shared().muteMicrophone(!isOn)
             
             let extraInfo: [String : AnyObject] = ["isCameraOn" : self.localParticipant?.camera as AnyObject, "isMicrophoneOn" : isOn as AnyObject]
             ZegoExpressEngine.shared().setStreamExtraInfo(extraInfo.jsonString)
-
             
             if isOn {
                 self.startPublishStream()
+                if mute {
+                    ZegoExpressEngine.shared().mutePublishStreamAudio(!isOn)
+                }
             } else {
                 if !(self.localParticipant?.camera ?? false) {
-                    self.stopPublishStream()
+                    if mute {
+                        self.startPublishStream()
+                        ZegoExpressEngine.shared().mutePublishStreamAudio(mute)
+                    } else {
+                        self.stopPublishStream()
+                    }
                 }
             }
             for delegate in self.uikitEventDelegates.allObjects {
@@ -212,12 +223,20 @@ extension ZegoUIKitCore {
             
             if isOn {
                 self.startPublishStream()
+                if muteMode {
+                    ZegoExpressEngine.shared().mutePublishStreamVideo(!isOn)
+                }
                 if let rendView = self.localParticipant?.renderView {
                     ZegoExpressEngine.shared().startPreview(generateCanvas(rendView: rendView, videoMode: self.localParticipant?.videoDisPlayMode ?? .aspectFill))
                 }
             } else {
                 if !(self.localParticipant?.mic ?? false) {
-                    self.stopPublishStream()
+                    if muteMode {
+                        self.startPublishStream()
+                        ZegoExpressEngine.shared().mutePublishStreamVideo(muteMode)
+                    } else {
+                        self.stopPublishStream()
+                    }
                 }
                 ZegoExpressEngine.shared().stopPreview()
             }
@@ -245,11 +264,15 @@ extension ZegoUIKitCore {
         ZegoExpressEngine.shared().setVideoConfig(config)
     }
     
+    func startPreview(_ renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
+        ZegoExpressEngine.shared().startPreview(generateCanvas(rendView: renderView, videoMode: videoMode))
+    }
+    
     func setLocalVideoView(renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
-//        guard let roomID = self.room?.roomID else {
-//            print("Error: [setVideoView] You need to join the room first and then set the videoView")
-//            return
-//        }
+        //        guard let roomID = self.room?.roomID else {
+        //            print("Error: [setVideoView] You need to join the room first and then set the videoView")
+        //            return
+        //        }
         guard let userID = self.localParticipant?.userID else {
             print("Error: [setVideoView] please login room pre")
             return
@@ -309,7 +332,7 @@ extension ZegoUIKitCore {
     func startPlayingAllAudioVideo() {
         ZegoExpressEngine.shared().muteAllPlayStreamAudio(false)
         ZegoExpressEngine.shared().muteAllPlayStreamVideo(false)
-
+        
     }
     
     func stopPlayingAllAudioVideo() {
@@ -394,6 +417,16 @@ extension ZegoUIKitCore {
         }
     }
     
+    func playStream(streamID: String, renderView: UIView?, videoModel: ZegoUIKitVideoFillMode) {
+        let playConfig: ZegoPlayerConfig = ZegoPlayerConfig()
+        playConfig.resourceMode = ZegoStreamResourceMode(rawValue: resourceModel.rawValue) ?? .default
+        if let renderView = renderView {
+            ZegoExpressEngine.shared().startPlayingStream(streamID, canvas: generateCanvas(rendView: renderView, videoMode: videoModel), config: playConfig)
+        } else {
+            ZegoExpressEngine.shared().startPlayingStream(streamID, config: playConfig)
+        }
+    }
+    
     func playStream(streamID: String, videoModel: ZegoUIKitVideoFillMode) {
         if streamID.contains("main") {
             playMainStream(streamID: streamID, videoModel: videoModel)
@@ -425,6 +458,12 @@ extension ZegoUIKitCore {
                 ZegoExpressEngine.shared().startPlayingStream(streamID, canvas: generateCanvas(rendView: screenShareView, videoMode: videoModel), config: playConfig)
             }
         }
+    }
+    
+    func playMixerStream(streamID: String, renderView: UIView, videoModel: ZegoUIKitVideoFillMode) {
+        let playConfig: ZegoPlayerConfig = ZegoPlayerConfig()
+        playConfig.resourceMode = ZegoStreamResourceMode(rawValue: resourceModel.rawValue) ?? .default
+        ZegoExpressEngine.shared().startPlayingStream(streamID, canvas: generateCanvas(rendView: renderView, videoMode: videoModel), config: playConfig)
     }
     
     private func generateCanvas(rendView: UIView?, videoMode: ZegoUIKitVideoFillMode) -> ZegoCanvas? {
@@ -466,17 +505,23 @@ extension ZegoUIKitCore {
     }
     
     
-    private func startPublishStream() {
-        guard let streamID = self.localParticipant?.streamID else { return }
-        ZegoExpressEngine.shared().startPublishingStream(streamID)
+    func startPublishStream(_ streamID: String? = nil) {
+        if let streamID = streamID {
+            self.localParticipant?.streamID = streamID
+            ZegoExpressEngine.shared().startPublishingStream(streamID)
+        } else {
+            guard let streamID = self.localParticipant?.streamID else { return }
+            ZegoExpressEngine.shared().startPublishingStream(streamID)
+        }
         for delegate in self.uikitEventDelegates.allObjects {
             guard let userInfo = self.localParticipant?.toUserInfo() else { return }
             delegate.onAudioVideoAvailable?([userInfo])
         }
     }
     
-    private func stopPublishStream() {
-        guard let _ = self.localParticipant?.streamID else { return }
+    func stopPublishStream() {
+        guard let streamID = self.localParticipant?.streamID else { return }
+        streamDic.removeValue(forKey: streamID)
         ZegoExpressEngine.shared().stopPublishingStream()
         ZegoExpressEngine.shared().stopPreview()
         for delegate in self.uikitEventDelegates.allObjects {
@@ -517,4 +562,34 @@ extension ZegoUIKitCore {
     func setAudioVideoResourceMode(_ model: ZegoAudioVideoResourceMode) {
         resourceModel = model
     }
+    
+    func sendSEI(_ seiString: String) {
+        if let data = seiString.data(using: .utf8) {
+            ZegoExpressEngine.shared().sendSEI(data)
+        } else {
+            print("sendSEI:failed to convert string to data")
+        }
+    }
+    
+    public func startMixerTask(_ task: ZegoMixerTask, callback: ZegoUIKitCallBack?) {
+        ZegoExpressEngine.shared().start(task) { errorCode, info in
+            guard let callback = callback else { return }
+            callback(["code": errorCode as AnyObject])
+        }
+    }
+
+    public func stopMixerTask(_ task: ZegoMixerTask, callback: ZegoUIKitCallBack?) {
+        ZegoExpressEngine.shared().stop(task) { errorCode in
+            
+        }
+    }
+    
+    public func mutePlayStreamAudio(streamID: String, mute: Bool) {
+        ZegoExpressEngine.shared().mutePlayStreamAudio(mute, streamID: streamID)
+    }
+    
+    public func mutePlayStreamVideo(streamID: String, mute: Bool) {
+        ZegoExpressEngine.shared().mutePlayStreamVideo(mute, streamID: streamID)
+    }
+    
 }

@@ -41,6 +41,8 @@ public class ZegoToggleMicrophoneButton: UIButton {
         }
     }
     
+    public var muteMode: Bool = false
+    
     private let help = ZegoToggleMicrophoneButton_Help()
 
     override init(frame: CGRect) {
@@ -67,7 +69,7 @@ public class ZegoToggleMicrophoneButton: UIButton {
     
     @objc func buttonClick() {
         self.isOn = !self.isOn
-        ZegoUIKit.shared.turnMicrophoneOn(userID ?? "", isOn: self.isOn)
+        ZegoUIKit.shared.turnMicrophoneOn(userID ?? "", isOn: self.isOn, mute: muteMode)
         self.delegate?.onToggleMicButtonClick(self.isOn)
     }
 

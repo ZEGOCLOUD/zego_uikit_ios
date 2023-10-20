@@ -28,4 +28,9 @@ extension ZegoUIKit {
     public func sendInRoomCommand(_ command: String, toUserIDs: [String], callback: ZegoSendInRoomCommnadCallback?) {
         ZegoUIKitCore.shared.sendInRoomCommand(command, toUserIDs: toUserIDs, callback: callback)
     }
+    
+    public func sendSEI(_ seiString: String) {
+        ZegoUIKitCore.shared.sendSEI(seiString)
+    }
+    
 }

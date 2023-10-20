@@ -52,8 +52,8 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
     public func onCallInvitationCancelled(_ callID: String, inviterID: String, data: String) {
         self.invitationDB.removeValue(forKey: callID)
         let inviter: ZegoUIKitUser = ZegoUIKitUser.init(inviterID, "")
-        let dataDic: Dictionary? = data.convertStringToDictionary()
-        let data: String? = dataDic?["data"] as? String
+//        let dataDic: Dictionary? = data.convertStringToDictionary()
+//        let data: String? = dataDic?["data"] as? String
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
             delegate.onInvitationCanceled?(inviter, data: data)
         }
@@ -62,10 +62,10 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
     public func onCallInvitationAccepted(_ callID: String, inviteeID: String, data: String) {
         self.invitationDB.removeValue(forKey: callID)
         let invitee: ZegoUIKitUser = ZegoUIKitUser.init(inviteeID, "")
-        let dataDic: Dictionary? = data.convertStringToDictionary()
-        let newData: String? = dataDic?["data"] as? String
+//        let dataDic: Dictionary? = data.convertStringToDictionary()
+//        let newData: String? = dataDic?["data"] as? String
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onInvitationAccepted?(invitee, data: newData)
+            delegate.onInvitationAccepted?(invitee, data: data)
         }
     }
     
@@ -83,9 +83,9 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
             }
             self.clearCall(callID)
             let invitee: ZegoUIKitUser = ZegoUIKitUser.init(inviteeID, "")
-            let newData: String? = dataDic?["data"] as? String
+//            let newData: String? = dataDic?["data"] as? String
             for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-                delegate.onInvitationRefused?(invitee, data: newData)
+                delegate.onInvitationRefused?(invitee, data: data)
             }
         }
     }
@@ -95,9 +95,9 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
               let userID = invitationData.inviter?.userID
         else { return }
         let user = ZegoUIKitUser.init(userID, "")
-        
+        let data: String = ["invitationID": callID as AnyObject].jsonString
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onInvitationTimeout?(user, data: nil)
+            delegate.onInvitationTimeout?(user, data: data)
         }
         self.invitationDB.removeValue(forKey: callID)
     }
@@ -108,9 +108,10 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
             let user = ZegoUIKitUser.init(userID, "")
             userList.append(user)
         }
+        let data: String = ["invitationID": callID as AnyObject].jsonString
         
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onInvitationResponseTimeout?(userList, data: nil)
+            delegate.onInvitationResponseTimeout?(userList, data: data)
         }
         
         let invitationData: InvitationData? = self.invitationDB[callID]
@@ -205,13 +206,13 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
                     let oldValue: String = oldRoomAttributes[key] ?? ""
                     self._roomAttributes.updateValue(value, forKey: key)
                     for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-                        delegate.onRoomPropertyUpdated?(key, oldValue: oldValue, newValue: value)
+                        delegate.onSignalPluginRoomPropertyUpdated?(key, oldValue: oldValue, newValue: value)
                     }
                 } else {
                     let oldValue: String = oldRoomAttributes[key] ?? ""
                     self._roomAttributes.removeValue(forKey: key)
                     for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-                        delegate.onRoomPropertyUpdated?(key, oldValue: oldValue, newValue: "")
+                        delegate.onSignalPluginRoomPropertyUpdated?(key, oldValue: oldValue, newValue: "")
                     }
                 }
             }
@@ -261,6 +262,8 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
     public func onRoomPropertiesUpdated(_ setProperties: [[String : String]], deleteProperties: [[String : String]], roomID: String) {
         let oldRoomAttributes: [String : String] = self._roomAttributes
         var updateKeys: [String] = []
+        var oldProperties : [String : String] = [:]
+        var newProperties : [String : String] = [:]
         
         for propertie in setProperties {
             for (key, value) in propertie {
@@ -268,9 +271,11 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
                     updateKeys.append(key)
                 }
                 let oldValue: String = oldRoomAttributes[key] ?? ""
+                oldProperties[key] = oldValue
+                newProperties[key] = value
                 self._roomAttributes.updateValue(value, forKey: key)
                 for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-                    delegate.onRoomPropertyUpdated?(key, oldValue: oldValue, newValue: value)
+                    delegate.onSignalPluginRoomPropertyUpdated?(key, oldValue: oldValue, newValue: value)
                 }
             }
             
@@ -282,11 +287,17 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
                     updateKeys.append(key)
                 }
                 let oldValue: String = oldRoomAttributes[key] ?? ""
+                oldProperties[key] = oldValue
+                newProperties[key] = ""
                 self._roomAttributes.removeValue(forKey: key)
                 for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-                    delegate.onRoomPropertyUpdated?(key, oldValue: oldValue, newValue: "")
+                    delegate.onSignalPluginRoomPropertyUpdated?(key, oldValue: oldValue, newValue: "")
                 }
             }
+        }
+        
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onSignalPluginRoomPropertyFullUpdated?(updateKeys, oldProperties: oldProperties, properties: newProperties)
         }
     }
     
