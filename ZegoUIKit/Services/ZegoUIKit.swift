@@ -73,7 +73,14 @@ public class ZegoUIKit: NSObject {
     public static func getSignalingPlugin() -> ZegoUIKitSignalingPluginImpl {
         return ZegoUIKitSignalingPluginImpl.shared
     }
-
+    
+    public func callExperimentalAPI(params: String) {
+        ZegoUIKitCore.shared.callExperimentalAPI(params: params)
+    }
+    
+    public func enableCustomVideoRender(enable: Bool) {
+        ZegoUIKitCore.shared.enableCustomVideoRender(enable: enable)
+    }
 }
 
 fileprivate class UIKitService_Help: NSObject, ZegoUIKitEventHandle {
@@ -301,6 +308,18 @@ fileprivate class UIKitService_Help: NSObject, ZegoUIKitEventHandle {
     func onPlayerRecvVideoFirstFrame(_ streamID: String) {
         for delegate in self.uikitEventDelegates.allObjects {
             delegate.onPlayerRecvVideoFirstFrame?(streamID)
+        }
+    }
+    
+    func onRemoteVideoFrameCVPixelBuffer(_ buffer: CVPixelBuffer, param: ZegoVideoFrameParam, streamID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onRemoteVideoFrameCVPixelBuffer?(buffer, param: param, streamID: streamID)
+        }
+    }
+    
+    func onCapturedVideoFrameCVPixelBuffer(_ buffer: CVPixelBuffer, param: ZegoVideoFrameParam, flipMode: ZegoVideoFlipMode, channel: ZegoPublishChannel) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onCapturedVideoFrameCVPixelBuffer?(buffer, param: param, flipMode: flipMode, channel: channel)
         }
     }
 }

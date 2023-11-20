@@ -8,7 +8,7 @@
 import Foundation
 import ZegoExpressEngine
 
-extension ZegoUIKitCore: ZegoEventHandler {
+extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
     
     func onRoomUserUpdate(_ updateType: ZegoUpdateType, userList: [ZegoUser], roomID: String) {
         var users = [ZegoUIKitUser]()
@@ -356,4 +356,16 @@ extension ZegoUIKitCore: ZegoEventHandler {
         }
     }
     
+    //MARK: - ZegoCustomVideoRenderHandler
+    func onRemoteVideoFrameCVPixelBuffer(_ buffer: CVPixelBuffer, param: ZegoVideoFrameParam, streamID: String) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onRemoteVideoFrameCVPixelBuffer?(buffer, param: param, streamID: streamID)
+        }
+    }
+    
+    func onCapturedVideoFrameCVPixelBuffer(_ buffer: CVPixelBuffer, param: ZegoVideoFrameParam, flipMode: ZegoVideoFlipMode, channel: ZegoPublishChannel) {
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onCapturedVideoFrameCVPixelBuffer?(buffer, param: param, flipMode: flipMode, channel: channel)
+        }
+    }
 }

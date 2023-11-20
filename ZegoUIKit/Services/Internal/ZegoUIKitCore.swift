@@ -101,6 +101,19 @@ extension ZegoUIKitCore {
         }
     }
     
+    func callExperimentalAPI(params: String) {
+        ZegoExpressEngine.shared().callExperimentalAPI(params)
+    }
+    
+    func enableCustomVideoRender(enable: Bool) {
+        let renderConfig: ZegoCustomVideoRenderConfig = ZegoCustomVideoRenderConfig()
+        renderConfig.bufferType = .cvPixelBuffer
+        renderConfig.frameFormatSeries = .RGB
+        renderConfig.enableEngineRender = true
+        ZegoExpressEngine.shared().enableCustomVideoRender(enable, config: renderConfig)
+        ZegoExpressEngine.shared().setCustomVideoRenderHandler(self)
+    }
+    
     //MARK -- room 相关
     func joinRoom(_ userID: String, userName: String, roomID: String, markAsLargeRoom: Bool) {
         self.markAsLargeRoom = markAsLargeRoom
