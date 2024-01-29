@@ -38,6 +38,9 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
                 delegate.onRemoteUserJoin?(users)
             } else {
                 delegate.onRemoteUserLeave?(users)
+                if ZegoUIKit.shared.userList.count == 1 {
+                    delegate.onOnlySelfInRoom?()
+                }
             }
             delegate.onUserCountOrPropertyChanged?(self.userList)
         }
@@ -54,6 +57,9 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
                 auxStreamList.append(stream)
                 onRoomAuxStreamUpdate(updateType, streamList: auxStreamList, extendedData: extendedData, roomID: roomID);
             }
+        }
+        if updateType == .add {
+            onRoomStreamExtraInfoUpdate(streamList, roomID: roomID)
         }
     }
     

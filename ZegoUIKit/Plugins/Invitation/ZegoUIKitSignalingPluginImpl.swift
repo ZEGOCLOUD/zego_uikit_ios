@@ -181,33 +181,28 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
 //            "inviterID": inviterID as AnyObject,
 //            "data" : data as AnyObject
 //        ]
-        let invitationID: String? = data?.convertStringToDictionary()?["invitationID"] as? String
-        var refuseInvitationData: InvitationData?
-        if let invitationID = invitationID {
-            refuseInvitationData = self.invitationDB[invitationID]
+        var invitationID: String? = data?.convertStringToDictionary()?["invitationID"] as? String
+        if invitationID == nil {
+            invitationID = self.findCallIDWithInvitation(inviterID)?.invitationID
         }
-        if refuseInvitationData == nil {
-            refuseInvitationData = self.findCallIDWithInvitation(inviterID)
-        }
-        guard let refuseInvitationData = refuseInvitationData,
-              let refuseInvitationID = refuseInvitationData.invitationID
-        else { return }
-        ZegoPluginAdapter.signalingPlugin?.refuseInvitation(with: refuseInvitationID, data: data, callback: { errorCode, errorMessage in
+        guard let invitationID = invitationID else { return }
+        ZegoPluginAdapter.signalingPlugin?.refuseInvitation(with: invitationID, data: data, callback: { errorCode, errorMessage in
             if errorCode == 0 {
-                self.invitationDB.removeValue(forKey: refuseInvitationID)
+                self.invitationDB.removeValue(forKey: invitationID)
             }
         })
     }
     
-    public func acceptInvitation(_ inviterID: String, data: String?, callback: PluginCallBack?) {
+    public func acceptInvitation(_ inviterID: String, invitationID: String? = nil, data: String?, callback: PluginCallBack?) {
 //        let dataDict: [String : AnyObject] = [
 //            "inviterID": inviterID as AnyObject,
 //            "data" : data as AnyObject
 //        ]
-        let acceptInvitationData: InvitationData? = self.findCallIDWithInvitation(inviterID)
-        guard let acceptInvitationData = acceptInvitationData,
-              let invitationID = acceptInvitationData.invitationID
-        else { return }
+        var invitationID: String? = invitationID
+        if invitationID == nil {
+            invitationID = self.findCallIDWithInvitation(inviterID)?.invitationID
+        }
+        guard let invitationID = invitationID else { return }
         ZegoPluginAdapter.signalingPlugin?.acceptInvitation(with: invitationID, data: data, callback: { errorCode, errorMessage in
             if errorCode == 0 {
                 self.invitationDB.removeValue(forKey: invitationID)

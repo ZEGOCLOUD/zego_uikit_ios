@@ -333,4 +333,58 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
         }
     }
     
+    // MARK: CallKit
+    public func didReceiveIncomingPush(_ uuid: UUID, invitationID: String,  data: String) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.didReceiveIncomingPush?(uuid, invitationID: invitationID, data: data)
+        }
+    }
+    
+    public func onCallKitStartCall(_ action: CallKitAction) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onCallKitStartCall?(action)
+        }
+    }
+    
+    public func onCallKitAnswerCall(_ action: CallKitAction) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onCallKitAnswerCall?(action)
+        }
+    }
+    
+    public func onCallKitEndCall(_ action: CallKitAction) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onCallKitEndCall?(action)
+        }
+    }
+    
+    public func onCallKitSetHeldCall(_ action: CallKitAction) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onCallKitSetHeldCall?(action)
+        }
+    }
+    
+    public func onCallKitSetMutedCall(_ action: CallKitAction) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onCallKitSetMutedCall?(action)
+        }
+    }
+    
+    public func onCallKitSetGroupCall(_ action: CallKitAction) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onCallKitSetGroupCall?(action)
+        }
+    }
+    
+    public func onCallKitPlayDTMFCall(_ action: CallKitAction) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onCallKitPlayDTMFCall?(action)
+        }
+    }
+    
+    public func onCallKitTimeOutPerforming(_ action: CallKitAction) {
+        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+            delegate.onCallKitTimeOutPerforming?(action)
+        }
+    }
 }

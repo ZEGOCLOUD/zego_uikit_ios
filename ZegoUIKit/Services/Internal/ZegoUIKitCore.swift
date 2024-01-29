@@ -519,6 +519,7 @@ extension ZegoUIKitCore {
     
     
     func startPublishStream(_ streamID: String? = nil) {
+        print("startPublishStream:\(streamID ?? "")")
         if let streamID = streamID {
             self.localParticipant?.streamID = streamID
             ZegoExpressEngine.shared().startPublishingStream(streamID)
