@@ -9,6 +9,8 @@ import UIKit
 
 public class ZegoInRoomMessageView: UIView {
     
+    public weak var delegate: ZegoInRoomMessageViewDelegate?
+    
     fileprivate var maxHeight: CGFloat = 200
 
     fileprivate var messageList: [MessageModel] = [MessageModel]()
@@ -158,6 +160,14 @@ extension ZegoInRoomMessageView_Help: UITableViewDelegate,UITableViewDataSource 
         guard let roomMessageView = roomMessageView else { return 0 }
         let model: MessageModel = roomMessageView.messageList[indexPath.row]
         return model.messageHeight + 10.0 + 4.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let messages = ZegoUIKit.shared.getInRoomMessages()
+        if indexPath.row < messages.count {
+            let message = messages[indexPath.row]
+            roomMessageView?.delegate?.onInRoomMessageClick?(message)
+        }
     }
 }
 
