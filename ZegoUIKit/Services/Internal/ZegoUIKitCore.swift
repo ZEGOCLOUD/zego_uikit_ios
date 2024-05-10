@@ -67,7 +67,7 @@ internal class ZegoUIKitCore: NSObject {
     var resourceModel: ZegoAudioVideoResourceMode = .default
     var muteMode: Bool = false
     
-    internal let uikitEventDelegates: NSHashTable<ZegoUIKitEventHandle> = NSHashTable(options: .weakMemory)
+    let uikitEventDelegates = ThreadSafeHashTable<ZegoUIKitEventHandle>()
     
     override init() {
         super.init()
@@ -77,6 +77,10 @@ internal class ZegoUIKitCore: NSObject {
 extension ZegoUIKitCore {
     func addEventHandler(_ eventHandle: ZegoUIKitEventHandle?) {
         self.uikitEventDelegates.add(eventHandle)
+    }
+    
+    func removeEventHandler(_ eventHandle: ZegoUIKitEventHandle?) {
+        uikitEventDelegates.remove(eventHandle)
     }
     
     func initWithAppID(appID: UInt32, appSign: String) {
@@ -311,7 +315,7 @@ extension ZegoUIKitCore {
             print("Error: [setVideoView] userID is empty, please enter a right userID")
             return
         }
-        let participant = self.participantDic[userID] ?? ZegoParticipant(userID: userID)
+        guard let participant = self.participantDic[userID] else { return }
         participant.streamID = generateStreamID(userID: userID, roomID: roomID)
         participant.renderView = renderView
         participant.videoDisPlayMode = videoMode
@@ -458,7 +462,6 @@ extension ZegoUIKitCore {
             } else {
                 ZegoExpressEngine.shared().startPlayingStream(streamID, config: playConfig)
             }
-            print("Error: [playStream] \(streamID)")
         }
     }
     
@@ -562,7 +565,7 @@ extension ZegoUIKitCore {
     func stopPlayStream(_ streamID: String) {
         ZegoExpressEngine.shared().stopPlayingStream(streamID)
     }
-    
+  
     func removeUserFromRoom(_ userIDs: [String]) {
         if (isLargeRoom || markAsLargeRoom) {
             let command: String = ["zego_remove_user": userIDs as AnyObject].jsonString

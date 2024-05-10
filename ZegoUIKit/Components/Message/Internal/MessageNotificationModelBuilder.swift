@@ -69,14 +69,14 @@ class MessageNotificationModelBuilder: NSObject {
         model.isUserJoinNoti = isUserJoinNoti
         return model
     }
-    
+  
     static func buildLeftMessageModel(user: ZegoUIKitUser) -> MessageNotificationModel {
-        let message = String(format: "left the room")
+        let message = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.leftRoomDialogMessage)
         return buildModel(with: user, message: message, isUserLeaveNoti: true)
     }
-    
+  
     static func buildJoinMessageModel(user: ZegoUIKitUser) -> MessageNotificationModel {
-        let message = String(format: "entered the room")
+        let message = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.enteredRoomDialogMessage)
         return buildModel(with: user, message: message, isUserJoinNoti: true)
     }
         

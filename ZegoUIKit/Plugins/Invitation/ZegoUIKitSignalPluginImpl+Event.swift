@@ -29,13 +29,20 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
         let dataDic: Dictionary? = data.convertStringToDictionary()
         let type: Int = dataDic?["type"] as! Int
         let data: String? = dataDic?["data"] as? String
-        var newData: [String : AnyObject]? = data?.convertStringToDictionary()
-        newData?["invitationID"] = callID as AnyObject
+        var newData: [String : AnyObject] = data?.convertStringToDictionary() ?? [:]
+        newData["invitationID"] = callID as AnyObject
+      
+        let inviter: [String : AnyObject] = [
+            "id": inviterID as AnyObject,
+            "name": dataDic?["inviter_name"] as AnyObject
+        ]
+        newData.updateValue(inviter as AnyObject, forKey: "inviter")
+    
         let user: ZegoUIKitUser = ZegoUIKitUser.init(inviterID, dataDic?["inviter_name"] as? String ?? "")
-        let inviteesList: [String] = getInvitees(newData?["invitees"] as? [Dictionary<String, AnyObject>] ?? [])
+        let inviteesList: [String] = getInvitees(newData["invitees"] as? [Dictionary<String, AnyObject>] ?? [])
         self.buildInvitatinData(callID, inviter: user,invitees: inviteesList, type: type)
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onInvitationReceived?(user, type: type, data: newData?.jsonString)
+            delegate.onInvitationReceived?(user, type: type, data: newData.jsonString)
         }
     }
     
@@ -60,12 +67,30 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
     }
     
     public func onCallInvitationAccepted(_ callID: String, inviteeID: String, data: String) {
-        self.invitationDB.removeValue(forKey: callID)
+        //FIXME: 多人邀请，一人超时的情况无法隐藏dialog
+        if inviteeID == ZegoUIKit.shared.localUserInfo?.userID{
+          self.invitationDB.removeValue(forKey: callID)
+        }
         let invitee: ZegoUIKitUser = ZegoUIKitUser.init(inviteeID, "")
 //        let dataDic: Dictionary? = data.convertStringToDictionary()
 //        let newData: String? = dataDic?["data"] as? String
+      
+        // invitationID 抛到业务层：停止响铃场景需要
+        let nvitation: [String : AnyObject] = [
+              "invitationID": callID as AnyObject,
+        ]
+        var dataString:String = data
+        //FIXME: web 端接受邀请data 是“{}”后续转对象会有问题
+        if dataString == "{}" || dataString == "" {
+          dataString = nvitation.jsonString
+        } else {
+          var dataDic: Dictionary = data.convertStringToDictionary()!
+          dataDic.updateValue(callID as AnyObject, forKey: "invitationID")
+          dataString = dataDic.jsonString
+        }
+      
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onInvitationAccepted?(invitee, data: data)
+            delegate.onInvitationAccepted?(invitee, data: dataString)
         }
     }
     
@@ -333,58 +358,5 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
         }
     }
     
-    // MARK: CallKit
-    public func didReceiveIncomingPush(_ uuid: UUID, invitationID: String,  data: String) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.didReceiveIncomingPush?(uuid, invitationID: invitationID, data: data)
-        }
-    }
-    
-    public func onCallKitStartCall(_ action: CallKitAction) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onCallKitStartCall?(action)
-        }
-    }
-    
-    public func onCallKitAnswerCall(_ action: CallKitAction) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onCallKitAnswerCall?(action)
-        }
-    }
-    
-    public func onCallKitEndCall(_ action: CallKitAction) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onCallKitEndCall?(action)
-        }
-    }
-    
-    public func onCallKitSetHeldCall(_ action: CallKitAction) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onCallKitSetHeldCall?(action)
-        }
-    }
-    
-    public func onCallKitSetMutedCall(_ action: CallKitAction) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onCallKitSetMutedCall?(action)
-        }
-    }
-    
-    public func onCallKitSetGroupCall(_ action: CallKitAction) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onCallKitSetGroupCall?(action)
-        }
-    }
-    
-    public func onCallKitPlayDTMFCall(_ action: CallKitAction) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onCallKitPlayDTMFCall?(action)
-        }
-    }
-    
-    public func onCallKitTimeOutPerforming(_ action: CallKitAction) {
-        for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
-            delegate.onCallKitTimeOutPerforming?(action)
-        }
-    }
+   
 }

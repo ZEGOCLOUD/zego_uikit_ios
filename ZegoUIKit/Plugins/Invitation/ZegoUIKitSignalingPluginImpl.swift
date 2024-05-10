@@ -77,6 +77,7 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
     public func sendInvitation(_ invitees: [String], timeout: UInt32, type: Int, data: String?, notificationConfig: ZegoSignalingPluginNotificationConfig?, callback: PluginCallBack?) {
         let dataDict: [String : AnyObject] = [
             "inviter_name": ZegoUIKit.shared.localUserInfo?.userName as AnyObject,
+            "inviter_id": ZegoUIKit.shared.localUserInfo?.userID as AnyObject,
             "invitees": invitees as AnyObject,
             "timeout": timeout as AnyObject,
             "type" : type as AnyObject,
@@ -255,13 +256,14 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
                       "message": "room has leave" as AnyObject])
             return
         }
-        signalingRoomInfo.roomID = ""
-        signalingRoomInfo.roomName = ""
         ZegoPluginAdapter.signalingPlugin?.leaveRoom(by: signalingRoomInfo.roomID, callBack: { errorCode, errorMessage in
             if errorCode == 0 {
                 self._roomAttributes.removeAll()
                 self._usersInRoomAttributes.removeAll()
             }
+            
+            self.signalingRoomInfo.roomID = ""
+            self.signalingRoomInfo.roomName = ""
             
             guard let callBack = callBack else {
                 return
@@ -367,21 +369,11 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
     }
     
     public func updateRoomProperty(_ key: String, value: String ,isDeleteAfterOwnerLeft: Bool = false, isForce: Bool = false, isUpdateOwner: Bool = false, callback:PluginCallBack?) {
-        if signalingRoomInfo.roomID.isEmpty {
-            print("[zim] roomID is empty")
-            return
-        }
-        ZegoPluginAdapter.signalingPlugin?.updateRoomProperty([key: value], roomID: signalingRoomInfo.roomID, isForce: isForce, isDeleteAfterOwnerLeft: isDeleteAfterOwnerLeft, isUpdateOwner: isUpdateOwner, callback: { errorCode, errorMessage, errorKeys in
-            if errorCode == 0 {
-                self._roomAttributes.updateValue(value, forKey: key)
-            }
-            guard let callback = callback else { return }
-            callback(
-                ["code" : errorCode as AnyObject,
-                 "message" : errorMessage as AnyObject
-                ]
-            )
-        })
+        updateRoomProperty([key: value], 
+                           isDeleteAfterOwnerLeft: isDeleteAfterOwnerLeft,
+                           isForce: isForce,
+                           isUpdateOwner: isUpdateOwner,
+                           callback: callback)
     }
     
     public func updateRoomProperty(_ attributes: [String : String] ,isDeleteAfterOwnerLeft: Bool = false, isForce: Bool = false, isUpdateOwner: Bool = false, callback:PluginCallBack?) {

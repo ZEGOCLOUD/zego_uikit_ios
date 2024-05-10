@@ -68,6 +68,7 @@ class ZegoAudioVideoHeadView: UIView {
                 //invalid url
                 return
             }
+            if (lastUrl == url) { return }
             self.lastUrl = url
             self.headImageView.downloadedFrom(url: imageUrl)
         }

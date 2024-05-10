@@ -52,6 +52,7 @@ public class ZegoSwitchAudioOutputButton: UIButton {
     
     @objc func buttonClick(sender: UIButton) {
         self.useSpeaker = !self.useSpeaker
+        ZegoUIKit.shared.setAudioOutputToSpeaker(enable: self.useSpeaker)
         self.delegate?.onAudioOutputButtonClick(self.useSpeaker)
     }
 }

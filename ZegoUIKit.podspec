@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoUIKit"
-  spec.version      = "2.10.0"
+  spec.version      = "2.11.0"
   spec.summary      = "ZegoUIKit iOS SDK"
 
   # This description is used to generate tags and improve search results.
@@ -151,7 +151,7 @@ Pod::Spec.new do |spec|
   #   #   main_spec.vendored_frameworks = 'UIKit/iOS/ZegoUIKit.xcframework'
   #   # end
   # end
-  spec.dependency 'ZegoExpressEngine', '~> 3.12.4'
+  spec.dependency 'ZegoExpressEngine', '~> 3.14.5'
   spec.dependency 'ZegoPluginAdapter', '>= 2.4.0'
 
 end

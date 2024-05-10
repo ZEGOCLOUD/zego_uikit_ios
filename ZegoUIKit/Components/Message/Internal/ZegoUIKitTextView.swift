@@ -15,10 +15,10 @@ class ZegoUIKitTextView: UITextView {
     
     var maxHeight: CGFloat = 60//定义最大高度
     weak var textViewDelegate: ZegoUIKitTextViewDelegate?
-
+  
     lazy var placeHolderLabel: UILabel = {
         let label = UILabel()
-        label.text = "Say something..."
+        label.text = ZegoUIKitTranslationTextConfig.shared.translationText.textFieldPlaceholderMessage
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor.colorWithHexString("#FFFFFF", alpha: 0.2)
         return label

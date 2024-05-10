@@ -65,32 +65,5 @@ import ZegoPluginAdapter
     
     @objc optional func onCapturedVideoFrameCVPixelBuffer(_ buffer: CVPixelBuffer, param: ZegoVideoFrameParam, flipMode: ZegoVideoFlipMode, channel: ZegoPublishChannel)
     
-    // MARK: CallKit
-    @objc optional
-    func didReceiveIncomingPush(_ uuid: UUID, invitationID: String, data: String)
-    
-    @objc optional
-    func onCallKitStartCall(_ action: CallKitAction)
-    
-    @objc optional
-    func onCallKitAnswerCall(_ action: CallKitAction)
-    
-    @objc optional
-    func onCallKitEndCall(_ action: CallKitAction)
-    
-    @objc optional
-    func onCallKitSetHeldCall(_ action: CallKitAction)
-    
-    @objc optional
-    func onCallKitSetMutedCall(_ action: CallKitAction)
-    
-    @objc optional
-    func onCallKitSetGroupCall(_ action: CallKitAction)
-    
-    @objc optional
-    func onCallKitPlayDTMFCall(_ action: CallKitAction)
-    
-    @objc optional
-    func onCallKitTimeOutPerforming(_ action: CallKitAction)
 }
 

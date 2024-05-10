@@ -146,6 +146,9 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
     
     func onRoomStreamExtraInfoUpdate(_ streamList: [ZegoStream], roomID: String) {
         for stream in streamList {
+          if stream.streamID.hasSuffix("_screensharing") {
+            // 屏幕共享流不做处理
+          } else {
             let extraInfo = stream.extraInfo.convertStringToDictionary()
             if let extraInfo = extraInfo {
                 let participant: ZegoParticipant? = participantDic[stream.user.userID]
@@ -163,6 +166,7 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
                 }
                 self.participantDic[stream.user.userID] = participant
             }
+          }
         }
     }
     

@@ -53,19 +53,19 @@ public class ZegoLeaveButton: UIButton {
     }
     
     private func showDialog(_ showDialogVC: UIViewController) {
-        var dialogTitle: String = "Leave the room"
+        var dialogTitle: String = ZegoUIKitTranslationTextConfig.shared.translationText.leaveRoomTextDialogTitle
         if let title = self.quitConfirmDialogInfo.title {
             dialogTitle = title
         }
-        var dialogMessage: String = "Are you sure to leave room?"
+        var dialogMessage: String = ZegoUIKitTranslationTextConfig.shared.translationText.leaveRoomTextDialogMessage
         if let message = self.quitConfirmDialogInfo.message {
             dialogMessage = message
         }
-        var cancelName: String = "Cancel"
+        var cancelName: String = ZegoUIKitTranslationTextConfig.shared.translationText.cancelDialogMessage
         if let cancleButtonName = self.quitConfirmDialogInfo.cancelButtonName {
             cancelName = cancleButtonName
         }
-        var sureName: String = "Confirm"
+        var sureName: String = ZegoUIKitTranslationTextConfig.shared.translationText.confirmDialogMessage
         if let confirmButtomName = self.quitConfirmDialogInfo.confirmButtonName {
             sureName = confirmButtomName
         }

@@ -65,15 +65,15 @@ class RoomChatMessageModelBuilder: NSObject {
         model.state = chatRoomMessage.state
         return model
     }
-    
+  
     static func buildLeftMessageModel(user: ZegoUIKitUser) -> RoomChatMessageModel {
-        let message = String(format: "left the room")
+        let message = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.leftRoomDialogMessage)
         let chatRoomMessage = ZegoInRoomMessage.init(message, messageID: 0, sendTime: 0, user: user)
         return buildChatRoomMessageModel(chatRoomMessage)
     }
-    
+  
     static func buildJoinMessageModel(user: ZegoUIKitUser) -> RoomChatMessageModel {
-        let message = String(format: "joined the room")
+        let message = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.joinedRoomDialogMessage)
         let chatRoomMessage = ZegoInRoomMessage.init(message, messageID: 0, sendTime: 0, user: user)
         return buildChatRoomMessageModel(chatRoomMessage)
     }

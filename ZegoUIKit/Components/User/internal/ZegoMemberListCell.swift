@@ -35,7 +35,7 @@ class ZegoMemberListCell: UITableViewCell {
                     self.userHead.text = firstStr
                 }
                 if userInfo.userID == ZegoUIKit.shared.localUserInfo?.userID {
-                    self.userNameLabel.text = String(format: "%@(You)", userName)
+                    self.userNameLabel.text = String(format: "%@%@", userName,ZegoUIKitTranslationTextConfig.shared.translationText.userIdentityYou)
                 } else {
                     self.userNameLabel.text = userName
                 }

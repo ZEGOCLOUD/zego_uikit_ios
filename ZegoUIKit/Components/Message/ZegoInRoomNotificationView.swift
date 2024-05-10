@@ -219,7 +219,7 @@ class ZegoInRoomNotificationView_Help: NSObject, UITableViewDelegate, UITableVie
         guard let config = inRoomNotificationView?.config else { return }
         var messageList = [ZegoInRoomMessage]()
         for user in userList {
-            let messageString = String(format: "enter the room",user.userName ?? "")
+            let messageString = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.enterRoomDialogMessage,user.userName ?? "")
             let message = ZegoInRoomMessage.init(messageString, messageID: 0, sendTime: 0, user: user)
             messageList.append(message)
         }
@@ -231,7 +231,7 @@ class ZegoInRoomNotificationView_Help: NSObject, UITableViewDelegate, UITableVie
         if config.notifyUserLeave {
             var messageList = [ZegoInRoomMessage]()
             for user in userList {
-                let messageString = String(format: "quit the room",user.userName ?? "")
+                let messageString = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.quitRoomDialogMessage,user.userName ?? "")
                 let message = ZegoInRoomMessage.init(messageString, messageID: 0, sendTime: 0, user: user)
                 messageList.append(message)
             }

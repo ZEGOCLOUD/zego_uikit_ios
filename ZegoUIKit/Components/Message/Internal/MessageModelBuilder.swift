@@ -59,12 +59,12 @@ class MessageModelBuilder: NSObject {
     }
     
     static func buildLeftMessageModel(user: ZegoUIKitUser) -> MessageModel {
-        let message = String(format: "left the room")
+        let message = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.leftRoomDialogMessage)
         return buildModel(with: user, message: message)
     }
     
     static func buildJoinMessageModel(user: ZegoUIKitUser) -> MessageModel {
-        let message = String(format: "joined the room")
+        let message = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.joinedRoomDialogMessage)
         return buildModel(with: user, message: message)
     }
         

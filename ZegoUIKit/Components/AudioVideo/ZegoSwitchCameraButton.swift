@@ -12,7 +12,7 @@ public protocol ZegoSwitchCameraButtonDelegate: AnyObject {
 }
 
 extension ZegoSwitchCameraButtonDelegate {
-    func onCameraFaceButtonClick(_ isFrontFacing: Bool) { }
+    func onSwitchCameraButtonClick(_ isFrontFacing: Bool) { }
 }
 
 public class ZegoSwitchCameraButton: UIButton {
@@ -61,7 +61,7 @@ public class ZegoSwitchCameraButton: UIButton {
     
     @objc func buttonClick(sender: UIButton) {
         self.isFrontFacing = !self.isFrontFacing
-        self.delegate?.onCameraFaceButtonClick(self.isFrontFacing)
+        self.delegate?.onSwitchCameraButtonClick(self.isFrontFacing)
     }
 
 }

@@ -67,6 +67,10 @@ public class ZegoUIKit: NSObject {
         ZegoUIKitCore.shared.addEventHandler(eventHandle)
     }
     
+    public func removeEventHandler(_ eventHandle: ZegoUIKitEventHandle?) {
+        ZegoUIKitCore.shared.removeEventHandler(eventHandle)
+    }
+    
     public static func getSignalingPlugin() -> ZegoUIKitSignalingPluginImpl {
         return ZegoUIKitSignalingPluginImpl.shared
     }

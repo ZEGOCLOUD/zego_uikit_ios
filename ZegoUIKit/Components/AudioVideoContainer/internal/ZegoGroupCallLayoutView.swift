@@ -655,7 +655,7 @@ class ZegoGroupCallUserHeadView: UIView {
                 break
             }
         }
-        self.numberLabel.text = String(format: "%d others", self.userList.count)
+        self.numberLabel.text = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.morePersonLiveOtherTitle, self.userList.count)
     }
 }
 
