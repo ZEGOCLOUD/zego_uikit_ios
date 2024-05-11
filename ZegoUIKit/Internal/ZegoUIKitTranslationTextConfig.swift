@@ -14,21 +14,13 @@ import UIKit
 
 public class ZegoUIKitTranslationTextConfig : NSObject {
     public static let shared = ZegoUIKitTranslationTextConfig() // 使用静态常量来保存单例实例
-    public var translationText : ZegoUIKitTranslationText = ZegoUIKitTranslationText()
-    public var languageCode: ZegoUIKitLanguage = .english {
-         didSet {
-           if languageCode == .chinese {
-             translationText = ZegoUIKitTranslationTextZH();
-           } else {
-             translationText = ZegoUIKitTranslationText();
-           }
-         }
-     }
-    
-  private override init() {} // 私有化初始化方法，防止外部创建实例
+    public var translationText : ZegoUIKitTranslationText = ZegoUIKitTranslationText(language: .english)
+  
+    private override init() {} // 私有化初始化方法，防止外部创建实例
 }
 
 public class ZegoUIKitTranslationText: NSObject {
+  var language :ZegoUIKitLanguage  = .english
   public var leaveRoomTextDialogTitle: String = "Leave the room"
   public var leaveRoomTextDialogMessage: String = "Are you sure to leave room?"
   public var cancelDialogMessage: String = "Cancel"
@@ -41,22 +33,26 @@ public class ZegoUIKitTranslationText: NSObject {
   public var textFieldPlaceholderMessage: String = "Say something..."
   public var morePersonLiveOtherTitle: String = "%d others"
   public var userIdentityYou: String = "(You)"
-}
-
-class ZegoUIKitTranslationTextZH: ZegoUIKitTranslationText {
-  override init() {
+  
+  public init(language:ZegoUIKitLanguage) {
     super.init()
-    leaveRoomTextDialogTitle = "离开房间"
-    leaveRoomTextDialogMessage = "您确定要离开房间吗?"
-    cancelDialogMessage = "取消"
-    confirmDialogMessage = "确认"
-    enterRoomDialogMessage = "进入房间"
-    quitRoomDialogMessage = "退出房间"
-    leftRoomDialogMessage = "已离开房间"
-    joinedRoomDialogMessage = "已加入房间"
-    enteredRoomDialogMessage = "已进入房间"
-    textFieldPlaceholderMessage = "说点什么..."
-    morePersonLiveOtherTitle = "其他%d人"
-    userIdentityYou = "(您)"
+    self.language = language
+    if language == .chinese {
+      leaveRoomTextDialogTitle = "离开房间"
+      leaveRoomTextDialogMessage = "您确定要离开房间吗?"
+      cancelDialogMessage = "取消"
+      confirmDialogMessage = "确认"
+      enterRoomDialogMessage = "进入房间"
+      quitRoomDialogMessage = "退出房间"
+      leftRoomDialogMessage = "已离开房间"
+      joinedRoomDialogMessage = "已加入房间"
+      enteredRoomDialogMessage = "已进入房间"
+      textFieldPlaceholderMessage = "说点什么..."
+      morePersonLiveOtherTitle = "其他%d人"
+      userIdentityYou = "(您)"
+    }
+  }
+  public func getLanguage() -> ZegoUIKitLanguage {
+    return self.language
   }
 }
