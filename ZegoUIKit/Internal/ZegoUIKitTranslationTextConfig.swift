@@ -8,19 +8,19 @@
 import UIKit
 
 @objc public enum ZegoUIKitLanguage : UInt32 {
-  case english
-  case chinese
+  case ENGLISH
+  case CHS
 }
 
 public class ZegoUIKitTranslationTextConfig : NSObject {
     public static let shared = ZegoUIKitTranslationTextConfig() // 使用静态常量来保存单例实例
-    public var translationText : ZegoUIKitTranslationText = ZegoUIKitTranslationText(language: .english)
+    public var translationText : ZegoUIKitTranslationText = ZegoUIKitTranslationText(language: .ENGLISH)
   
     private override init() {} // 私有化初始化方法，防止外部创建实例
 }
 
 public class ZegoUIKitTranslationText: NSObject {
-  var language :ZegoUIKitLanguage  = .english
+  var language :ZegoUIKitLanguage  = .ENGLISH
   public var leaveRoomTextDialogTitle: String = "Leave the room"
   public var leaveRoomTextDialogMessage: String = "Are you sure to leave room?"
   public var cancelDialogMessage: String = "Cancel"
@@ -37,7 +37,7 @@ public class ZegoUIKitTranslationText: NSObject {
   public init(language:ZegoUIKitLanguage) {
     super.init()
     self.language = language
-    if language == .chinese {
+    if language == .CHS {
       leaveRoomTextDialogTitle = "离开房间"
       leaveRoomTextDialogMessage = "您确定要离开房间吗?"
       cancelDialogMessage = "取消"
