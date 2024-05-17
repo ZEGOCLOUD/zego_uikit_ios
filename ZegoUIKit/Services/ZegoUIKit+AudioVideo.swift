@@ -21,6 +21,12 @@ extension ZegoUIKit {
     public func setAudioOutputToSpeaker(enable: Bool) {
         ZegoUIKitCore.shared.enableSpeaker(enable: enable)
     }
+  
+    public func setVideoConfig(config: ZegoPresetResolution) {
+      let videoPreset = ZegoVideoConfigPreset(rawValue: config.rawValue)!
+      let videoConfig = ZegoVideoConfig(preset: videoPreset)
+      ZegoUIKitCore.shared.setVideoConfig(videoConfig)
+    }
     
     public func isMicrophoneOn(_ userID: String) -> Bool {
         return ZegoUIKitCore.shared.isMicDeviceOn(userID)

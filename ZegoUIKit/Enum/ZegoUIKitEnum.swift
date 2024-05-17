@@ -97,6 +97,15 @@ public enum ZegoViewPosition: Int {
 }
 
 
+@objc public enum ZegoPresetResolution : UInt {
+  case PRESET_180P = 0
+  case PRESET_270P
+  case PRESET_360P
+  case PRESET_540P
+  case PRESET_720P
+  case PRESET_1080P
+}
+
 enum ZegoUIIconSetType: String, Hashable {
     case icon_camera_normal
     case icon_camera_off
