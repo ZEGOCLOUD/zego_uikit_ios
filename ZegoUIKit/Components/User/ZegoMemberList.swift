@@ -11,7 +11,7 @@ import UIKit
     @objc optional func getMemberListItemView(_ tableView: UITableView, indexPath: IndexPath, userInfo: ZegoUIKitUser) -> UITableViewCell?
     @objc optional func getMemberListItemHeight(_ userInfo: ZegoUIKitUser) -> CGFloat
     @objc optional func getMemberListHeaderHeight(_ tableView: UITableView, section: Int) -> CGFloat
-    @objc optional func getMemberListviewForHeaderInSection(_ tableView: UITableView, section: Int) -> UIView?
+    @objc optional func getMemberListViewForHeaderInSection(_ tableView: UITableView, section: Int) -> UIView?
     @objc optional func sortUserList(_ userList: [ZegoUIKitUser]) -> [ZegoUIKitUser]
 }
 
@@ -117,7 +117,7 @@ class ZegoMemberList_Help: NSObject, UITableViewDelegate, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return self.memberList?.delegate?.getMemberListviewForHeaderInSection?(tableView, section: section)
+        return self.memberList?.delegate?.getMemberListViewForHeaderInSection?(tableView, section: section)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

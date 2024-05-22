@@ -39,7 +39,7 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
             } else {
                 delegate.onRemoteUserLeave?(users)
                 if ZegoUIKit.shared.userList.count == 1 {
-                    delegate.onOnlySelfInRoom?()
+                    delegate.onOnlySelfInRoom?(users)
                 }
             }
             delegate.onUserCountOrPropertyChanged?(self.userList)

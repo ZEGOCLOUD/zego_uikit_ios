@@ -68,5 +68,8 @@ class ZegoUIIconSet {
     
     static var iconFullScreenNomal: UIImage = ZegoUIIconSetType.full_screen_nomal.load()
     static var iconFullScreenSelect: UIImage = ZegoUIIconSetType.full_screen_select.load()
-    
+  
+    static var iconSeatLock: UIImage = ZegoUIIconSetType.lock_seat.load()
+    static var iconSeatUnLock: UIImage = ZegoUIIconSetType.un_lock_seat.load()
+      
 }

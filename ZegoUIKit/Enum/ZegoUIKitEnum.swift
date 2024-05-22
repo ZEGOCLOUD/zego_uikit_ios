@@ -163,7 +163,9 @@ enum ZegoUIIconSetType: String, Hashable {
     
     case full_screen_nomal
     case full_screen_select
-    
+  
+    case lock_seat
+    case un_lock_seat
     // MARK: - Image handling
     
 //    private static let bundle = Bundle(identifier: "im.zego.uikit")

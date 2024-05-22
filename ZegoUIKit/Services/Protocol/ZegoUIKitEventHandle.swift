@@ -14,7 +14,7 @@ import ZegoPluginAdapter
     //MARK: - user
     @objc optional func onRemoteUserJoin(_ userList:[ZegoUIKitUser])
     @objc optional func onRemoteUserLeave(_ userList:[ZegoUIKitUser])
-    @objc optional func onOnlySelfInRoom()
+    @objc optional func onOnlySelfInRoom(_ userList:[ZegoUIKitUser])
     @objc optional func onUserCountOrPropertyChanged(_ userList:[ZegoUIKitUser]?)
     
     //MARK: - room
