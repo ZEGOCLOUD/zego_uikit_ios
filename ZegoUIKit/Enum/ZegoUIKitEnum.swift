@@ -8,7 +8,7 @@
 import Foundation
 import ZegoExpressEngine
 
-public enum ZegoUIKitVideoFillMode: UInt {
+@objc public enum ZegoUIKitVideoFillMode: UInt {
     /// The proportional scaling up, there may be black borders
     case aspectFit = 0
     /// The proportional zoom fills the entire View and may be partially cut
@@ -17,7 +17,7 @@ public enum ZegoUIKitVideoFillMode: UInt {
     case scaleToFill = 2
 }
 
-public enum ZegoUIKitLayoutMode: UInt {
+@objc public enum ZegoUIKitLayoutMode: UInt {
     /// Picture within picture
     case pictureInPicture = 0
     ///Side by side mode
@@ -25,7 +25,7 @@ public enum ZegoUIKitLayoutMode: UInt {
     case invalid
 }
 
-public enum ZegoViewPosition: Int {
+@objc public enum ZegoViewPosition: Int {
     case topLeft
     case topRight
     case bottomLeft

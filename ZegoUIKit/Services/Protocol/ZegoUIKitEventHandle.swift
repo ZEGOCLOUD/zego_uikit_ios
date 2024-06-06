@@ -51,6 +51,7 @@ import ZegoPluginAdapter
     
     //MARK: - signal plugin
     @objc optional func onSignalingPluginConnectionState(_ params: [String: AnyObject])
+    @objc optional func onIMRoomStateChanged(_ state: Int, event: Int, roomID: String)
     @objc optional func onInvitationReceived(_ inviter: ZegoUIKitUser, type: Int, data: String?)
     @objc optional func onInvitationTimeout(_ inviter: ZegoUIKitUser, data: String?)
     @objc optional func onInvitationResponseTimeout(_ invitees: [ZegoUIKitUser], data: String?)

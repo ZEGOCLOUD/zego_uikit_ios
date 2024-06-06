@@ -21,6 +21,11 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
         }
     }
     
+    public func onIMRoomStateChanged(_ state: Int, event: Int, roomID: String) {
+      for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
+          delegate.onIMRoomStateChanged?(state, event: event, roomID: roomID)
+      }
+    }
     public func onTokenWillExpire(in second: UInt32) {
         
     }
@@ -67,10 +72,8 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
     }
     
     public func onCallInvitationAccepted(_ callID: String, inviteeID: String, data: String) {
-        //FIXME: 多人邀请，一人超时的情况无法隐藏dialog
-        if inviteeID == ZegoUIKit.shared.localUserInfo?.userID{
-          self.invitationDB.removeValue(forKey: callID)
-        }
+//        if inviteeID == ZegoUIKit.shared.localUserInfo?.userID {
+        self.invitationDB.removeValue(forKey: callID)
         let invitee: ZegoUIKitUser = ZegoUIKitUser.init(inviteeID, "")
 //        let dataDic: Dictionary? = data.convertStringToDictionary()
 //        let newData: String? = dataDic?["data"] as? String
@@ -80,7 +83,7 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
               "invitationID": callID as AnyObject,
         ]
         var dataString:String = data
-        //FIXME: web 端接受邀请data 是“{}”后续转对象会有问题
+        //FIXME: The web side accepts the invitation if data is "{}", the subsequent object transfer will be problematic
         if dataString == "{}" || dataString == "" {
           dataString = nvitation.jsonString
         } else {
@@ -116,10 +119,14 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
     }
     
     public func onCallInvitationTimeout(_ callID: String) {
-        guard let invitationData: InvitationData = self.invitationDB[callID],
-              let userID = invitationData.inviter?.userID
-        else { return }
-        let user = ZegoUIKitUser.init(userID, "")
+        let invitationData: InvitationData? = self.invitationDB[callID]
+        let userID:String = invitationData?.inviter?.userID ?? ""
+        // 接受的时候invitationDB已经被删除了
+//        else { return }
+        var user = ZegoUIKitUser()
+        if userID.count > 0 {
+            user = ZegoUIKitUser.init(userID, "")
+        }
         let data: String = ["invitationID": callID as AnyObject].jsonString
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
             delegate.onInvitationTimeout?(user, data: data)
@@ -289,7 +296,7 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
         var updateKeys: [String] = []
         var oldProperties : [String : String] = [:]
         var newProperties : [String : String] = [:]
-        
+      
         for propertie in setProperties {
             for (key, value) in propertie {
                 if !updateKeys.contains(key) {

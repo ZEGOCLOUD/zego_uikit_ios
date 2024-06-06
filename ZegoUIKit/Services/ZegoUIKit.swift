@@ -11,6 +11,7 @@ import ZegoPluginAdapter
 
 public typealias ZegoUIKitCallBack = (_ data: Dictionary<String, AnyObject>?) -> ()
 
+@objcMembers
 public class ZegoUIKit: NSObject {
     
     /// @return UIKitService singleton instance

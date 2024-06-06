@@ -272,7 +272,12 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
                       "message": errorMessage as AnyObject])
         })
     }
-    
+  
+    public func clearRoomInfo (){
+      self.signalingRoomInfo.roomID = ""
+      self.signalingRoomInfo.roomName = ""
+    }
+  
     func getUsersInRoomAttributes() -> [ZegoUserInRoomAttributesInfo]? {
         return self._usersInRoomAttributes
     }

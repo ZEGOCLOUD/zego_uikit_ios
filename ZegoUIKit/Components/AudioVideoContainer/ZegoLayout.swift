@@ -7,6 +7,7 @@
 
 import UIKit
 
+@objcMembers
 public class ZegoLayout: NSObject {
     public var mode: ZegoUIKitLayoutMode = .invalid
     public var config: ZegoLayoutConfig?

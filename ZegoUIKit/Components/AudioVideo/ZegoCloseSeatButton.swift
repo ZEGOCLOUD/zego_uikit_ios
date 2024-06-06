@@ -2,7 +2,7 @@
 //  ZegoCloseSeatButton.swift
 //  ZegoUIKit
 //
-//  Created by zegomjf on 2024/5/16.
+//  Created by zego on 2024/5/16.
 //
 
 import UIKit
@@ -20,7 +20,6 @@ public class ZegoCloseSeatButton: UIButton {
   public var isLock: Bool = true {
       didSet {
           self.isSelected = isLock
-          ZegoUIKit.shared.setRoomProperty("lockseat", value: isLock ? "1" : "0", callback: nil)
       }
   }
   public weak var delegate: CloseSeatButtonDelegate?
@@ -36,11 +35,15 @@ public class ZegoCloseSeatButton: UIButton {
       }
   }
 
+  private let help = ZegoCloseSeatButton_Help()
+
   override init(frame: CGRect) {
       super.init(frame: frame)
       self.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
       self.setImage(self.unLockSeat, for: .normal)
       self.setImage(self.iconLockSeat, for: .selected)
+      self.help.closeSeatButton = self
+      ZegoUIKit.shared.addEventHandler(self.help)
   }
   
   required public init?(coder: NSCoder) {
@@ -49,8 +52,23 @@ public class ZegoCloseSeatButton: UIButton {
   
   @objc func buttonClick() {
       self.isLock = !self.isLock
+      ZegoUIKit.shared.setRoomProperty("lockseat", value: isLock ? "1" : "0", callback: ZegoUIKitCallBack? {data in
+          
+      })
       self.delegate?.onCloseSeatButtonClick(self.isLock)
   }
-
 }
 
+class ZegoCloseSeatButton_Help: NSObject, ZegoUIKitEventHandle {
+  
+  weak var closeSeatButton: ZegoCloseSeatButton?
+  override init() {
+      super.init()
+      
+  }
+  func onRoomPropertyUpdated(_ key: String, oldValue: String, newValue: String) {
+    if key == "lockseat" {
+      self.closeSeatButton?.isLock = (newValue as NSString).boolValue
+    }
+  }
+}

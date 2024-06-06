@@ -7,6 +7,7 @@
 
 import UIKit
 
+@objcMembers
 public class ZegoLayoutPictureInPictureConfig: ZegoLayoutConfig {
     public var isSmallViewDraggable: Bool = false
     public var smallViewBackgroundColor: UIColor = UIColor.colorWithHexString("#333437")

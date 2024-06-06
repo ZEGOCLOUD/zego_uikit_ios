@@ -2,7 +2,7 @@
 //  ZegoTranslationText.swift
 //  ZegoUIKit
 //
-//  Created by zegomjf on 2024/4/24.
+//  Created by zego on 2024/4/24.
 //
 
 import UIKit

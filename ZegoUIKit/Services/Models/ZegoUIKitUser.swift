@@ -7,6 +7,7 @@
 
 import UIKit
 
+@objcMembers
 public class ZegoUIKitUser: NSObject, Codable {
     
     public var userID: String?
