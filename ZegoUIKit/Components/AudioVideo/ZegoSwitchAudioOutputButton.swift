@@ -18,7 +18,7 @@ extension ToggleAudioOutputButtonDelegate {
 
 public class ZegoSwitchAudioOutputButton: UIButton {
 
-    public var iconSpeaker: UIImage = ZegoUIIconSet.iconSpeakerNomal
+    public var iconSpeaker: UIImage = ZegoUIIconSet.iconSpeakerNormal
     public var iconEarSpeaker: UIImage = ZegoUIIconSet.iconSpeakerOff
     public var iconBluetooth: UIImage = ZegoUIIconSet.iconBluetooth
     

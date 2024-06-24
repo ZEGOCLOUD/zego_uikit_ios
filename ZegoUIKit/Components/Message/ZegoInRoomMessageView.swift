@@ -12,10 +12,12 @@ public class ZegoInRoomMessageView: UIView {
     public weak var delegate: ZegoInRoomMessageViewDelegate?
     
     fileprivate var maxHeight: CGFloat = 200
-
+    
     fileprivate var messageList: [MessageModel] = [MessageModel]()
     
     private let help: ZegoInRoomMessageView_Help = ZegoInRoomMessageView_Help()
+    
+    var originalDataList:[ZegoInRoomMessage] = [ZegoInRoomMessage]()
     
     var lastOffsetY: CGFloat = 0
     var minHeight: CGFloat = 0
@@ -28,10 +30,20 @@ public class ZegoInRoomMessageView: UIView {
     
     @objc public override init(frame: CGRect) {
         super.init(frame: frame)
+        self.initRoomMessageView()
+        self.setupTableView()
+    }
+    
+    @objc public init(frame: CGRect,customerRegisterCell:Bool = false) {
+        super.init(frame: frame)
+        self.initRoomMessageView()
+        self.setupTableView(customerRegisterCell: customerRegisterCell)
+    }
+    
+    private func initRoomMessageView() {
         self.help.roomMessageView = self
         ZegoUIKit.shared.addEventHandler(self.help)
         self.getAllMessage()
-        self.setupTableView()
     }
     
     required init?(coder: NSCoder) {
@@ -56,8 +68,13 @@ public class ZegoInRoomMessageView: UIView {
         super.layoutSubviews()
     }
     
+    public func registerClassForCellReuseIdentifier(_ cellClass: AnyClass?, forCellReuseIdentifier: String) {
+        self.tableView.register(cellClass, forCellReuseIdentifier: forCellReuseIdentifier)
+    }
+    
     fileprivate func getAllMessage() {
         self.messageList.removeAll()
+        self.originalDataList = ZegoUIKit.shared.getInRoomMessages()
         var height: CGFloat = 0
         for message in ZegoUIKit.shared.getInRoomMessages() {
             let model = MessageModelBuilder.buildModel(with: message.user, message: message.message ?? "")
@@ -69,7 +86,7 @@ public class ZegoInRoomMessageView: UIView {
         self.tableView.reloadData()
     }
     
-    private func setupTableView() {
+    private func setupTableView(customerRegisterCell:Bool = false) {
         self.tableView.delegate = self.help
         self.tableView.dataSource = self.help
         self.tableView.backgroundColor = UIColor.clear
@@ -84,7 +101,9 @@ public class ZegoInRoomMessageView: UIView {
             self.tableView.insetsContentViewsToSafeArea = false
         }
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
-        self.tableView.register(ZegoUIKitMessageCell.self, forCellReuseIdentifier: "ZegoUIKitMessageCell")
+        if customerRegisterCell == false {
+            self.tableView.register(ZegoUIKitMessageCell.self, forCellReuseIdentifier: "ZegoUIKitMessageCell")
+        }
         self.addSubview(self.tableView)
     }
     
@@ -106,6 +125,8 @@ class ZegoInRoomMessageView_Help: NSObject, ZegoUIKitEventHandle {
     weak var roomMessageView: ZegoInRoomMessageView?
     
     func onInRoomMessageReceived(_ messageList: [ZegoInRoomMessage]) {
+        self.roomMessageView?.originalDataList.append(contentsOf: messageList)
+        
         var newMessageList = [MessageModel]()
         for message in messageList {
             let model = MessageModelBuilder.buildModel(with: message.user, message: message.message ?? "")
@@ -144,16 +165,28 @@ extension ZegoInRoomMessageView_Help: UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.roomMessageView?.messageList.count ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let messageCell: ZegoUIKitMessageCell = tableView.dequeueReusableCell(withIdentifier: "ZegoUIKitMessageCell") as! ZegoUIKitMessageCell
-        if indexPath.row < self.roomMessageView?.messageList.count ?? 0 {
-            let index: Int = indexPath.row
-            messageCell.messageModel = self.roomMessageView?.messageList[index]
+        
+        let cell = self.roomMessageView?.delegate?.getInRoomMessageItemView?(tableView, indexPath: indexPath, message: self.roomMessageView!.originalDataList[indexPath.row])
+
+        guard let cell = cell else {
+            if let _ = tableView.dequeueReusableCell(withIdentifier: "ZegoUIKitMessageCell") as? ZegoUIKitMessageCell {
+                    
+            } else {
+                self.roomMessageView?.tableView.register(ZegoUIKitMessageCell.self, forCellReuseIdentifier: "ZegoUIKitMessageCell")
+            }
+                
+            let messageCell: ZegoUIKitMessageCell = tableView.dequeueReusableCell(withIdentifier: "ZegoUIKitMessageCell") as! ZegoUIKitMessageCell
+            if indexPath.row < self.roomMessageView?.messageList.count ?? 0 {
+                let index: Int = indexPath.row
+                messageCell.messageModel = self.roomMessageView?.messageList[index]
+            }
+            messageCell.selectionStyle = .none
+            messageCell.backgroundColor = UIColor.clear
+            return messageCell
         }
-        messageCell.selectionStyle = .none
-        messageCell.backgroundColor = UIColor.clear
-        return messageCell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -16,13 +16,13 @@ public class ZegoMicrophoneStateIcon: UIImageView {
             self.isOn = ZegoUIKit.shared.isMicrophoneOn(userID)
         }
     }
-    public var iconMicophoneOn: UIImage = ZegoUIIconSet.iconMicstatusNomal
-    public var iconMicrophoneOff: UIImage = ZegoUIIconSet.iconMicstatusOff
-    public var iconMicrophoneSpeaking: UIImage = ZegoUIIconSet.iconMicstatusWave
+    public var iconMicrophoneOn: UIImage = ZegoUIIconSet.iconMicStatusNormal
+    public var iconMicrophoneOff: UIImage = ZegoUIIconSet.iconMicStatusOff
+    public var iconMicrophoneSpeaking: UIImage = ZegoUIIconSet.iconMicStatusWave
     public var isOn: Bool = true {
         didSet {
             if isOn {
-                self.image = self.iconMicophoneOn
+                self.image = self.iconMicrophoneOn
             } else {
                 self.image = self.iconMicrophoneOff
             }
@@ -36,7 +36,7 @@ public class ZegoMicrophoneStateIcon: UIImageView {
         self.help.micStatusIcon = self
         ZegoUIKit.shared.addEventHandler(self.help)
         self.isOn = true
-        self.image = self.iconMicophoneOn
+        self.image = self.iconMicrophoneOn
     }
     
     required public init?(coder: NSCoder) {

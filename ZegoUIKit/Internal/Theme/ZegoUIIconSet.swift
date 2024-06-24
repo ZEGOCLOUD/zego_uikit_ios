@@ -13,7 +13,7 @@ class ZegoUIIconSet {
     static var iconCameraOff: UIImage = ZegoUIIconSetType.icon_camera_off.load()
     static var iconMicNormal: UIImage = ZegoUIIconSetType.icon_mic_normal.load()
     static var iconMicOff: UIImage = ZegoUIIconSetType.icon_mic_off.load()
-    static var iconSpeakerNomal: UIImage = ZegoUIIconSetType.icon_speaker_normal.load()
+    static var iconSpeakerNormal: UIImage = ZegoUIIconSetType.icon_speaker_normal.load()
     static var iconSpeakerOff: UIImage = ZegoUIIconSetType.icon_speaker_off.load()
     static var iconPhone: UIImage = ZegoUIIconSetType.icon_iphone.load()
     static var iconMore: UIImage = ZegoUIIconSetType.icon_more.load()
@@ -25,9 +25,9 @@ class ZegoUIIconSet {
     
     static var iconCameraOverturn2: UIImage = ZegoUIIconSetType.icon_camera_overturn_2.load()
     
-    static var iconMicstatusNomal: UIImage = ZegoUIIconSetType.icon_mic_status_nomal.load()
-    static var iconMicstatusOff: UIImage = ZegoUIIconSetType.icon_mic_status_off.load()
-    static var iconMicstatusWave: UIImage = ZegoUIIconSetType.icon_mic_status_wave.load()
+    static var iconMicStatusNormal: UIImage = ZegoUIIconSetType.icon_mic_status_nomal.load()
+    static var iconMicStatusOff: UIImage = ZegoUIIconSetType.icon_mic_status_off.load()
+    static var iconMicStatusWave: UIImage = ZegoUIIconSetType.icon_mic_status_wave.load()
     
     static var iconCameraStatusNomal: UIImage = ZegoUIIconSetType.icon_camera_status_nomal.load()
     static var iconCameraStatusOff: UIImage = ZegoUIIconSetType.icon_camera_status_off.load()

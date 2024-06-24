@@ -62,12 +62,12 @@ public class ZegoLeaveButton: UIButton {
             dialogMessage = message
         }
         var cancelName: String = ZegoUIKitTranslationTextConfig.shared.translationText.cancelDialogMessage
-        if let cancleButtonName = self.quitConfirmDialogInfo.cancelButtonName {
-            cancelName = cancleButtonName
+        if let cancelButtonName = self.quitConfirmDialogInfo.cancelButtonName {
+            cancelName = cancelButtonName
         }
         var sureName: String = ZegoUIKitTranslationTextConfig.shared.translationText.confirmDialogMessage
-        if let confirmButtomName = self.quitConfirmDialogInfo.confirmButtonName {
-            sureName = confirmButtomName
+        if let confirmButtonName = self.quitConfirmDialogInfo.confirmButtonName {
+            sureName = confirmButtonName
         }
         let alterView = UIAlertController.init(title: dialogTitle, message: dialogMessage, preferredStyle: .alert)
         let cancelAction: UIAlertAction = UIAlertAction.init(title: cancelName, style: .cancel) { action in

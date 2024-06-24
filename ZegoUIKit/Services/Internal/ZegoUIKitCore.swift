@@ -221,10 +221,10 @@ extension ZegoUIKitCore {
         } else {
             let isLargeRoom: Bool = self.isLargeRoom || markAsLargeRoom
             if isOn {
-                let command: String = ["zego_turn_microphone_on": userID as AnyObject].jsonString
+                let command: String = ["zego_turn_microphone_on": [userID] as AnyObject].jsonString
                 self.sendInRoomCommand(command, toUserIDs: isLargeRoom ? [] : [userID], callback: nil)
             } else {
-                let command: String = ["zego_turn_microphone_off": userID as AnyObject].jsonString
+                let command: String = ["zego_turn_microphone_off": [userID] as AnyObject].jsonString
                 self.sendInRoomCommand(command, toUserIDs: isLargeRoom ? [] : [userID], callback: nil)
             }
         }

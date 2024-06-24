@@ -70,7 +70,7 @@ class ZegoMemberListCell: UITableViewCell {
     
     lazy var micIcon: ZegoMicrophoneStateIcon = {
         let icon = ZegoMicrophoneStateIcon(frame: .zero)
-        icon.iconMicophoneOn = ZegoUIIconSet.iconMemberMicNor
+        icon.iconMicrophoneOn = ZegoUIIconSet.iconMemberMicNor
         icon.iconMicrophoneOff = ZegoUIIconSet.iconMemberMicOff
         icon.iconMicrophoneSpeaking = ZegoUIIconSet.iconMemberMicWave
         return icon

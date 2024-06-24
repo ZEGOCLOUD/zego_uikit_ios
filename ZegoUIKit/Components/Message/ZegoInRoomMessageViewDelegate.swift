@@ -9,4 +9,5 @@ import Foundation
 
 @objc public protocol ZegoInRoomMessageViewDelegate: AnyObject {
     @objc optional func onInRoomMessageClick(_ message: ZegoInRoomMessage)
+    @objc optional func getInRoomMessageItemView(_ tableView: UITableView, indexPath: IndexPath, message: ZegoInRoomMessage) -> UITableViewCell?
 }
