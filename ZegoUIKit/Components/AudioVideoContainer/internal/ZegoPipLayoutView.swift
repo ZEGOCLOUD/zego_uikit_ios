@@ -282,7 +282,7 @@ class ZegoPipLayoutView: UIView {
             let bottomMargin: CGFloat = 100
             let floadIndex: CGFloat = CGFloat(index)
             let floatViewNum: CGFloat = CGFloat(viewNum)
-            switch self.config.smallViewPostion {
+            switch self.config.smallViewPosition {
             case .topRight:
                 let audioVideoViewY: CGFloat = topMargin + (self.config.smallViewSize.height * (floadIndex - 1)) + (self.config.spacingBetweenSmallViews * (floadIndex - 1))
                 let audioVideoViewX: CGFloat = self.bounds.size.width - 12 - self.config.smallViewSize.width

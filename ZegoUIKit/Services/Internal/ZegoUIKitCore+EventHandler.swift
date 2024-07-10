@@ -241,7 +241,7 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
     
     func onAudioRouteChange(_ audioRoute: ZegoAudioRoute) {
         for delegate in self.uikitEventDelegates.allObjects {
-            delegate.onAudioOutputDeviceChange?(ZegoUIKitAudioOutputDevice(rawValue: audioRoute.rawValue) ?? .speaker)
+            delegate.onAudioOutputDeviceChanged?(ZegoUIKitAudioOutputDevice(rawValue: audioRoute.rawValue) ?? .speaker)
         }
     }
     
@@ -310,6 +310,21 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
         }
     }
 
+    func onIMRecvBarrageMessage(_ messageList: [ZegoBarrageMessageInfo], roomID: String) {
+      var newMessageList: [ZegoUIKitBarrageMessageInfo] = []
+      for info in messageList {
+        let newInfo = ZegoUIKitBarrageMessageInfo()
+        newInfo.message = info.message
+        newInfo.messageID = info.messageID
+        newInfo.sendTime = info.sendTime
+        newInfo.fromUser = ZegoUIKitUser(info.fromUser.userID, info.fromUser.userName)
+        newMessageList.append(newInfo)
+      }
+      for delegate in self.uikitEventDelegates.allObjects {
+          delegate.onIMRecvBarrageMessage?(roomID, messageList: newMessageList)
+      }
+    }
+  
     func onIMRecvCustomCommand(_ command: String, from fromUser: ZegoUser, roomID: String) {
         let commandDict: [String : AnyObject] = command.convertStringToDictionary() ?? [:]
         for key in commandDict.keys {

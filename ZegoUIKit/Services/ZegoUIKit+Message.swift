@@ -10,6 +10,7 @@ import ZegoExpressEngine
 
 public typealias ZegoUIKitSendMessageCallback = (Result<Any, Error>) -> Void
 public typealias ZegoSendInRoomCommnadCallback = (_ errorCode: Int32) -> Void
+public typealias ZegoIMSendBarrageMessageCallback = (_ errorCode: Int32, _ messageID:String) -> Void
 
 extension ZegoUIKit {
     
@@ -33,4 +34,7 @@ extension ZegoUIKit {
         ZegoUIKitCore.shared.sendSEI(seiString)
     }
     
+    public func sendBarrageMessage(roomID: String , message: String, callback: ZegoIMSendBarrageMessageCallback?) {
+      ZegoUIKitCore.shared.sendBarrageMessage(roomID: roomID, message: message, callback: callback)
+    }
 }

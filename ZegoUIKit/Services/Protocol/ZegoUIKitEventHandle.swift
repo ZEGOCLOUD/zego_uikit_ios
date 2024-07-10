@@ -30,7 +30,7 @@ import ZegoPluginAdapter
     @objc optional func onAudioVideoUnavailable(_ userList: [ZegoUIKitUser])
     @objc optional func onScreenSharingAvailable(_ userList: [ZegoUIKitUser])
     @objc optional func onScreenSharingUnavailable(_ userList: [ZegoUIKitUser])
-    @objc optional func onAudioOutputDeviceChange(_ audioRoute: ZegoUIKitAudioOutputDevice)
+    @objc optional func onAudioOutputDeviceChanged(_ audioOutput: ZegoUIKitAudioOutputDevice)
     @objc optional func onPlayerRecvSEI(_ seiString: String, streamID: String)
     @objc optional func onPlayerRecvAudioFirstFrame(_ streamID: String)
     @objc optional func onPlayerRecvVideoFirstFrame(_ streamID: String)
@@ -42,7 +42,7 @@ import ZegoPluginAdapter
     @objc optional func onInRoomCommandReceived(_ fromUser: ZegoUIKitUser, command: String)
     @objc optional func onInRoomTextMessageReceived(_ messages: [ZegoSignalingInRoomTextMessage], roomID: String)
     @objc optional func onInRoomCommandMessageReceived(_ messages: [ZegoSignalingInRoomCommandMessage], roomID: String)
-    
+    @objc optional func onIMRecvBarrageMessage(_ roomID: String, messageList: [ZegoUIKitBarrageMessageInfo])
     //MARK: - user in room attributs
     @objc optional func onRoomMemberLeft(_ userIDList: [String]?, roomID: String)
     @objc optional func onMeRemovedFromRoom()

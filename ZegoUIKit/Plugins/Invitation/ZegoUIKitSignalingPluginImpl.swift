@@ -86,7 +86,7 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         ZegoPluginAdapter.signalingPlugin?.sendInvitation(with: invitees, timeout: timeout, data: dataDict.jsonString,notificationConfig: notificationConfig, callback: { errorCode, errorMessage, invitationID, errorInvitees in
             if errorCode == 0 {
                 if let inviter = ZegoUIKit.shared.localUserInfo {
-                    self.buildInvitatinData(invitationID, inviter: inviter,invitees: invitees, type: type)
+                    self.buildInvitationData(invitationID, inviter: inviter,invitees: invitees, type: type)
                     self.updateInvitationData(invitationID, invitees: errorInvitees, state: .error)
                 }
             }
@@ -97,7 +97,7 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         })
     }
     
-    func buildInvitatinData(_ invitationID: String, inviter: ZegoUIKitUser, invitees: [String], type: Int) {
+    func buildInvitationData(_ invitationID: String, inviter: ZegoUIKitUser, invitees: [String], type: Int) {
         var newInvitees: [ZegoInvitationUser] = []
         for userID in invitees {
             let user = ZegoUIKitUser.init(userID, "")

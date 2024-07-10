@@ -28,6 +28,10 @@ extension ZegoUIKit {
       ZegoUIKitCore.shared.setVideoConfig(videoConfig)
     }
     
+    public func getAudioRouteType() -> ZegoUIKitAudioOutputDevice {
+      return ZegoUIKitAudioOutputDevice(rawValue: UInt(ZegoUIKitCore.shared.audioOutputDeviceType()!.rawValue))!
+    }
+  
     public func isMicrophoneOn(_ userID: String) -> Bool {
         return ZegoUIKitCore.shared.isMicDeviceOn(userID)
     }

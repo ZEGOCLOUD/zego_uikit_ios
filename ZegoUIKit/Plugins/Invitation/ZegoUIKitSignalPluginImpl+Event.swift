@@ -45,7 +45,7 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
     
         let user: ZegoUIKitUser = ZegoUIKitUser.init(inviterID, dataDic?["inviter_name"] as? String ?? "")
         let inviteesList: [String] = getInvitees(newData["invitees"] as? [Dictionary<String, AnyObject>] ?? [])
-        self.buildInvitatinData(callID, inviter: user,invitees: inviteesList, type: type)
+        self.buildInvitationData(callID, inviter: user,invitees: inviteesList, type: type)
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
             delegate.onInvitationReceived?(user, type: type, data: newData.jsonString)
         }
@@ -79,13 +79,13 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
 //        let newData: String? = dataDic?["data"] as? String
       
         // invitationID 抛到业务层：停止响铃场景需要
-        let nvitation: [String : AnyObject] = [
+        let invitation: [String : AnyObject] = [
               "invitationID": callID as AnyObject,
         ]
         var dataString:String = data
         //FIXME: The web side accepts the invitation if data is "{}", the subsequent object transfer will be problematic
         if dataString == "{}" || dataString == "" {
-          dataString = nvitation.jsonString
+          dataString = invitation.jsonString
         } else {
           var dataDic: Dictionary = data.convertStringToDictionary()!
           dataDic.updateValue(callID as AnyObject, forKey: "invitationID")

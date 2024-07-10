@@ -64,6 +64,14 @@ extension ZegoUIKitCore {
         }
     }
     
+  
+    public func sendBarrageMessage(roomID: String , message: String, callback: ZegoIMSendBarrageMessageCallback?) {
+      ZegoExpressEngine.shared().sendBarrageMessage(message, roomID: roomID) { errorCode, messageID in
+        guard let callback = callback else { return }
+        callback(errorCode,messageID)
+      }
+    }
+  
     func getTimeStamp() -> UInt64 {
         let timeInterval: TimeInterval = Date().timeIntervalSince1970
         let timeStamp = UInt64(timeInterval)

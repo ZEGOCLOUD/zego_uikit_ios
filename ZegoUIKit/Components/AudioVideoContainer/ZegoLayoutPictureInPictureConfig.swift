@@ -14,7 +14,7 @@ public class ZegoLayoutPictureInPictureConfig: ZegoLayoutConfig {
     public var largeViewBackgroundColor: UIColor = UIColor.colorWithHexString("#4A4B4D")
     public var smallViewBackgroundImage: UIImage?
     public var largeViewBackgroundImage: UIImage?
-    public var smallViewPostion: ZegoViewPosition = .topRight
+    public var smallViewPosition: ZegoViewPosition = .topRight
     public var switchLargeOrSmallViewByClick: Bool = true
     public var smallViewSize: CGSize = CGSize(width: 95, height: 169)
     public var spacingBetweenSmallViews: CGFloat = 0

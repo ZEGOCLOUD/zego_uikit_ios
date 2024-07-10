@@ -65,9 +65,9 @@ fileprivate class ToggleAudioOutputButton_Help: NSObject, ZegoUIKitEventHandle {
         super.init()
     }
     
-    func onAudioOutputDeviceChange(_ audioRoute: ZegoUIKitAudioOutputDevice) {
+    func onAudioOutputDeviceChanged(_ audioOutput: ZegoUIKitAudioOutputDevice) {
         guard let toggleAudioOutputButton = toggleAudioOutputButton else { return }
-        switch audioRoute {
+        switch audioOutput {
         case .speaker:
             toggleAudioOutputButton.setImage(toggleAudioOutputButton.iconSpeaker, for: .normal)
             toggleAudioOutputButton.isEnabled = true
