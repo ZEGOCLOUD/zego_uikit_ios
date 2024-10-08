@@ -17,6 +17,22 @@ import ZegoExpressEngine
     case scaleToFill = 2
 }
 
+@objc public enum ZegoUIKitZegoAECMode: UInt {
+    /// Soft ANS. In most instances, the sound quality will not be damaged, but some noise will remain.
+    case soft = 0
+    /// Medium ANS. It may damage some sound quality, but it has a good noise reduction effect.
+    case medium = 1
+    /// Aggressive ANS. It may significantly impair the sound quality, but it has a good noise reduction effect.
+    case aggressive = 2
+    /// AI mode ANS. It will cause great damage to music, so it can not be used for noise suppression of sound sources that need to collect background sound. Please contact ZEGO technical support before use.
+    case ai = 3
+    /// Balanced AI mode ANS. It will cause great damage to music, so it can not be used for noise suppression of sound sources that need to collect background sound. Please contact ZEGO technical support before use.
+    case aiBalanced = 4
+    /// Low latency AI mode ANS. It will cause great damage to music, so it can not be used for noise suppression of sound sources that need to collect background sound. Please contact ZEGO technical support before use.
+    case aiLowLatency = 5
+}
+
+
 @objc public enum ZegoUIKitLayoutMode: UInt {
     /// Picture within picture
     case pictureInPicture = 0

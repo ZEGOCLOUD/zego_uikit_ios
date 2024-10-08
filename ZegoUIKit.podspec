@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoUIKit"
-  spec.version      = "2.11.8"
+  spec.version      = "2.11.9"
   spec.summary      = "ZegoUIKit iOS SDK"
 
   # This description is used to generate tags and improve search results.

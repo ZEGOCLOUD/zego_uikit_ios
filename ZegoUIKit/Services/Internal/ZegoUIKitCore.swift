@@ -99,6 +99,11 @@ extension ZegoUIKitCore {
         ZegoExpressEngine.destroy(nil)
     }
     
+    func setRoomScenario(_ rawValue:UInt){
+        let scenario = ZegoScenario(rawValue: rawValue) ?? .general // general 是默认场景
+        ZegoExpressEngine.shared().setRoomScenario(scenario)
+    }
+    
     func login(_ userID: String, userName: String) {
         if self.localParticipant == nil {
             self.localParticipant = ZegoParticipant(userID: userID, name: userName)
@@ -119,7 +124,7 @@ extension ZegoUIKitCore {
     }
     
     //MARK -- room 相关
-    func joinRoom(_ userID: String, userName: String, roomID: String, markAsLargeRoom: Bool) {
+    func joinRoom(_ userID: String, userName: String, roomID: String, markAsLargeRoom: Bool, callBack: @escaping (Int) -> Void) {
         self.markAsLargeRoom = markAsLargeRoom
         self.localParticipant = nil
         self.participantDic.removeAll()
@@ -138,6 +143,7 @@ extension ZegoUIKitCore {
         config.isUserStatusNotify = true
         ZegoExpressEngine.shared().loginRoom(roomID, user: user, config: config) { code, info in
             print("login code:\(code)")
+          callBack(Int(code))
         }
         
         // monitor sound level
@@ -284,7 +290,17 @@ extension ZegoUIKitCore {
     func startPreview(_ renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
         ZegoExpressEngine.shared().startPreview(generateCanvas(rendView: renderView, videoMode: videoMode))
     }
+  
+    func enable3A(_ enable: Bool, aecMode: ZegoUIKitZegoAECMode) {
+         ZegoExpressEngine.shared().enableAGC(enable);
+         ZegoExpressEngine.shared().enableAEC(enable);
+         ZegoExpressEngine.shared().enableANS(enable);
+         if (enable) {
+             ZegoExpressEngine.shared().setANSMode(ZegoANSMode.aggressive);
+         }
+    }
     
+
     func setLocalVideoView(renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
         //        guard let roomID = self.room?.roomID else {
         //            print("Error: [setVideoView] You need to join the room first and then set the videoView")

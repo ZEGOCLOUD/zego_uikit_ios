@@ -13,7 +13,7 @@ extension ZegoUIKit {
     public func setAudioVideoResourceMode(_ model: ZegoAudioVideoResourceMode) {
         ZegoUIKitCore.shared.setAudioVideoResourceMode(model)
     }
-
+    
     public func useFrontFacingCamera(isFrontFacing: Bool) {
         ZegoUIKitCore.shared.useFrontFacingCamera(isFrontFacing: isFrontFacing)
     }
@@ -21,17 +21,17 @@ extension ZegoUIKit {
     public func setAudioOutputToSpeaker(enable: Bool) {
         ZegoUIKitCore.shared.enableSpeaker(enable: enable)
     }
-  
+    
     public func setVideoConfig(config: ZegoPresetResolution) {
-      let videoPreset = ZegoVideoConfigPreset(rawValue: config.rawValue)!
-      let videoConfig = ZegoVideoConfig(preset: videoPreset)
-      ZegoUIKitCore.shared.setVideoConfig(videoConfig)
+        let videoPreset = ZegoVideoConfigPreset(rawValue: config.rawValue)!
+        let videoConfig = ZegoVideoConfig(preset: videoPreset)
+        ZegoUIKitCore.shared.setVideoConfig(videoConfig)
     }
     
     public func getAudioRouteType() -> ZegoUIKitAudioOutputDevice {
-      return ZegoUIKitAudioOutputDevice(rawValue: UInt(ZegoUIKitCore.shared.audioOutputDeviceType()!.rawValue))!
+        return ZegoUIKitAudioOutputDevice(rawValue: UInt(ZegoUIKitCore.shared.audioOutputDeviceType()!.rawValue))!
     }
-  
+    
     public func isMicrophoneOn(_ userID: String) -> Bool {
         return ZegoUIKitCore.shared.isMicDeviceOn(userID)
     }
@@ -73,7 +73,7 @@ extension ZegoUIKit {
     public func startMixerTask(_ task: ZegoMixerTask, callback: ZegoUIKitCallBack?) {
         ZegoUIKitCore.shared.startMixerTask(task, callback: callback)
     }
-
+    
     public func stopMixerTask(_ task: ZegoMixerTask, callback: ZegoUIKitCallBack?) {
         ZegoUIKitCore.shared.stopMixerTask(task, callback: callback)
     }
@@ -98,16 +98,19 @@ extension ZegoUIKit {
         ZegoUIKitCore.shared.startPreview(renderView, videoMode: videoMode)
     }
     
-    func setLocalVideoView(renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
+    public func setLocalVideoView(renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
         ZegoUIKitCore.shared.setLocalVideoView(renderView: renderView, videoMode: videoMode)
     }
     
-    func setRemoteVideoView(userID: String, renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
+    public func setRemoteVideoView(userID: String, renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
         ZegoUIKitCore.shared.setRemoteVideoView(userID: userID, renderView: renderView, videoMode: videoMode)
     }
     
-    func setRemoteScreenShareView(userID: String, renderView: UIView, videoMode: ZegoUIKitVideoFillMode = .aspectFit) {
+    public func setRemoteScreenShareView(userID: String, renderView: UIView, videoMode: ZegoUIKitVideoFillMode = .aspectFit) {
         ZegoUIKitCore.shared.setRemoteScreenShareView(userID: userID, renderView: renderView, videoMode: videoMode)
     }
     
+    public func enable3A(_ enable: Bool, aecMode: ZegoUIKitZegoAECMode) {
+        ZegoUIKitCore.shared.enable3A(enable, aecMode:aecMode)
+    }
 }

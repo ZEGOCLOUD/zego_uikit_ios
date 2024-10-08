@@ -10,8 +10,8 @@ import ZegoExpressEngine
 
 extension ZegoUIKit {
     
-    public func joinRoom(_ userID: String, userName: String, roomID: String, markAsLargeRoom: Bool = false) {
-        ZegoUIKitCore.shared.joinRoom(userID, userName: userName, roomID: roomID, markAsLargeRoom: markAsLargeRoom)
+    public func joinRoom(_ userID: String, userName: String, roomID: String, markAsLargeRoom: Bool, callBack: @escaping (Int) -> Void) {
+      ZegoUIKitCore.shared.joinRoom(userID, userName: userName, roomID: roomID, markAsLargeRoom: markAsLargeRoom,callBack: callBack)
     }
     
     public func leaveRoom() {
@@ -20,6 +20,10 @@ extension ZegoUIKit {
     
     public func setRoomProperty(_ key: String, value: String, callback: ZegoUIKitCallBack?) {
         ZegoUIKitCore.shared.setRoomProperty(key, value: value, callback: callback)
+    }
+    
+    public func setRoomScenario(_ scenario: UInt) {
+        ZegoUIKitCore.shared.setRoomScenario(scenario)
     }
     
     public func getRoomProperties() -> [String : String] {
