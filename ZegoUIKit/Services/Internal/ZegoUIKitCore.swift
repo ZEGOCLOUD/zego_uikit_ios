@@ -98,9 +98,9 @@ extension ZegoUIKitCore {
     func uninit() {
         ZegoExpressEngine.destroy(nil)
     }
-    
+  
     func setRoomScenario(_ rawValue:UInt){
-        let scenario = ZegoScenario(rawValue: rawValue) ?? .general // general 是默认场景
+        let scenario = ZegoScenario(rawValue: rawValue) ?? .general 
         ZegoExpressEngine.shared().setRoomScenario(scenario)
     }
     
@@ -291,16 +291,15 @@ extension ZegoUIKitCore {
         ZegoExpressEngine.shared().startPreview(generateCanvas(rendView: renderView, videoMode: videoMode))
     }
   
-    func enable3A(_ enable: Bool, aecMode: ZegoUIKitZegoAECMode) {
-         ZegoExpressEngine.shared().enableAGC(enable);
-         ZegoExpressEngine.shared().enableAEC(enable);
-         ZegoExpressEngine.shared().enableANS(enable);
-         if (enable) {
-             ZegoExpressEngine.shared().setANSMode(ZegoANSMode.aggressive);
-         }
-    }
+  func enable3A(_ enable: Bool, aecMode: ZegoUIKitZegoAECMode) {
+       ZegoExpressEngine.shared().enableAGC(enable);
+       ZegoExpressEngine.shared().enableAEC(enable);
+       ZegoExpressEngine.shared().enableANS(enable);
+       if (enable) {
+           ZegoExpressEngine.shared().setANSMode(ZegoANSMode.aggressive);
+       }
+  }
     
-
     func setLocalVideoView(renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
         //        guard let roomID = self.room?.roomID else {
         //            print("Error: [setVideoView] You need to join the room first and then set the videoView")

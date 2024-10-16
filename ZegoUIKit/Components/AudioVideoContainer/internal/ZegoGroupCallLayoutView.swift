@@ -81,7 +81,7 @@ class ZegoGroupCallLayoutView: UIView {
             self.config = config as? ZegoLayoutGalleryConfig
             self.audioVideoViewConfig = audioVideoViewConfig
             self.updateLayout()
-            self.nomalFullScreenSharingView(screenSharingList.first?.userID ?? "")
+            self.normalFullScreenSharingView(screenSharingList.first?.userID ?? "")
         }
     }
     
@@ -267,7 +267,7 @@ class ZegoGroupCallLayoutView: UIView {
         return nil
     }
     
-    func nomalFullScreenSharingView(_ userID: String = "") {
+    func normalFullScreenSharingView(_ userID: String = "") {
         if config?.showNewScreenSharingViewInFullscreenMode ?? true {
             if (fullScreenSharingView == nil &&  userID.count > 0) {
                 fullScreenSharingView = ZegoScreenSharingView()
@@ -328,7 +328,7 @@ extension ZegoGroupCallLayoutView: ZegoUIKitEventHandle, ZegoGroupCallUserViewDe
         } else {
             screenSharingList.append(contentsOf: userList)
         }
-        self.nomalFullScreenSharingView(userList.first?.userID ?? "")
+        self.normalFullScreenSharingView(userList.first?.userID ?? "")
         self.updateLayout()
     }
     
@@ -631,10 +631,10 @@ class ZegoGroupCallUserHeadView: UIView {
             let height = width
             self.firstUserHead.layer.cornerRadius = width * 0.5
             self.secondUserHead.layer.cornerRadius = width * 0.5
-            let orignX: CGFloat = (self.frame.size.width - ((width * 2) - 14)) * 0.5
-            let orignY: CGFloat = (self.frame.size.height - height - 8 - 20) * 0.5
-            self.firstUserHead.frame = CGRect(x: orignX, y: orignY, width: width, height: height)
-            self.secondUserHead.frame = CGRect(x: self.firstUserHead.frame.maxX - 14, y: orignY, width: width, height: height)
+            let originX: CGFloat = (self.frame.size.width - ((width * 2) - 14)) * 0.5
+            let originY: CGFloat = (self.frame.size.height - height - 8 - 20) * 0.5
+            self.firstUserHead.frame = CGRect(x: originX, y: originY, width: width, height: height)
+            self.secondUserHead.frame = CGRect(x: self.firstUserHead.frame.maxX - 14, y: originY, width: width, height: height)
             self.numberLabel.frame = CGRect(x: 10, y: self.firstUserHead.frame.maxY + 8, width: self.frame.size.width - 20, height: 17)
         }
     }

@@ -10,7 +10,7 @@ import ZegoExpressEngine
 
 extension ZegoUIKit {
     
-    public func joinRoom(_ userID: String, userName: String, roomID: String, markAsLargeRoom: Bool = false, callBack: @escaping (Int) -> Void) {
+  public func joinRoom(_ userID: String, userName: String, roomID: String, markAsLargeRoom: Bool = false, callBack: @escaping (Int) -> Void) {
       ZegoUIKitCore.shared.joinRoom(userID, userName: userName, roomID: roomID, markAsLargeRoom: markAsLargeRoom,callBack: callBack)
     }
     

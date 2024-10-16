@@ -106,12 +106,12 @@ class ZegoMemberList_Help: NSObject, UITableViewDelegate, UITableViewDataSource,
         
         let cell = self.memberList?.delegate?.getMemberListItemView?(tableView, indexPath: indexPath, userInfo: userInfo)
         guard let cell = cell else {
-            let nomalCell: ZegoMemberListCell = tableView.dequeueReusableCell(withIdentifier: self.memberList?.ZegoMemberListCellIdentifier ?? "") as! ZegoMemberListCell
-            nomalCell.showCameraState = self.memberList?.showCameraState ?? true
-            nomalCell.showMicrophoneState = self.memberList?.showMicrophoneState ?? true
-            nomalCell.userInfo = userInfo
-            nomalCell.backgroundColor = UIColor.clear
-            return nomalCell
+            let normalCell: ZegoMemberListCell = tableView.dequeueReusableCell(withIdentifier: self.memberList?.ZegoMemberListCellIdentifier ?? "") as! ZegoMemberListCell
+            normalCell.showCameraState = self.memberList?.showCameraState ?? true
+            normalCell.showMicrophoneState = self.memberList?.showMicrophoneState ?? true
+            normalCell.userInfo = userInfo
+            normalCell.backgroundColor = UIColor.clear
+            return normalCell
         }
         return cell
     }

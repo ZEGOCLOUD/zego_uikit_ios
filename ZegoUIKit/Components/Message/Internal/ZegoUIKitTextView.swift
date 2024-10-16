@@ -51,7 +51,7 @@ extension ZegoUIKitTextView: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         let frame = textView.frame
-        let constrainSize=CGSize(width:frame.size.width,height:CGFloat(MAXFLOAT))
+        let constrainSize = CGSize(width: frame.size.width,height: CGFloat(MAXFLOAT))
         var size = textView.sizeThatFits(constrainSize)
         if size.height >= maxHeight{
             size.height = maxHeight
