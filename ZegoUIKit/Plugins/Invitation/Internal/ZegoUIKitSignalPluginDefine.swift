@@ -10,7 +10,7 @@ import Foundation
 enum InvitationState: Int {
     case error
     case accept
-    case waiting
+    case wating
     case refuse
     case cancel
     case timeout

@@ -101,7 +101,7 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         var newInvitees: [ZegoInvitationUser] = []
         for userID in invitees {
             let user = ZegoUIKitUser.init(userID, "")
-            let invitationUser = ZegoInvitationUser.init(user, state: .waiting)
+            let invitationUser = ZegoInvitationUser.init(user, state: .wating)
             newInvitees.append(invitationUser)
         }
         let invitationData: InvitationData = InvitationData.init(invitationID, inviter: inviter, invitees: newInvitees, type: type)
@@ -154,7 +154,7 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         else { return }
         var needClear: Bool = true
         for user in invitationInvitees {
-            if user.state == .waiting {
+            if user.state == .wating {
                 needClear = false
                 break
             }

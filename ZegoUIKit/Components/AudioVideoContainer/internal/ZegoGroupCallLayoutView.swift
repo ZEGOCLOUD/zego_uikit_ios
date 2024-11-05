@@ -81,7 +81,7 @@ class ZegoGroupCallLayoutView: UIView {
             self.config = config as? ZegoLayoutGalleryConfig
             self.audioVideoViewConfig = audioVideoViewConfig
             self.updateLayout()
-            self.normalFullScreenSharingView(screenSharingList.first?.userID ?? "")
+            self.nomalFullScreenSharingView(screenSharingList.first?.userID ?? "")
         }
     }
     
@@ -267,7 +267,7 @@ class ZegoGroupCallLayoutView: UIView {
         return nil
     }
     
-    func normalFullScreenSharingView(_ userID: String = "") {
+    func nomalFullScreenSharingView(_ userID: String = "") {
         if config?.showNewScreenSharingViewInFullscreenMode ?? true {
             if (fullScreenSharingView == nil &&  userID.count > 0) {
                 fullScreenSharingView = ZegoScreenSharingView()
@@ -328,7 +328,7 @@ extension ZegoGroupCallLayoutView: ZegoUIKitEventHandle, ZegoGroupCallUserViewDe
         } else {
             screenSharingList.append(contentsOf: userList)
         }
-        self.normalFullScreenSharingView(userList.first?.userID ?? "")
+        self.nomalFullScreenSharingView(userList.first?.userID ?? "")
         self.updateLayout()
     }
     

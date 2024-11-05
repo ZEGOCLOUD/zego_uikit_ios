@@ -34,6 +34,7 @@ import ZegoPluginAdapter
     @objc optional func onPlayerRecvSEI(_ seiString: String, streamID: String)
     @objc optional func onPlayerRecvAudioFirstFrame(_ streamID: String)
     @objc optional func onPlayerRecvVideoFirstFrame(_ streamID: String)
+    @objc optional func onAfterStartPlayStream(_ streamID: String,  channel: ZegoPublishChannel)
     
     
     //MARK: - room message

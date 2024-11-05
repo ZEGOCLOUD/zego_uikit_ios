@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-let UIKitScreenHeight = UIScreen.main.bounds.size.height
+let UIkitScreenHeight = UIScreen.main.bounds.size.height
 let UIKitScreenWidth = UIScreen.main.bounds.size.width
 
 func UIKitAdaptLandscapeWidth(_ x: CGFloat) -> CGFloat {
@@ -16,5 +16,5 @@ func UIKitAdaptLandscapeWidth(_ x: CGFloat) -> CGFloat {
 }
 
 func UIKitAdaptLandscapeHeight(_ x: CGFloat) -> CGFloat {
-    return x * (UIKitScreenHeight / 818.0)
+    return x * (UIkitScreenHeight / 818.0)
 }

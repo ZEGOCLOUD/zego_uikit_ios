@@ -247,8 +247,12 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
     
     func onRemoteSoundLevelUpdate(_ soundLevels: [String : NSNumber]) {
         for key in soundLevels.keys {
-            guard let userID = self.streamDic[key] else { return }
-            let user = self.participantDic[userID]?.toUserInfo()
+            let userID = (self.streamDic[key] == nil) ? self.auxStreamDic[key]: nil
+            if (userID == nil){
+                return
+            }
+                    
+            let user = self.participantDic[userID!]?.toUserInfo()
             let value: Double = (soundLevels[key] ?? 0).doubleValue
             guard let user = user else { return }
             for delegate in self.uikitEventDelegates.allObjects {

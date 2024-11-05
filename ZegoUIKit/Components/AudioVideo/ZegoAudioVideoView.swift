@@ -48,9 +48,9 @@ public class ZegoAudioVideoView: UIView {
         }
     }
     
-    var streamIsAvailable: Bool = false {
+    var streamIsAvaible: Bool = false {
         didSet {
-            self.videoView.isHidden = !streamIsAvailable
+            self.videoView.isHidden = !streamIsAvaible
         }
     }
     
@@ -63,14 +63,14 @@ public class ZegoAudioVideoView: UIView {
         }
     }
     
-    public var audioViewBackgroundImage: UIImage? {
+    public var audioViewBackgroudImage: UIImage? {
         didSet {
-            guard let audioViewBackgroundImage = audioViewBackgroundImage else {
+            guard let audioViewBackgroudImage = audioViewBackgroudImage else {
                 backgroundImageView.isHidden = true
                 return
             }
             backgroundImageView.isHidden = false
-            backgroundImageView.image = audioViewBackgroundImage
+            backgroundImageView.image = audioViewBackgroudImage
         }
     }
     
@@ -283,12 +283,12 @@ public class ZegoAudioVideoView: UIView {
         }
         scaleAnimation.toValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, 1.5, 1.5, 0))      // 缩放结束大小
 
-        let animaGroup = CAAnimationGroup()
-        animaGroup.animations = [opacityAnimation, scaleAnimation]
-        animaGroup.duration = 2.0       // 动画执行时间
-        animaGroup.repeatCount = HUGE   // 最大重复
-        animaGroup.autoreverses = false
-        self.animationGroup = animaGroup
+        let animGroup = CAAnimationGroup()
+        animGroup.animations = [opacityAnimation, scaleAnimation]
+        animGroup.duration = 2.0       // 动画执行时间
+        animGroup.repeatCount = HUGE   // 最大重复
+        animGroup.autoreverses = false
+        self.animationGroup = animGroup
 
         return replicator
     }

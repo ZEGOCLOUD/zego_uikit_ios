@@ -224,7 +224,7 @@ class ZegoPipLayoutView: UIView {
                 audioVideoView.layer.borderColor = UIColor.colorWithHexString("#A4A4A4").cgColor
                 audioVideoView.layer.borderWidth = 0
                 if (self.config.largeViewBackgroundImage != nil) {
-                    audioVideoView.audioViewBackgroundImage = self.config.largeViewBackgroundImage
+                    audioVideoView.audioViewBackgroudImage = self.config.largeViewBackgroundImage
                 }
             } else {
                 // is small view
@@ -234,7 +234,7 @@ class ZegoPipLayoutView: UIView {
                 audioVideoView.layer.borderColor = UIColor.colorWithHexString("#A4A4A4").cgColor
                 audioVideoView.layer.borderWidth = 0.5
                 if (self.config.smallViewBackgroundImage != nil) {
-                    audioVideoView.audioViewBackgroundImage = self.config.smallViewBackgroundImage
+                    audioVideoView.audioViewBackgroudImage = self.config.smallViewBackgroundImage
                 }
                 if self.config.isSmallViewDraggable {
                     let dragGesture = UIPanGestureRecognizer(target: self, action:#selector(dragViewDidDrag(gesture:)))
