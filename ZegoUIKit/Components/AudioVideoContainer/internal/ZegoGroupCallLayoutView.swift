@@ -81,7 +81,7 @@ class ZegoGroupCallLayoutView: UIView {
             self.config = config as? ZegoLayoutGalleryConfig
             self.audioVideoViewConfig = audioVideoViewConfig
             self.updateLayout()
-            self.nomalFullScreenSharingView(screenSharingList.first?.userID ?? "")
+            self.normalFullScreenSharingView(screenSharingList.first?.userID ?? "")
         }
     }
     
@@ -228,15 +228,15 @@ class ZegoGroupCallLayoutView: UIView {
             let isFirst: Int = (index % 2)
             let itemWidth: CGFloat = self.frame.size.width - (margin * 2)
             let itemHeight: CGFloat = (self.frame.size.height - margin) * 0.5
-            let orignY: CGFloat = (margin * CGFloat(isFirst)) + (itemHeight * CGFloat(isFirst))
-            return CGRect(x: margin, y: orignY, width: itemWidth, height: itemHeight)
+            let originY: CGFloat = (margin * CGFloat(isFirst)) + (itemHeight * CGFloat(isFirst))
+            return CGRect(x: margin, y: originY, width: itemWidth, height: itemHeight)
         } else {
             let isFirst: Int = (index % 2)
             let itemWidth: CGFloat = (self.frame.size.width - (margin * 2)) * 0.5 - itemSpace
             let itemHeight: CGFloat = (self.frame.size.height - (itemSpace * CGFloat((line)))) / CGFloat(lineNum)
-            let orignX: CGFloat = margin + (CGFloat(isFirst) * itemWidth) + CGFloat(itemSpace * CGFloat(isFirst))
-            let orignY: CGFloat = (itemSpace * CGFloat(line)) + (itemHeight * CGFloat(line))
-            return CGRect(x: orignX, y: orignY, width: itemWidth, height: itemHeight)
+            let originX: CGFloat = margin + (CGFloat(isFirst) * itemWidth) + CGFloat(itemSpace * CGFloat(isFirst))
+            let originY: CGFloat = (itemSpace * CGFloat(line)) + (itemHeight * CGFloat(line))
+            return CGRect(x: originX, y: originY, width: itemWidth, height: itemHeight)
         }
     }
     
@@ -267,7 +267,7 @@ class ZegoGroupCallLayoutView: UIView {
         return nil
     }
     
-    func nomalFullScreenSharingView(_ userID: String = "") {
+    func normalFullScreenSharingView(_ userID: String = "") {
         if config?.showNewScreenSharingViewInFullscreenMode ?? true {
             if (fullScreenSharingView == nil &&  userID.count > 0) {
                 fullScreenSharingView = ZegoScreenSharingView()
@@ -328,7 +328,7 @@ extension ZegoGroupCallLayoutView: ZegoUIKitEventHandle, ZegoGroupCallUserViewDe
         } else {
             screenSharingList.append(contentsOf: userList)
         }
-        self.nomalFullScreenSharingView(userList.first?.userID ?? "")
+        self.normalFullScreenSharingView(userList.first?.userID ?? "")
         self.updateLayout()
     }
     

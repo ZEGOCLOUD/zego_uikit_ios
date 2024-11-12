@@ -98,9 +98,9 @@ extension ZegoUIKitCore {
     func uninit() {
         ZegoExpressEngine.destroy(nil)
     }
-    
+  
     func setRoomScenario(_ rawValue:UInt){
-        let scenario = ZegoScenario(rawValue: rawValue) ?? .general // general 是默认场景
+        let scenario = ZegoScenario(rawValue: rawValue) ?? .general 
         ZegoExpressEngine.shared().setRoomScenario(scenario)
     }
     
