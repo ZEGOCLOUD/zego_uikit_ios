@@ -96,6 +96,7 @@ extension ZegoUIKitCore {
     }
     
     func uninit() {
+        self.localParticipant = nil
         ZegoExpressEngine.destroy(nil)
     }
   
