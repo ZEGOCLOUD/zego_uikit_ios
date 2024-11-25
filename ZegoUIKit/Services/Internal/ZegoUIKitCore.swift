@@ -296,7 +296,8 @@ extension ZegoUIKitCore {
          ZegoExpressEngine.shared().enableAEC(enable);
          ZegoExpressEngine.shared().enableANS(enable);
          if (enable) {
-             ZegoExpressEngine.shared().setANSMode(ZegoANSMode.aggressive);
+             let mode:ZegoANSMode =  ZegoANSMode(rawValue: aecMode.rawValue)!
+             ZegoExpressEngine.shared().setANSMode(mode);
          }
     }
     

@@ -40,7 +40,10 @@ import ZegoPluginAdapter
     //MARK: - room message
     @objc optional func onInRoomMessageReceived(_ messageList: [ZegoInRoomMessage])
     @objc optional func onInRoomMessageSendingStateChanged(_ message: ZegoInRoomMessage)
+    //MARK: 内部事件处理不对外回调
     @objc optional func onInRoomCommandReceived(_ fromUser: ZegoUIKitUser, command: String)
+    //MARK: 业务层用户监听，过滤了内部的事件。
+    @objc optional func onIMRecvCustomCommand(_ fromUser: ZegoUIKitUser, command: String)
     @objc optional func onInRoomTextMessageReceived(_ messages: [ZegoSignalingInRoomTextMessage], roomID: String)
     @objc optional func onInRoomCommandMessageReceived(_ messages: [ZegoSignalingInRoomCommandMessage], roomID: String)
     @objc optional func onIMRecvBarrageMessage(_ roomID: String, messageList: [ZegoUIKitBarrageMessageInfo])

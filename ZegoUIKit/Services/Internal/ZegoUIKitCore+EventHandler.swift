@@ -361,7 +361,12 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
             }
         }
         for delegate in self.uikitEventDelegates.allObjects {
-            delegate.onInRoomCommandReceived?(ZegoUIKitUser.init(fromUser.userID, fromUser.userName), command: command)
+            let allKeysHavePrefix = commandDict.keys.allSatisfy { $0.hasPrefix("zego_") }
+            if allKeysHavePrefix {
+                delegate.onInRoomCommandReceived?(ZegoUIKitUser.init(fromUser.userID, fromUser.userName), command: command)
+            } else {
+                delegate.onIMRecvCustomCommand?(ZegoUIKitUser.init(fromUser.userID, fromUser.userName), command: command)
+            }
         }
     }
     

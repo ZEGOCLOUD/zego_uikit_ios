@@ -51,7 +51,7 @@ extension ZegoUIKitCore {
         self.sendInRoomMessage(messageContent)
     }
     
-    func sendInRoomCommand(_ command: String, toUserIDs: [String], callback: ZegoSendInRoomCommnadCallback?) {
+    func sendInRoomCommand(_ command: String, toUserIDs: [String], callback: ZegoSendInRoomCommandCallback?) {
         guard let roomID = room?.roomID else { return }
         var userList: [ZegoUser] = []
         for userID in toUserIDs {
