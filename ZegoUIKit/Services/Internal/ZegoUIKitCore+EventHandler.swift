@@ -261,11 +261,23 @@ extension ZegoUIKitCore: ZegoEventHandler, ZegoCustomVideoRenderHandler {
         }
     }
     
+    func onRemoteSoundLevelInfoUpdate(_ soundLevelInfos:[String: ZegoSoundLevelInfo]){
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onRemoteSoundLevelInfoUpdate?(soundLevelInfos)
+        }
+    }
+    
     func onCapturedSoundLevelUpdate(_ soundLevel: NSNumber) {
         let user = self.localParticipant?.toUserInfo()
         guard let user = user else { return }
         for delegate in self.uikitEventDelegates.allObjects {
             delegate.onSoundLevelUpdate?(user, level: soundLevel.doubleValue)
+        }
+    }
+    
+    func onCapturedSoundLevelInfoUpdate(_ soundLevelInfo: ZegoSoundLevelInfo){
+        for delegate in self.uikitEventDelegates.allObjects {
+            delegate.onCapturedSoundLevelInfoUpdate?(soundLevelInfo)
         }
     }
     

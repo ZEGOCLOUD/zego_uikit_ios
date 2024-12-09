@@ -83,11 +83,11 @@ extension ZegoUIKitCore {
         uikitEventDelegates.remove(eventHandle)
     }
     
-    func initWithAppID(appID: UInt32, appSign: String) {
+    func initWithAppID(appID: UInt32, appSign: String, scenario:UInt=0) {
         let profile = ZegoEngineProfile()
         profile.appID = appID
         profile.appSign = appSign
-        profile.scenario = .general
+        profile.scenario = ZegoScenario(rawValue: scenario) ?? .general
         let config: ZegoEngineConfig = ZegoEngineConfig()
         config.advancedConfig = ["notify_remote_device_unknown_status": "true", "notify_remote_device_init_status":"true"]
         ZegoExpressEngine.setEngineConfig(config)

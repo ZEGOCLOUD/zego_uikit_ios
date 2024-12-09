@@ -26,6 +26,8 @@ import ZegoPluginAdapter
     @objc optional func onCameraOn(_ user: ZegoUIKitUser, isOn: Bool)
     @objc optional func onMicrophoneOn(_ user: ZegoUIKitUser, isOn: Bool)
     @objc optional func onSoundLevelUpdate(_ userInfo: ZegoUIKitUser, level: Double)
+    @objc optional func onCapturedSoundLevelInfoUpdate(_ soundLevelInfo: ZegoSoundLevelInfo)
+    @objc optional func onRemoteSoundLevelInfoUpdate(_ soundLevelInfos:[String: ZegoSoundLevelInfo])
     @objc optional func onAudioVideoAvailable(_ userList: [ZegoUIKitUser])
     @objc optional func onAudioVideoUnavailable(_ userList: [ZegoUIKitUser])
     @objc optional func onScreenSharingAvailable(_ userList: [ZegoUIKitUser])

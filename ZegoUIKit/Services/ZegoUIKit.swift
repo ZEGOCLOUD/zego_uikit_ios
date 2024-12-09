@@ -52,8 +52,8 @@ public class ZegoUIKit: NSObject {
         super.init()
     }
 
-    public func initWithAppID(appID: UInt32, appSign: String) {
-        ZegoUIKitCore.shared.initWithAppID(appID: appID, appSign: appSign)
+    public func initWithAppID(appID: UInt32, appSign: String, scenario:UInt = 0) {
+        ZegoUIKitCore.shared.initWithAppID(appID: appID, appSign: appSign, scenario: scenario)
     }
     
     public func uninit() {
