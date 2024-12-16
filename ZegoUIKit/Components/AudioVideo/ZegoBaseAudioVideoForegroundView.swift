@@ -63,5 +63,4 @@ extension ZegoBaseAudioVideoForegroundView: ZegoUIKitEventHandle {
             }
         }
     }
-    
 }

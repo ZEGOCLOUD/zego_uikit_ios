@@ -56,10 +56,12 @@ public class ZegoAudioVideoView: UIView {
     
     public var roomID: String?
     
-    var avatarUrl: String? {
+    public var avatarUrl: String? {
         didSet {
             guard let avatarUrl = avatarUrl else { return }
-            self.headView.setHeadImageUrl(avatarUrl)
+            if avatarUrl != "" {
+                self.headView.setHeadImageUrl(avatarUrl)
+            }
         }
     }
     
@@ -121,7 +123,7 @@ public class ZegoAudioVideoView: UIView {
         return imageView
     }()
     
-    private var customMaskView: UIView?
+    internal var customMaskView: UIView?
     private var userInfo: ZegoUIKitUser? {
         get {
             for user in ZegoUIKit.shared.userList {
@@ -201,7 +203,7 @@ public class ZegoAudioVideoView: UIView {
         }
         
         self.headView.font = UIFont.systemFont(ofSize: fontSize, weight: .semibold)
-        
+        self.wave?.removeFromSuperlayer()
         self.wave = self.makeRadarAnimation(showRect: self.headView.frame, isRound: true)
         self.layer.insertSublayer(self.wave ?? CALayer(), below: self.headView.layer)
 

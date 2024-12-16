@@ -85,7 +85,8 @@ public class ZegoInRoomMessageInput: UIView {
             self.inputTextView.endEditing(true)
             return
         }
-        ZegoUIKit.shared.sendInRoomMessage(self.inputTextView.text)
+        ZegoUIKit.shared.sendInRoomMessage(self.inputTextView.text) { errorCode in
+        }
         self.delegate?.onSubmit()
         self.lastOffsetY = 0
         self.inputTextView.text = ""

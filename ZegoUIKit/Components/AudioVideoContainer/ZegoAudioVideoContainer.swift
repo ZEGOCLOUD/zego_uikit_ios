@@ -11,6 +11,7 @@ import ZegoExpressEngine
 public protocol ZegoAudioVideoContainerDelegate: AnyObject {
     func getForegroundView(_ userInfo: ZegoUIKitUser?) -> ZegoBaseAudioVideoForegroundView?
     func sortAudioVideo(_ userList: [ZegoUIKitUser]) -> [ZegoUIKitUser]?
+    func onUserIDUpdated(userID: String) -> String?
 }
 
 extension ZegoAudioVideoContainerDelegate {
@@ -74,5 +75,9 @@ fileprivate class ZegoAudioVideoContainer_Help: NSObject, ZegoUIKitEventHandle, 
     
     func sortAudioVideo(_ userList: [ZegoUIKitUser]) -> [ZegoUIKitUser]? {
         return self.container?.delegate?.sortAudioVideo(userList)
+    }
+    
+    func onUserIDUpdated(userID: String) -> String? {
+        return self.container?.delegate?.onUserIDUpdated(userID: userID)
     }
 }

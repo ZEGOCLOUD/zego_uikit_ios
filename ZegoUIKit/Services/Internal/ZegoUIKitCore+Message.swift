@@ -14,7 +14,7 @@ extension ZegoUIKitCore {
         return self.messageList
     }
     
-    func sendInRoomMessage(_ message: String) {
+    func sendInRoomMessage(_ message: String, callback:ZegoUIKitSendMessageCallback?) {
         guard let roomID = self.room?.roomID else { return }
         self.localMessageId = self.localMessageId - 1
         let roomMessage: ZegoInRoomMessage = ZegoInRoomMessage(message, messageID: self.localMessageId, sendTime: self.getTimeStamp(), user: self.localParticipant?.toUserInfo() ?? ZegoUIKitUser())
@@ -29,7 +29,9 @@ extension ZegoUIKitCore {
                 roomMessage.state = .success
             } else {
                 roomMessage.state = .failed
+                self.messageList = self.messageList.filter { $0 != roomMessage }
             }
+            callback?(errorCode)
             for delegate in self.uikitEventDelegates.allObjects {
                 delegate.onInRoomMessageSendingStateChanged?(roomMessage)
             }
@@ -48,7 +50,9 @@ extension ZegoUIKitCore {
     func resendInRoomMessage(_ message: ZegoInRoomMessage) {
         guard let messageContent = message.message else { return }
         self.messageList.removeAll(where: {$0.messageID == message.messageID})
-        self.sendInRoomMessage(messageContent)
+        self.sendInRoomMessage(messageContent) { errorCode in
+            
+        }
     }
     
     func sendInRoomCommand(_ command: String, toUserIDs: [String], callback: ZegoSendInRoomCommandCallback?) {

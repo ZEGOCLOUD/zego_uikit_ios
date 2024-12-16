@@ -205,7 +205,7 @@ class ZegoPipLayoutView: UIView {
                 self.videoList.append(audioVideoView)
             }
             audioVideoView.userID = user.userID
-            
+            audioVideoView.avatarUrl = user.userAvatar
             if audioVideoConfig.useVideoViewAspectFill && audioVideoView.videoFillMode != .aspectFill {
                 audioVideoView.videoFillMode = .aspectFill
             } else if !audioVideoConfig.useVideoViewAspectFill && audioVideoView.videoFillMode != .aspectFit {

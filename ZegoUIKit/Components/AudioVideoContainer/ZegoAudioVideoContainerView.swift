@@ -10,6 +10,7 @@ import UIKit
 protocol ZegoAudioVideoContainerViewDelegate: AnyObject {
     func getForegroundView(_ userInfo: ZegoUIKitUser?) -> ZegoBaseAudioVideoForegroundView?
     func sortAudioVideo(_ userList: [ZegoUIKitUser]) -> [ZegoUIKitUser]?
+    func onUserIDUpdated(userID: String) -> String?
 }
 
 extension ZegoAudioVideoContainerViewDelegate {
@@ -79,5 +80,9 @@ class ZegoAudioVideoContainerView_Help: NSObject, ZegoPipLayoutViewDelegate,Zego
     
     func sortAudioVideo(_ userList: [ZegoUIKitUser]) -> [ZegoUIKitUser]? {
         return self.containerView?.delegate?.sortAudioVideo(userList)
+    }
+    
+    func onUserIDUpdated(userID: String) -> String? {
+        return self.containerView?.delegate?.onUserIDUpdated(userID: userID)
     }
 }

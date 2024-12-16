@@ -164,6 +164,13 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         }
     }
     
+    public func removeCallInvitation(_ invitees: [String]) {
+        let cancelList: [String] = self.findCallID(invitees)
+        for callID in cancelList {
+            self.invitationDB.removeValue(forKey: callID)
+        }
+    }
+    
     public func cancelInvitation(_ invitees: [String], data: String?, callback: PluginCallBack?) {
         let cancelList: [String] = self.findCallID(invitees)
         for callID in cancelList {

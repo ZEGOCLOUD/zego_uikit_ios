@@ -166,6 +166,10 @@ extension ZegoUIKitCore {
         }
     }
     
+    func removeParticipantDic() {
+        self.participantDic.removeAll()
+    }
+    
     //MARK: --
     func useFrontFacingCamera(isFrontFacing: Bool) {
         ZegoExpressEngine.shared().useFrontCamera(isFrontFacing)
@@ -289,6 +293,7 @@ extension ZegoUIKitCore {
     }
     
     func startPreview(_ renderView: UIView, videoMode: ZegoUIKitVideoFillMode) {
+        print("[startPreview]")
         ZegoExpressEngine.shared().startPreview(generateCanvas(rendView: renderView, videoMode: videoMode))
     }
   
@@ -376,15 +381,18 @@ extension ZegoUIKitCore {
     }
     
     public func setRoomProperty(_ key: String, value: String, callback: ZegoUIKitCallBack?) {
+        print("setRoomProperty key:\(key) value:\(value) roomID:\(String(describing: self.room?.roomID))")
         guard let roomID = self.room?.roomID else { return }
-        if self.roomProperties.keys.contains(key) && self.roomProperties[key] as? String == value {
-            return
-        }
+//        if self.roomProperties.keys.contains(key) && self.roomProperties[key] as? String == value {
+            print("roomProperties contain key:\(key) self.roomProperties:\(self.roomProperties)")
+//            return
+//        }
         let oldValue: String = roomProperties.keys.contains(key) ? roomProperties[key] as? String ?? "" : ""
         let oldProperties = self.getRoomProperties();
         roomProperties[key] = value as AnyObject
         let extraInfo: String = roomProperties.jsonString
         ZegoExpressEngine.shared().setRoomExtraInfo(extraInfo, forKey: "extra_info", roomID: roomID) { errorCode in
+            print("setRoomExtraInfo errorCode:\(errorCode)")
             if let callback = callback {
                 let dict: [String: AnyObject] = ["code": errorCode as AnyObject]
                 callback(dict)

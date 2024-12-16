@@ -9,6 +9,7 @@ import UIKit
 
 protocol ZegoGroupCallLayoutViewDelegate: AnyObject {
     func getForegroundView(_ userInfo: ZegoUIKitUser?) -> ZegoBaseAudioVideoForegroundView?
+    func onUserIDUpdated(userID: String) -> String?
 }
 
 class ZegoGroupCallLayoutView: UIView {
@@ -282,6 +283,10 @@ class ZegoGroupCallLayoutView: UIView {
 }
 
 extension ZegoGroupCallLayoutView: ZegoUIKitEventHandle, ZegoGroupCallUserViewDelegate, ZegoScreenSharingViewDelegate, ZegoScreenSharingForegroundViewDelegate {
+    func onUserIDUpdated(userID: String) -> String? {
+        return self.delegate?.onUserIDUpdated(userID: userID)
+    }
+    
     
 //    func onRemoteUserJoin(_ userList: [ZegoUIKitUser]) {
 //        for user in userList {
@@ -457,6 +462,7 @@ extension ZegoGroupCallLayoutView: ZegoUIKitEventHandle, ZegoGroupCallUserViewDe
 protocol ZegoGroupCallUserViewDelegate: AnyObject {
     func getForegroundView(_ userInfo: ZegoUIKitUser?) -> ZegoBaseAudioVideoForegroundView?
     func fullScreenClick(_ userID: String)
+    func onUserIDUpdated(userID: String) -> String?
 }
 
 class ZegoGroupCallUserView: UIView {
@@ -528,6 +534,9 @@ class ZegoGroupCallUserView: UIView {
         if self.type == 0 {
             self.audioVideoView.isHidden = false
             self.audioVideoView.userID = userList.first?.userID
+            if let userAvatar = delegate?.onUserIDUpdated(userID: self.audioVideoView.userID ?? "") as? String {
+                self.audioVideoView.avatarUrl = userAvatar
+            }
         } else if type == 1 {
             self.userHeadView.isHidden = false
             self.userHeadView.userList = self.userList
@@ -645,6 +654,9 @@ class ZegoGroupCallUserHeadView: UIView {
             guard let userName = user.userName else {
                 index = index + 1
                 continue
+            }
+            if userName.count <= 0 {
+                return
             }
             let firstStr: String = String(userName[userName.startIndex])
             if index == 0 {

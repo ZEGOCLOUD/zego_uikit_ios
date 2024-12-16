@@ -18,6 +18,10 @@ extension ZegoUIKit {
         ZegoUIKitCore.shared.leaveRoom()
     }
     
+    public func removeParticipantDic() {
+        ZegoUIKitCore.shared.removeParticipantDic()
+    }
+    
     public func setRoomProperty(_ key: String, value: String, callback: ZegoUIKitCallBack?) {
         ZegoUIKitCore.shared.setRoomProperty(key, value: value, callback: callback)
     }

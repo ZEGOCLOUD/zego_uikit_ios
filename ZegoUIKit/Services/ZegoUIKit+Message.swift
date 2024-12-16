@@ -8,7 +8,7 @@
 import Foundation
 import ZegoExpressEngine
 
-public typealias ZegoUIKitSendMessageCallback = (Result<Any, Error>) -> Void
+public typealias ZegoUIKitSendMessageCallback = (_ errorCode: Int32) -> Void
 public typealias ZegoSendInRoomCommandCallback = (_ errorCode: Int32) -> Void
 public typealias ZegoIMSendBarrageMessageCallback = (_ errorCode: Int32, _ messageID:String) -> Void
 
@@ -18,8 +18,8 @@ extension ZegoUIKit {
         return ZegoUIKitCore.shared.getInRoomMessages()
     }
     
-    public func sendInRoomMessage(_ message: String) {
-        ZegoUIKitCore.shared.sendInRoomMessage(message)
+    public func sendInRoomMessage(_ message: String,callback:ZegoUIKitSendMessageCallback?) {
+        ZegoUIKitCore.shared.sendInRoomMessage(message,callback: callback)
     }
     
     public func resendInRoomMessage(_ message: ZegoInRoomMessage) {
