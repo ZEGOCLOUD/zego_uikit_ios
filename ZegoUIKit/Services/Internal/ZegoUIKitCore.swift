@@ -144,6 +144,12 @@ extension ZegoUIKitCore {
         config.isUserStatusNotify = true
         ZegoExpressEngine.shared().loginRoom(roomID, user: user, config: config) { code, info in
             print("login code:\(code)")
+
+            let reportData = ["room_id": roomID as AnyObject,
+                              "error" : code as AnyObject,
+                              "msg": "" as AnyObject]
+            ReportUtil.sharedInstance().reportEvent("loginRoom", paramsDict: reportData)
+            
           callBack(Int(code))
         }
         
@@ -152,6 +158,9 @@ extension ZegoUIKitCore {
     }
     
     func leaveRoom() {
+        if self.room == nil {
+            return
+        }
         self.room = nil
         self.roomProperties.removeAll()
         self.participantDic.removeAll()
@@ -161,8 +170,15 @@ extension ZegoUIKitCore {
         ZegoExpressEngine.shared().stopSoundLevelMonitor()
         ZegoExpressEngine.shared().stopPreview()
         ZegoExpressEngine.shared().stopPublishingStream()
-        ZegoExpressEngine.shared().logoutRoom { errorCode, dict in
+        ZegoExpressEngine.shared().logoutRoom {[weak self] errorCode, dict in
             print("logout room errorCode: %d",errorCode)
+            guard let self = self else { return }
+            let reportData = ["room_id": self.room?.roomID as AnyObject,
+                              "error" : errorCode as AnyObject,
+                              "msg": "" as AnyObject]
+            ReportUtil.sharedInstance().reportEvent("logoutRoom", paramsDict: reportData)
+            
+            self.room = nil
         }
     }
     

@@ -46,6 +46,13 @@ extension ZegoUIKitSignalingPluginImpl: ZegoSignalingPluginEventHandler {
         let user: ZegoUIKitUser = ZegoUIKitUser.init(inviterID, dataDic?["inviter_name"] as? String ?? "")
         let inviteesList: [String] = getInvitees(newData["invitees"] as? [Dictionary<String, AnyObject>] ?? [])
         self.buildInvitationData(callID, inviter: user,invitees: inviteesList, type: type)
+        
+        let appState:String = UIApplication.shared.applicationState == .active ? "active" : (UIApplication.shared.applicationState == .background ? "background" : "restarted")
+        let reportData = ["call_id": callID as AnyObject,
+                          "app_state" : appState as AnyObject,
+                          "extended_data": data as AnyObject]
+        ReportUtil.sharedInstance().reportEvent("invitationReceived", paramsDict: reportData)
+        
         for delegate in ZegoUIKitCore.shared.uikitEventDelegates.allObjects {
             delegate.onInvitationReceived?(user, type: type, data: newData.jsonString)
         }

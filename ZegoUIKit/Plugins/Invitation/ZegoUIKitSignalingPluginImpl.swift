@@ -90,6 +90,21 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
                     self.updateInvitationData(invitationID, invitees: errorInvitees, state: .error)
                 }
             }
+            var errorUserList = ""
+            if errorInvitees.count > 0 {
+                errorUserList = errorInvitees.convertArrayToString()
+            }
+            
+            let reportData = ["invitees": invitees.convertArrayToString() as AnyObject,
+                              "count": invitees.count as AnyObject,
+                              "error_userlist": errorUserList as AnyObject,
+                              "error_count": errorInvitees.count as AnyObject,
+                              "call_id": invitationID as AnyObject,
+                              "error": errorCode as AnyObject,
+                              "msg": errorMessage as AnyObject,
+                              "extended_data": "" as AnyObject]
+            
+            ReportUtil.sharedInstance().reportEvent("callInvite", paramsDict: reportData)
             guard let callback = callback else { return }
             let callbackParams: [String : AnyObject] = ["code": errorCode as AnyObject, "message": errorMessage as AnyObject, "callID": invitationID as AnyObject, "errorInvitees": errorInvitees as AnyObject]
             callback(callbackParams)

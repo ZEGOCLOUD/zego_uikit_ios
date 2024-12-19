@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoUIKit"
-  spec.version      = "2.12.8"
+  spec.version      = "2.12.9"
   spec.summary      = "ZegoUIKit iOS SDK"
 
   # This description is used to generate tags and improve search results.
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  spec.platform     = :ios, "12.0"
+  spec.platform     = :ios, "13.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -90,7 +90,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ZegoUIKit","ZegoUIKit/**/*.swift"
+  spec.source_files = "ZegoUIKit/*.{h,swift}", "ZegoUIKit/**/*.{h,swift}"
+
   spec.resource_bundle = {'ZegoUIKit' => ['ZegoUIKit/Resource/*.{png}']}
 
 
@@ -153,5 +154,5 @@ Pod::Spec.new do |spec|
   # end
   spec.dependency 'ZegoExpressEngine', '>= 3.15.0'
   spec.dependency 'ZegoPluginAdapter', '>= 2.5.2'
-
+  spec.dependency 'ZegoUIKitReport', '0.2.10'
 end
