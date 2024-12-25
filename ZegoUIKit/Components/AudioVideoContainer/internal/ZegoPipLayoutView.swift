@@ -27,8 +27,8 @@ class ZegoPipLayoutView: UIView {
     var globalAudioVideoUserList: [ZegoUIKitUser]!
     
     private let limitMargin: CGFloat = 12.0
-    private let topPadding: CGFloat = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
-    private let bottomPadding: CGFloat = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+    private let topPadding: CGFloat = UIKitKeyWindow?.safeAreaInsets.top ?? 0
+    private let bottomPadding: CGFloat = UIKitKeyWindow?.safeAreaInsets.bottom ?? 0
     
     fileprivate let help: ZegoPipLayoutView_Help = ZegoPipLayoutView_Help()
 

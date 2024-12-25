@@ -87,7 +87,7 @@ extension ZegoUIKitCore {
         let profile = ZegoEngineProfile()
         profile.appID = appID
         profile.appSign = appSign
-        profile.scenario = ZegoScenario(rawValue: scenario) ?? .general
+        profile.scenario = ZegoScenario(rawValue: scenario) ?? .default
         let config: ZegoEngineConfig = ZegoEngineConfig()
         config.advancedConfig = ["notify_remote_device_unknown_status": "true", "notify_remote_device_init_status":"true"]
         ZegoExpressEngine.setEngineConfig(config)
@@ -101,7 +101,7 @@ extension ZegoUIKitCore {
     }
   
     func setRoomScenario(_ rawValue:UInt){
-        let scenario = ZegoScenario(rawValue: rawValue) ?? .general 
+        let scenario = ZegoScenario(rawValue: rawValue) ?? .default
         ZegoExpressEngine.shared().setRoomScenario(scenario)
     }
     

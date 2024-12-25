@@ -216,7 +216,7 @@ class ZegoInRoomNotificationView_Help: NSObject, UITableViewDelegate, UITableVie
     }
     
     func onRemoteUserJoin(_ userList: [ZegoUIKitUser]) {
-        guard let config = inRoomNotificationView?.config else { return }
+        guard (inRoomNotificationView?.config) != nil else { return }
         var messageList = [ZegoInRoomMessage]()
         for user in userList {
             let messageString = String(format: ZegoUIKitTranslationTextConfig.shared.translationText.enterRoomDialogMessage,user.userName ?? "")

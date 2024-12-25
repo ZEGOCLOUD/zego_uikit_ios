@@ -42,6 +42,10 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
         switch type {
         case .signaling:
             return ZegoPluginAdapter.signalingPlugin
+        case .callkit:
+            return ZegoPluginAdapter.callkitPlugin
+        case .call:
+            return ZegoPluginAdapter.callPlugin
         @unknown default:
             break
         }
@@ -194,12 +198,12 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
                     self.invitationDB.removeValue(forKey: callID)
                 }
                 guard let callback = callback else { return }
-                callback(["code": errorCode as AnyObject, "message": errorMessage as AnyObject])
+                callback(["code": errorCode as AnyObject, "message": errorMessage as AnyObject,"callID": callID  as AnyObject])
             })
         }
     }
     
-    public func refuseInvitation(_ inviterID: String, data: String?) {
+    public func refuseInvitation(_ inviterID: String, data: String?,callback: PluginCallBack?) {
 //        let dataDict: [String : AnyObject] = [
 //            "inviterID": inviterID as AnyObject,
 //            "data" : data as AnyObject
@@ -213,6 +217,7 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
             if errorCode == 0 {
                 self.invitationDB.removeValue(forKey: invitationID)
             }
+            callback?(["code": errorCode as AnyObject, "invitationID": invitationID as AnyObject])
         })
     }
     
@@ -231,7 +236,7 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
                 self.invitationDB.removeValue(forKey: invitationID)
             }
             guard let callback = callback else { return }
-            callback(["code": errorCode as AnyObject, "message": errorMessage as AnyObject])
+            callback(["code": errorCode as AnyObject, "message": errorMessage as AnyObject,"invitationID": invitationID as AnyObject])
         })
     }
     

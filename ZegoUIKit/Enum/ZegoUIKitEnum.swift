@@ -8,6 +8,10 @@
 import Foundation
 import ZegoExpressEngine
 
+
+public let UIKitKeyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+
+
 @objc public enum ZegoUIKitVideoFillMode: UInt {
     /// The proportional scaling up, there may be black borders
     case aspectFit = 0

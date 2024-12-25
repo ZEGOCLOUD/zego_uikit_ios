@@ -49,6 +49,8 @@ public class ZegoRefuseInvitationButton: UIButton {
     @objc public func buttonClick() {
         self.delegate?.onRefuseInvitationButtonClick()
         guard let inviterID = inviterID else { return }
-        ZegoUIKitSignalingPluginImpl.shared.refuseInvitation(inviterID, data: self.data)
+        ZegoUIKitSignalingPluginImpl.shared.refuseInvitation(inviterID, data: self.data) { data in
+            
+        }
     }
 }
