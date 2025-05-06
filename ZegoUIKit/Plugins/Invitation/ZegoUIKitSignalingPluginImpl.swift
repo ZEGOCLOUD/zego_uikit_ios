@@ -88,6 +88,8 @@ public class ZegoUIKitSignalingPluginImpl: NSObject {
             "data" : data as AnyObject
         ]
         ZegoPluginAdapter.signalingPlugin?.sendInvitation(with: invitees, timeout: timeout, data: dataDict.jsonString,notificationConfig: notificationConfig, callback: { errorCode, errorMessage, invitationID, errorInvitees in
+            LogManager.sharedInstance().write(toLog: "[UIKit][ZegoUIKitSignalingPluginImpl][sendInvitation] error:\(errorCode), invitationID:\(invitationID), errorMsg:\(errorMessage)")
+            
             if errorCode == 0 {
                 if let inviter = ZegoUIKit.shared.localUserInfo {
                     self.buildInvitationData(invitationID, inviter: inviter,invitees: invitees, type: type)

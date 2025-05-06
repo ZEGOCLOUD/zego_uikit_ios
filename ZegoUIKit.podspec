@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoUIKit"
-  spec.version      = "2.13.0"
+  spec.version      = "2.13.1"
   spec.summary      = "ZegoUIKit iOS SDK"
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files = "ZegoUIKit/*.{h,swift}", "ZegoUIKit/**/*.{h,swift}"
+  spec.source_files = "ZegoUIKit/*.{h,swift,m}", "ZegoUIKit/**/*.{h,swift,m}"
 
   spec.resource_bundle = {'ZegoUIKit' => ['ZegoUIKit/Resource/*.{png}']}
 

@@ -161,6 +161,7 @@ extension ZegoUIKitCore {
         if self.room == nil {
             return
         }
+        let roomID = self.room?.roomID ?? ""
         self.room = nil
         self.roomProperties.removeAll()
         self.participantDic.removeAll()
@@ -173,7 +174,7 @@ extension ZegoUIKitCore {
         ZegoExpressEngine.shared().logoutRoom {[weak self] errorCode, dict in
             print("logout room errorCode: %d",errorCode)
             guard let self = self else { return }
-            let reportData = ["room_id": self.room?.roomID as AnyObject,
+            let reportData = ["room_id": roomID as AnyObject,
                               "error" : errorCode as AnyObject,
                               "msg": "" as AnyObject]
             ReportUtil.sharedInstance().reportEvent("logoutRoom", paramsDict: reportData)
