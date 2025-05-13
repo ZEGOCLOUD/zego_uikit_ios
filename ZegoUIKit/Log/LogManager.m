@@ -127,6 +127,10 @@ static id _instance;
     [self writeToLog:content appendTime:YES flush:NO];
 }
 
+- (void)writeToLog:(NSString *)content flush:(BOOL)flushImmediately {
+    [self writeToLog:content appendTime:YES flush:flushImmediately];
+}
+
 - (void)writeToLog:(NSString *)content appendTime:(BOOL)appendTime flush:(BOOL)flushImmediately {
   if (NULL == self.logFileHandle) {
     return;

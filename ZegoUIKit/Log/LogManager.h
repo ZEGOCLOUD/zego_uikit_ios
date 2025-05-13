@@ -9,6 +9,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)writeToLog:(NSString *)content;
 
+- (void)writeToLog:(NSString *)content flush:(BOOL)flushImmediately;
+
 - (void)writeToLog:(NSString *)content appendTime:(BOOL)appendTime flush:(BOOL)flushImmediately;
 
 - (void)flush;
