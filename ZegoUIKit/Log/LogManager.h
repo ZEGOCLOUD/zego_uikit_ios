@@ -7,11 +7,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (void)writeToLog:(NSString *)content;
+- (void)write:(NSString *)content;
 
-- (void)writeToLog:(NSString *)content flush:(BOOL)flushImmediately;
+- (void)write:(NSString *)content flush:(BOOL)flushImmediately;
 
-- (void)writeToLog:(NSString *)content appendTime:(BOOL)appendTime flush:(BOOL)flushImmediately;
+- (void)write:(NSString *)content appendTime:(BOOL)appendTime flush:(BOOL)flushImmediately;
 
 - (void)flush;
 

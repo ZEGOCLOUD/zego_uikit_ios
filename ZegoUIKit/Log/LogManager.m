@@ -14,7 +14,7 @@ static id _instance;
 
 @implementation LogManager
 
-#define RETAIN_LOG_FILE_IN_X_DAYS   1
+#define RETAIN_LOG_FILE_IN_X_DAYS   5
 #define LOG_CACHE_UPPER_LIMIT       5
 
 + (instancetype)sharedInstance {
@@ -116,22 +116,22 @@ static id _instance;
     
     NSString *toRemoveFilePath = [folderPath stringByAppendingPathComponent:fileName];
     if ([fileManager removeItemAtPath:toRemoveFilePath error:&error]) {
-      [self writeToLog:[NSString stringWithFormat:@"Deleted file: %@ succeed.", fileName] appendTime:YES flush:NO];
+      [self write:[NSString stringWithFormat:@"Deleted file: %@ succeed.", fileName] appendTime:YES flush:NO];
     } else {
-      [self writeToLog:[NSString stringWithFormat:@"Deleted file: %@ failed, error: %ld", fileName, error ? error.code : -1] appendTime:YES flush:NO];
+      [self write:[NSString stringWithFormat:@"Deleted file: %@ failed, error: %ld", fileName, error ? error.code : -1] appendTime:YES flush:NO];
     }
   }
 }
 
-- (void)writeToLog:(NSString *)content {
-    [self writeToLog:content appendTime:YES flush:NO];
+- (void)write:(NSString *)content {
+    [self write:content appendTime:YES flush:NO];
 }
 
-- (void)writeToLog:(NSString *)content flush:(BOOL)flushImmediately {
-    [self writeToLog:content appendTime:YES flush:flushImmediately];
+- (void)write:(NSString *)content flush:(BOOL)flushImmediately {
+    [self write:content appendTime:YES flush:flushImmediately];
 }
 
-- (void)writeToLog:(NSString *)content appendTime:(BOOL)appendTime flush:(BOOL)flushImmediately {
+- (void)write:(NSString *)content appendTime:(BOOL)appendTime flush:(BOOL)flushImmediately {
   if (NULL == self.logFileHandle) {
     return;
   }
@@ -179,7 +179,7 @@ static id _instance;
 }
 
 - (void)flush {
-  [self writeToLog:@"Passive flush." appendTime:YES flush:YES];
+  [self write:@"Passive flush." appendTime:YES flush:YES];
 }
 
 - (void)_handleApplicationDidEnterBackground:(NSNotification *)notify {
