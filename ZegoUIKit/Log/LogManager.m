@@ -33,6 +33,9 @@ static id _instance;
     [self _createLogFile];
       
     [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_handleApplicationWillEnterForeground:)
+                                                 name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(_handleApplicationDidEnterBackground:)
                                                  name:UIApplicationDidEnterBackgroundNotification object:nil];
   }
@@ -132,17 +135,21 @@ static id _instance;
 }
 
 - (void)write:(NSString *)content appendTime:(BOOL)appendTime flush:(BOOL)flushImmediately {
-  if (NULL == self.logFileHandle) {
-    return;
-  }
-  
-  NSString *logContent = NULL;
-  if (appendTime) {
-    NSDate *currentDate = [NSDate date];
-    logContent = [NSString stringWithFormat:@"%@ %@\n", [self.dateFormatter stringFromDate:currentDate], content];
-  } else {
-    logContent = [NSString stringWithFormat:@"%@\n", content];
-  }
+    if (NULL == self.logFileHandle) {
+        return;
+    }
+      
+    NSString *logContent = NULL;
+    if (appendTime) {
+        NSDate *currentDate = [NSDate date];
+        logContent = [NSString stringWithFormat:@"%@ %@\n", [self.dateFormatter stringFromDate:currentDate], content];
+    } else {
+        logContent = [NSString stringWithFormat:@"%@\n", content];
+    }
+    
+    #ifdef DEBUG
+    NSLog(@"%@", logContent);
+    #endif
   
   BOOL isNeedsWriteToFile = NO;
   NSArray *toWriteArray = NULL;
@@ -179,10 +186,16 @@ static id _instance;
 }
 
 - (void)flush {
-  [self write:@"Passive flush." appendTime:YES flush:YES];
+  [self write:@"Log passive flush." appendTime:YES flush:YES];
+}
+
+- (void)_handleApplicationWillEnterForeground:(NSNotification *)notify {
+    [self write:@"Will enter foreground."];
+    [self flush];
 }
 
 - (void)_handleApplicationDidEnterBackground:(NSNotification *)notify {
+    [self write:@"Did enter background."];
     [self flush];
 }
 
