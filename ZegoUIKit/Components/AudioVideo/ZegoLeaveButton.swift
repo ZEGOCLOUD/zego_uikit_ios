@@ -47,6 +47,7 @@ public class ZegoLeaveButton: UIButton {
         if let showDialogVC = self.quitConfirmDialogInfo.dialogPresentVC {
             self.showDialog(showDialogVC)
         } else {
+            LogManager.sharedInstance().write("[UIKit][ZegoLeaveButtom][buttonClick]")
             self.delegate?.onLeaveButtonClick(true)
             ZegoUIKit.shared.leaveRoom()
         }

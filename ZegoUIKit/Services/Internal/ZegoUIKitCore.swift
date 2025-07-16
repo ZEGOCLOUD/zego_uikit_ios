@@ -108,6 +108,7 @@ extension ZegoUIKitCore {
     func login(_ userID: String, userName: String) {
         if self.localParticipant == nil {
             self.localParticipant = ZegoParticipant(userID: userID, name: userName)
+            LogManager.sharedInstance().write("[UIKit][ZegoUIKitCore][login] localParticipant, userID: \(userID), name: \(userName)")
         }
     }
     
@@ -139,7 +140,8 @@ extension ZegoUIKitCore {
         participant.streamID = generateStreamID(userID: participant.userID, roomID: roomID)
         self.participantDic[participant.userID] = participant
         self.localParticipant = participant
-        
+        LogManager.sharedInstance().write("[UIKit][ZegoUIKitCore][joinRoom] localParticipant, userID: \(participant.userID), name: \(participant.name)")
+
         let config: ZegoRoomConfig = ZegoRoomConfig()
         config.isUserStatusNotify = true
         ZegoExpressEngine.shared().loginRoom(roomID, user: user, config: config) { code, info in
@@ -172,7 +174,8 @@ extension ZegoUIKitCore {
         ZegoExpressEngine.shared().stopPreview()
         ZegoExpressEngine.shared().stopPublishingStream()
         ZegoExpressEngine.shared().logoutRoom {[weak self] errorCode, dict in
-            print("logout room errorCode: %d",errorCode)
+            LogManager.sharedInstance().write("[UIKit][ZegoUIKitCore][leaveRoom] logout room error:\(errorCode)")
+
             guard let self = self else { return }
             let reportData = ["room_id": roomID as AnyObject,
                               "error" : errorCode as AnyObject,
