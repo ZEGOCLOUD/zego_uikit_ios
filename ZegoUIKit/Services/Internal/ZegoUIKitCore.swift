@@ -7,6 +7,7 @@
 
 import UIKit
 import ZegoExpressEngine
+import ZegoPrebuiltLog
 
 internal class ZegoParticipant: NSObject {
     let userID: String

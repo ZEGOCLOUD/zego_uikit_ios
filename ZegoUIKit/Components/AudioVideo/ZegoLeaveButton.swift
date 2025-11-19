@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ZegoPrebuiltLog
 
 public protocol LeaveButtonDelegate: AnyObject {
     func onLeaveButtonClick(_ isLeave: Bool)

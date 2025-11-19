@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoUIKit"
-  spec.version      = "2.13.4"
+  spec.version      = "2.15.0"
   spec.summary      = "ZegoUIKit iOS SDK"
 
   # This description is used to generate tags and improve search results.
@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = { :type => "Copyright", :text => "Copyright © 2022-2024 ZEGO. All Rights Reserved.\n" }
+  spec.license      = { :type => "Copyright", :text => "Copyright © 2015-2025 ZEGO. All Rights Reserved.\n" }
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -52,7 +52,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "ZEGOCLOUND" => "zego.im" }
+  spec.author             = { "ZEGOCLOUD" => "zego.im" }
   # Or just: spec.author    = "careyxi"
   # spec.authors            = { "careyxi" => "careyxi@zego.im" }
   # spec.social_media_url   = "https://twitter.com/careyxi"
@@ -155,7 +155,10 @@ Pod::Spec.new do |spec|
   #   #   main_spec.vendored_frameworks = 'UIKit/iOS/ZegoUIKit.xcframework'
   #   # end
   # end
-  spec.dependency 'ZegoExpressEngine', '>= 3.15.0'
-  spec.dependency 'ZegoPluginAdapter', '>= 2.5.2'
-  spec.dependency 'ZegoUIKitReport', '0.2.10'
+
+  spec.dependency 'ZegoExpressEngine', '>= 3.17.0'
+  spec.dependency 'ZegoPluginAdapter', '>= 2.6.0'
+  spec.dependency 'ZegoUIKitReport', '>= 0.2.10'
+  spec.dependency 'ZegoPrebuiltLog'
+
 end

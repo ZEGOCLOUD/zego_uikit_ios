@@ -7,7 +7,7 @@
 
 import UIKit
 import ZegoPluginAdapter
-
+import ZegoPrebuiltLog
 
 class SignalingPluginRoomInfo: NSObject {
     var roomID: String = ""
